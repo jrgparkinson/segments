@@ -76,15 +76,29 @@ for (i=0; i < data.length; i++)
     // var color = "red";
     // var weight = 3;
 
-    if (data[i].explored === true) { opts = {color: "green", weight: 1, fill: true, opacity: 0.3}; }
+    if (data[i].explored === true) { opts = {color: "green", weight: 1, fill: false, opacity: 0.1}; }
     L.rectangle(data[i].bounds, opts).addTo(map);
 }
 
 for (i=0; i < segments.length; i++) 
 {
-    console.log(segments[i].start_latlng);
-    L.circleMarker(segments[i].start_latlng, {color: 'blue', weight: 1}).bindLabel(segments[i].name).addTo(map);
-    // console.log(rect);
+    // console.log(segments[i].colour);
+    var seg = segments[i];
+    console.log(segments[i]);
+
+    if (seg.fastest_athlete=="Jamie Parkinson")
+    {
+        L.marker(seg.start_latlng, {color: seg.colour, weight: 1})
+    .bindPopup("<a href='" + seg.url + "'>" + seg.name + "</a>, distance: " + seg.distance + "m, min/k: " + seg.fastest_pace + " ", {sticky: true}).openPopup()
+    .addTo(map);
+    }
+    else
+    {
+        L.circleMarker(seg.start_latlng, {color: seg.colour, weight: 1})
+    .bindPopup("<a href='" + seg.url + "'>" + seg.name + "</a>, distance: " + seg.distance + "m, min/k: " + seg.fastest_pace + " ", {sticky: true}).openPopup()
+    .addTo(map);
+    }
+    
 }
 
 L.control.scale().addTo(map);

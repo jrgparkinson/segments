@@ -18,3 +18,4 @@ urllib3==1.26.4
 Werkzeug==1.0.1
 coloredlogs==15.0
 beautifulsoup4==4.9.3
+matplotlib==3.3.4

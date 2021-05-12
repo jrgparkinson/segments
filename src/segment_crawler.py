@@ -5,6 +5,10 @@ from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 import logging
 import re
+import matplotlib as mpl
+import matplotlib.cm as cm
+
+
 
 LOGGER = logging.getLogger(__name__)
 
@@ -64,10 +68,14 @@ class SegmentsData:
 
         for segment in self.data:
 
+            segment["url"] = f"https://www.strava.com/segments/{segment['id']}"
+
             if "fastest_time" in segment:
-                if re.match(r"\d+:\d+", segment["fastest_time"]):
+                if re.match(r"^\d+:\d+$", segment["fastest_time"]):
                     t = datetime.strptime(segment["fastest_time"],"%M:%S")
-                elif re.match(r"\d+s", segment["fastest_time"]):
+                elif re.match(r"^\d+:\d+:\d+$", segment["fastest_time"]):
+                    t = datetime.strptime(segment["fastest_time"],"%H:%M:%S")
+                elif re.match(r"^\d+s$", segment["fastest_time"]):
                     t = datetime.strptime(segment["fastest_time"][:-1],"%S")
                 else:
                     raise Exception("Unknown time format: %s" % segment["fastest_time"])
@@ -77,6 +85,13 @@ class SegmentsData:
                 segment["fastest_pace"] = float("NaN")
 
             segment["climb"] = round(segment["climb"], 2)
+
+            norm = mpl.colors.Normalize(vmin=2.5, vmax=4.5)
+            cmap = cm.viridis_r
+            # cmap = cm.coolwarm
+            m = cm.ScalarMappable(norm=norm, cmap=cmap)
+            rgb = m.to_rgba(segment["fastest_pace"])
+            segment["colour"] = mpl.colors.to_hex(rgb)
 
         self.data.sort(key=lambda x:x["fastest_pace"], reverse=True)
         return self.data
