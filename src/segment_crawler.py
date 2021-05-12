@@ -82,6 +82,55 @@ class SegmentsData:
         return self.data
 
 
+
+def retrieve_segments_recursively(client, bounds, segments_db, regions, zoom_level=0):
+    if zoom_level > 8:
+        return False
+
+    # Check if this region has been fully explored
+    if regions.is_explored(bounds):
+        return True
+
+    retrieved_segments = client.explore_segments(bounds, activity_type="running")
+    LOGGER.info(
+        f"Retrieve {len(retrieved_segments)} in bounding box on level {zoom_level}"
+    )
+    segments_db.save_segments(retrieved_segments)
+
+    segments_db.save()
+
+    if len(retrieved_segments) < 10:
+        regions.set_explored(bounds, True)
+        return True
+    else:
+        # more segments to retrieve
+        # split area in 4
+        mid_point = [
+            (bounds[0][0] + bounds[1][0]) / 2,
+            (bounds[0][1] + bounds[1][1]) / 2,
+        ]
+        new_boxes = [
+            # bottom left quadrant
+            [bounds[0], mid_point],
+            # top left quadrant
+            [(bounds[0][0], mid_point[1]), (mid_point[0], bounds[1][1])],
+            # top right quadrant
+            [mid_point, bounds[1]],
+            # bottom right quadrant
+            [(mid_point[0], bounds[0][1]), (bounds[1][0], mid_point[1])],
+        ]
+
+        is_explored = True
+        for box in new_boxes:
+            is_explored = is_explored and retrieve_segments_recursively(client, box, segments_db, regions, zoom_level + 1)
+
+        if is_explored:
+            regions.set_explored(bounds, True)
+            return True
+
+    return False
+
+
 if __name__ == "__main__":
 
     segments = SegmentsData()

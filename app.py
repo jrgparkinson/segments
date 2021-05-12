@@ -19,7 +19,8 @@ import logging
 import datetime
 import coloredlogs
 from stravalib.client import Client
-from src.segment_crawler import SegmentsData
+from src.segment_crawler import SegmentsData, retrieve_segments_recursively
+from src.regions import RegionsData
 
 app = Flask(__name__)
 app.secret_key = os.getenv("FLASK_SECRET")
@@ -41,39 +42,6 @@ logging.getLogger("stravalib").setLevel(logging.ERROR)
 
 
 
-def retrieve_segments_recursively(client, bounds, segments_db, zoom_level=0):
-    if zoom_level > 2:
-        return
-
-    retrieved_segments = client.explore_segments(bounds, activity_type="running")
-    LOGGER.info(
-        f"Retrieve {len(retrieved_segments)} in bounding box on level {zoom_level}"
-    )
-    segments_db.save_segments(retrieved_segments)
-
-    segments_db.save()
-
-    if len(retrieved_segments) == 10:
-        # more segments to retrieve
-        # split area in 4
-        mid_point = [
-            (bounds[0][0] + bounds[1][0]) / 2,
-            (bounds[0][1] + bounds[1][1]) / 2,
-        ]
-        new_boxes = [
-            # bottom left quadrant
-            [bounds[0], mid_point],
-            # top left quadrant
-            [(bounds[0][0], mid_point[1]), (mid_point[0], bounds[1][1])],
-            # top right quadrant
-            [mid_point, bounds[1]],
-            # bottom right quadrant
-            [(mid_point[0], bounds[0][1]), (bounds[1][0], mid_point[1])],
-        ]
-
-        for box in new_boxes:
-            retrieve_segments_recursively(client, box, segments_db, zoom_level + 1)
-
 
 @app.route("/", methods=["GET"])
 def index():
@@ -81,6 +49,15 @@ def index():
     client, authorize_url = get_client_or_authorize_url()
     segments = SegmentsData()
     return render_template("index.html", authorize_url=authorize_url, segments=segments.display_segments())
+
+
+@app.route("/map", methods=["GET"])
+def map():
+    """ Map """
+    client, authorize_url = get_client_or_authorize_url()
+    segments = SegmentsData()
+    regions = RegionsData()
+    return render_template("map.html", segments=segments.display_segments(), regions=regions.display())
 
 
 @app.route("/retrieve", methods=["GET"])
@@ -92,17 +69,13 @@ def retrieve():
     # bottom left, top right
     bounds = [(51.723917, -1.301553), (51.792771, -1.185510)]
 
-    # with open("data/segments.json", "r") as f:
-    #     segments_db = json.load(f)
-
     segments = SegmentsData(client)
-
-    # with open("data/regions.json", "r") as f:
-    #     regions_db = json.load(f)
+    regions = RegionsData()
 
     if authorize_url is None:
-        retrieve_segments_recursively(client, bounds, segments)
+        retrieve_segments_recursively(client, bounds, segments, regions)
     segments.save()
+    regions.save()
 
     return render_template("index.html", authorize_url=authorize_url, segments=segments.display_segments())
 
