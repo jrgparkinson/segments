@@ -1,0 +1,2464 @@
+
+<!-- Orion-App Layout -->
+<!DOCTYPE html>
+<html class='logged-in  feed3p0 old-login strava-orion responsive' dir='ltr' lang='en-GB' xmlns:fb='http://www.facebook.com/2008/fbml' xmlns:og='http://opengraphprotocol.org/schema/' xmlns='http://www.w3.org/TR/html5'>
+<!--
+layout orion app
+-->
+<head>
+<meta charset='UTF-8'>
+<meta content='width = device-width, initial-scale = 1, maximum-scale = 1' name='viewport'>
+<style type='text/css'>
+.spinner, .spinner .status {
+  position: relative;
+}
+.spinner {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.spinner .status {
+  top: 2px;
+  margin-left: 0.5em;
+}
+.spinner .status:empty {
+  display: none;
+}
+.spinner.lg .graphic {
+  border-width: 3px;
+  height: 32px;
+  width: 32px;
+}
+.spinner.tiny {
+  height: 10px;
+  width: 10px;
+}
+.spinner.centered, .spinner.vcentered {
+  box-sizing: border-box;
+  width: 100%;
+}
+.spinner.vcentered {
+  left: 0;
+  margin-top: -12px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 50%;
+}
+.spinner .graphic, .ajax-loading-image {
+  animation: spin 1.2s infinite linear;
+  box-sizing: border-box;
+  border-color: #eee;
+  border-radius: 50%;
+  border-style: solid;
+  border-top-color: #666;
+  border-top-style: solid;
+  border-width: 2px;
+  content: "";
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  vertical-align: middle;
+  width: 20px;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+</style>
+
+<link rel="stylesheet" media="screen" href="https://d3nn82uaxijpm6.cloudfront.net/assets/strava-app-icons-dff4c105de7bc4e5105473cf3756c5a991ebd5e39a5bc3ee0110afa6e0425650.css" />
+<link rel="stylesheet" media="screen" href="https://d3nn82uaxijpm6.cloudfront.net/assets/strava-orion-9d18c50a074dc9ac9bea3bd5ec57737938851e6c53d91da7a6b6524c27763fa7.css" />
+
+<link rel="stylesheet" media="screen" href="https://d3nn82uaxijpm6.cloudfront.net/packs/css/application-5fe93d3b.chunk.css" />
+<script src="https://d3nn82uaxijpm6.cloudfront.net/packs/js/application-0ba1397768998e539bdb.chunk.js"></script>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/apple-touch-icon-180x180.png?v=dLlWydWlG8' rel='apple-touch-icon' sizes='180x180'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/apple-touch-icon-152x152.png?v=dLlWydWlG8' rel='apple-touch-icon' sizes='152x152'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/apple-touch-icon-144x144.png?v=dLlWydWlG8' rel='apple-touch-icon' sizes='144x144'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/apple-touch-icon-120x120.png?v=dLlWydWlG8' rel='apple-touch-icon' sizes='120x120'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/apple-touch-icon-114x114.png?v=dLlWydWlG8' rel='apple-touch-icon' sizes='114x114'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/apple-touch-icon-76x76.png?v=dLlWydWlG8' rel='apple-touch-icon' sizes='76x76'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/apple-touch-icon-72x72.png?v=dLlWydWlG8' rel='apple-touch-icon' sizes='72x72'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/apple-touch-icon-60x60.png?v=dLlWydWlG8' rel='apple-touch-icon' sizes='60x60'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/apple-touch-icon-57x57.png?v=dLlWydWlG8' rel='apple-touch-icon' sizes='57x57'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/favicon-32x32.png?v=dLlWydWlG8' rel='icon' sizes='32x32' type='image/png'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/icon-strava-chrome-192.png?v=dLlWydWlG8' rel='icon' sizes='192x192' type='image/png'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/favicon-96x96.png?v=dLlWydWlG8' rel='icon' sizes='96x96' type='image/png'>
+<link href='https://d3nn82uaxijpm6.cloudfront.net/favicon-16x16.png?v=dLlWydWlG8' rel='icon' sizes='16x16' type='image/png'>
+<link href='/manifest.json?v=dLlWydWlG8' rel='manifest'>
+<meta content='#FC5200' name='msapplication-TileColor'>
+<meta content='https://d3nn82uaxijpm6.cloudfront.net/mstile-144x144.png?v=dLlWydWlG8' name='msapplication-TileImage'>
+<meta content='#FC5200' name='theme-color'>
+<meta content='Strava' name='apple-mobile-web-app-title'>
+<meta content='Strava' name='application-name'>
+<meta content='yes' name='apple-mobile-web-app-capable'>
+<meta content='black' name='apple-mobile-web-app-status-bar-style'>
+
+<script type='application/ld+json'>
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "Strava",
+  "url": "https://www.strava.com/",
+  "logo": "https://d3nn82uaxijpm6.cloudfront.net/assets/brands/strava/logo-strava-lg-5671105ffddb86e437bb68503a4973e8bf07e2a41c0b332d3e3bced21d537e98.png",
+  "sameAs": [
+    "https://facebook.com/Strava",
+    "https://twitter.com/strava",
+    "https://instagram.com/strava",
+    "https://youtube.com/stravainc",
+    "https://blog.strava.com",
+    "https://github.com/strava",
+    "https://medium.com/strava-engineering"
+  ]
+}
+
+
+</script>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="UecSYPNhZG+oc+zBI9A5tFS2uIW/b5O5y2dkVheurhCHB+iflT7m5aq8wBCw8f52HpT5Hvc3WCocKnI8dnmi4A==" />
+<script src="https://d3nn82uaxijpm6.cloudfront.net/packs/js/chunking_runtime-e727879288996dfe4461.js"></script>
+<script src="https://d3nn82uaxijpm6.cloudfront.net/packs/js/global-404cfbf464f8102710c4.chunk.js"></script>
+<script src="https://d3nn82uaxijpm6.cloudfront.net/assets/strava-head-d0f4c1f1472bbfd71048d6bbbe5e3b9041ec1330343ab67cfc3a6099b8fee09e.js"></script>
+
+
+<link rel="stylesheet" media="screen" href="https://d3nn82uaxijpm6.cloudfront.net/assets/segments/show-deb34c5603f8040e3db057abb7c6464cb9e3a5eb5e7f3fd39545e353f4ccee2a.css" />
+<link rel="stylesheet" media="screen" href="https://d3nn82uaxijpm6.cloudfront.net/packs/css/segments-1c300dad.chunk.css" />
+<title>Marston Ferry Dash | Strava Run Segment in Oxford, Oxfordshire, United Kingdom</title>
+<meta content='View bike ride segment, 1.3 kilometers long, starting in Oxford, Oxfordshire, with 6 meters in elevation gain.' type='description'>
+<link href='https://www.strava.com/segments/3336587' rel='canonical'>
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+    {'gtm.start': new Date().getTime(),event:'gtm.js'}
+    );var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','googleTagManagerDataLayer', "GTM-TP845S");
+</script>
+
+
+<script>
+  !function(options){
+    // Temporary fix to try and unstick queued snowplow events
+    var queueStorageKey = 'snowplowOutQueue_snowplow_cf_get';
+    if (localStorage && localStorage[queueStorageKey]) {
+      try {
+        var queue = JSON.parse(localStorage.getItem(queueStorageKey));
+        var filteredQueue = queue.filter(function(i) {
+            return i.length < 5000;
+        });
+        localStorage.setItem(queueStorageKey, JSON.stringify(filteredQueue));
+      } catch (e) {
+      }
+    }
+  
+    window.Strava = window.Strava || {};
+    var _enabled = true;
+    var _options = options;
+    var _snowplowReady = null;
+  
+    window.Strava.ExternalAnalytics = window.Strava.ExternalAnalytics || (
+      {
+        isEnabled: function() {
+          return _enabled;
+        },
+        isDebug: function() {
+          return _options.debug;
+        },
+        track: function() {
+        },
+        trackV2: function(event) {
+          var eventData = {
+            'category': event.category,
+            'page': event.page,
+            'action': event.action,
+            'element': event.element || null,
+            'properties': event.properties || {}
+          }
+          if (this.isEnabled()) {
+            snowplow('trackSelfDescribingEvent', {
+              schema: 'iglu:com.strava/track/jsonschema/1-0-0',
+              data: eventData
+            });
+          } else {
+            !!console.table && console.table(eventData);
+          }
+        },
+        trackLink: function() {
+        },
+        trackForm: function() {
+        },
+        identifyV2: function () {
+        },
+        page: function(pageProperties) {
+          if(this.isEnabled()) {
+            snowplow('trackPageView');
+          }
+        },
+        identify: function(athleteId, options, eventName) {
+          if (this.isEnabled()) {
+            var properties = options || {}
+            properties.athlete_id = athleteId;
+            var eventData = {
+              'category': 'identify',
+              'page': null,
+              'action': eventName,
+              'element': null,
+              'properties': properties
+            };
+            snowplow('trackSelfDescribingEvent', {
+              schema: 'iglu:com.strava/track/jsonschema/1-0-0',
+              data: eventData
+            });
+          }
+        },
+        reset: function() {
+          if(this.isEnabled()) {
+            snowplow('setUserId', null)
+            var spCookie = document.cookie.match('_sp_id\\.[a-f0-9]+')
+            if(spCookie != null) {
+              document.cookie = spCookie[0] + "= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
+            }
+          }
+        },
+        setupSnowplow: function(id) {
+          if(this.isEnabled()) {
+            snowplow("newTracker", "cf", "c.strava.com", {
+              appId: "strava-web",
+              platform: "web"
+            });
+            snowplow('setUserId', id);
+            snowplow('enableFormTracking');
+          }
+        },
+        getDomainUserId: function() {
+          var d = jQuery.Deferred();
+          if (this.isEnabled()) {
+            if (!_snowplowReady) {
+              _snowplowReady = jQuery.Deferred();
+              snowplow(function(){
+                _snowplowReady.resolve(this.cf.getDomainUserId());
+              });
+            }
+            _snowplowReady.always(function(getDomainUserId){
+              d.resolve(getDomainUserId);
+            });
+          } else {
+            d.reject(null);
+          }
+          return d;
+        },
+        log: function(message, values) {
+          if(this.isDebug()) {
+            console.log(message, 'background-color: yellow; color: blue; font-size: medium;', values);
+          }
+        },
+        debug: function(value) {
+          _options.debug = value;
+        }
+      }
+    )
+  }({
+    is_mobile: false,
+    os: "",
+    debug: false,
+    athlete_id: 1619378,
+    locale: "en-GB"
+  });
+</script>
+
+<script>
+  !function(){
+    var analytics = window.analytics = window.analytics || [];
+    if(analytics.invoked) {
+      window.console && console.error && console.error("Segment snippet included twice.");
+    } else {
+      (function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","https://dy9z4910shqac.cloudfront.net/1oG5icild0laCtJMi45LjA.js","snowplow"));
+      Strava.ExternalAnalytics.setupSnowplow(1619378);
+  
+      Strava.ExternalAnalytics.page(null);
+    }
+  }();
+</script>
+
+<script>
+  !function(debug){
+    window.Strava = window.Strava || {};
+    var _enabled = true;
+    var _debug = !!debug;
+    var _branchData = null;
+  
+    window.Strava.BranchIO = window.Strava.BranchIO || (
+      {
+        isEnabled: function() {
+          return _enabled;
+        },
+        isDebug: function() {
+          return _debug;
+        },
+        dataToLocalStorage: function() {
+          if (!_branchData) {
+            _branchData = new Strava.BranchAnalytics.BranchData();
+          }
+  
+          var d = this.data()
+          var that = this;
+          d.done(function(data) {
+            that.log('storing data %o to local storage', data)
+            _branchData.data(data)
+          });
+          d.fail(function(message) {
+            that.log('failed to retrieve data from branch');
+            _branchData.data({})
+          });
+          return d;
+        },
+        createLink: function(options) {
+          var d = jQuery.Deferred();
+          var data = null;
+          const that = this;
+          var callback = function(e, l) {
+            if (!e) {
+              d.resolve(l);
+            } else {
+              d.reject(e);
+            }
+          }
+          if (options.peek_data) {
+            data = this.dataFromLocalStorage();
+            if (data && data.data_parsed && data.data_parsed['~referring_link']) {
+              d.resolve(data.data_parsed['~referring_link']);
+            } else {
+              d.reject();
+            }
+          } else {
+  
+            Strava.ExternalAnalytics
+              .getDomainUserId()
+              .always(function(domainUserId){
+                if (domainUserId) {
+                  options.data['domainUserId'] = domainUserId;
+                }
+  
+                if(that.isEnabled()) {
+                  branch.link(options, callback);
+                };
+            });
+          }
+          return d;
+        },
+        dataFromLocalStorage: function() {
+          if (!_branchData) {
+            _branchData = new Strava.BranchAnalytics.BranchData();
+          }
+          return _branchData.data();
+        },
+        clearLocalStorage: function() {
+          if (!_branchData) {
+            _branchData = new Strava.BranchAnalytics.BranchData();
+          }
+          _branchData.data({});
+        },
+        data: function(checkLocalStorage) {
+          var d = jQuery.Deferred();
+          var that = this;
+          var c = function(message, meta_data) {
+            var storedData = null;
+  
+            if(message) {
+              d.reject(message);
+            } else {
+              if (checkLocalStorage == true && (meta_data == null || meta_data.data == "" || meta_data.data == null)) {
+                storedData = that.dataFromLocalStorage();
+                that.clearLocalStorage();
+  
+                d.resolve(storedData);
+              } else {
+                d.resolve(meta_data);
+              }
+            }
+          };
+  
+          if(this.isEnabled()) {
+            branch.data(c);
+            this.log('%cdata (branch enabled)');
+          } else {
+            this.log('%cdata (branch disabled)');
+            d.resolve({});
+          }
+          return d;
+        },
+        identify: function(athleteId) {
+          var callback = function(error, data) {
+            if (error) {
+              console.log(error);
+            }
+          }
+          if(this.isEnabled()) {
+            branch.setIdentity(athleteId, callback);
+          }
+        },
+        track: function(eventName, metaData) {
+          var callback = function(error, data) {
+            if (error) {
+              console.log(error);
+            }
+          }
+          if(this.isEnabled()) {
+            branch.track(eventName, metaData, callback);
+          }
+        },
+        log: function(message, values) {
+          if(this.isDebug()) {
+            console.log(message, 'background-color: yellow; color: blue; font-size: medium;', values);
+          }
+        },
+        debug: function(value) {
+          _debug = value;
+        }
+      }
+    )
+  }(false);
+</script>
+
+<script>
+  (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode banner closeBanner creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode".split(" "), 0);
+  branch.init("key_live_lmpPsfj2DP8CflI4rmzfiemerte7sgwm", {});
+</script>
+
+</head>
+<body>
+<noscript>
+<iframe height='0' src='//www.googletagmanager.com/ns.html?id=GTM-TP845S' style='display:none;visibility:hidden' width='0'></iframe>
+</noscript>
+
+<link rel="stylesheet" media="screen" href="https://d3nn82uaxijpm6.cloudfront.net/assets/common/smartbanner_orion-2d815ff185df733b835fcc83c93080835593cb5aa031e983fbc59b3e5f8244bc.css" />
+<div class='container smartbanner-content pt-md pb-md' id='smartbanner-orion'>
+<div class='row'>
+<div class='col-xs-12'>
+<img class="app-icon" src="https://d3nn82uaxijpm6.cloudfront.net/assets/activities/icon-ios-app-fdd1ed3da3ce334990af99517dc8f735832f6e5a3bb97feff3abdbd091caffba.svg" />
+<div class='app-info mt-xs'>
+<div class='app-name'>Strava</div>
+<div class='app-subtitle'>Free app for Android and iPhone</div>
+</div>
+<div class='text-right mt-xs'>
+<a href="https://www.strava.com/mobile" class="btn btn-primary btn-outline btn-cta text-uppercase" role="button">Download</a>
+</div>
+</div>
+</div>
+</div>
+
+<header id='global-header'><!--
+deploy: 836538b98306f41be8b3471b5f1c7fede85103c4
+-->
+<!--[if lte IE 8]>
+<div class='alert alert-warning message warning mb-0 text-center'>
+<p>It looks like you're using a version of Internet Explorer that Strava no longer supports. Please <a href='http://www.microsoft.com/en-us/download/ie.aspx?q=internet+explorer'>upgrade your web browser</a> &mdash; <a href='https://strava.zendesk.com/entries/20420212-Supported-Browsers-on-Strava'>Learn more</a>.</p>
+</div>
+<![endif]-->
+<nav class='nav-bar container collapsable-nav' role='navigation'>
+<div title="Return to the Strava home page" class="branding"><a class="branding-content" href="/"><span class="sr-only">Strava</span></a></div>
+<!-- / Nav Menu Button -->
+<a href="#container-nav" aria-expanded="false" aria-controls="container-nav" data-toggle="collapse" class="btn btn-default btn-mobile-menu" role="button">Menu</a>
+<div class='nav-container collapse' id='container-nav'>
+<form class='form-inline' id='global-search-bar'>
+<div class='form-group bottomless'>
+<div class='dropdown' id='global-search-filter'>
+<button aria-expanded='false' aria-haspopup='true' class='btn btn-default btn-icon btn-icon-right' data-toggle='dropdown' data-value='athletes'>
+<span class='btn-label'>Athletes</span>
+<span class="app-icon-wrapper  "><span class="app-icon icon-caret-down icon-dark icon-sm"></span></span>
+</button>
+<ul aria-labeledby='global-search-filter' class='dropdown-menu' role='menu'>
+<li>
+<div class='clickable' data-value='activities'>
+Activities
+</div>
+</li>
+<li>
+<div class='clickable' data-value='athletes'>
+Athletes
+</div>
+</li>
+<li>
+<div class='clickable' data-value='clubs'>
+Clubs
+</div>
+</li>
+<li>
+<div class='clickable' data-value='segments'>
+Segments
+</div>
+</li>
+</ul>
+</div>
+<div class='input-group'>
+<label class='btn btn-white btn-icon btn-icon-only' for='global-search-field' id='global-search-button' title='Search'>
+<span class="app-icon-wrapper  "><span class="app-icon icon-search icon-lg icon-dark"></span></span>
+</label>
+<input class='form-control' data-search-filter='athletes' id='global-search-field' placeholder='Search' type='text'>
+<div class='btn btn-white btn-icon btn-icon-only' id='global-search-cancel' title='Cancel'>
+<span class="app-icon-wrapper  "><span class="app-icon icon-remove icon-sm icon-dark"></span></span>
+</div>
+</div>
+<div id='global-search-autocomplete-anchor'>
+<div id='global-search-autocomplete-container'></div>
+</div>
+</div>
+</form>
+
+<ul class='global-nav nav-group'>
+<li class='nav-item drop-down-menu' data-log-category='dashboard' data-log-page='dashboard'>
+<a class="selection nav-link" href="/dashboard">Dashboard
+</a><ul class='options'>
+<li class=''>
+<a href="/dashboard">Activity Feed</a>
+</li>
+<li class=''>
+<a href="/athlete/segments/starred">My Segments</a>
+</li>
+<li class=''>
+<a href="/athlete/routes">My Routes</a>
+</li>
+<li class='premium opt-group'>
+<div class='text-caption4 subscription-callout'>
+SUBSCRIPTION
+</div>
+<ul>
+<li class='' data-log-element='my_goals'>
+<a href="/athlete/goals">My Goals
+</a></li>
+<li class='' data-log-element='heatmaps'>
+<a href="/athlete/heatmaps">Heatmaps
+</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class='nav-item drop-down-menu' data-log-category='training' data-log-page='training'>
+<a class="selection nav-link" href="/athlete/training/log">Training
+</a><ul class='options'>
+<li class=''>
+<a href="/athlete/calendar">Training Calendar</a>
+</li>
+<li class=''>
+<a href="/athlete/training">My Activities</a>
+</li>
+<li class='premium opt-group'>
+<div class='text-caption4 subscription-callout'>
+SUBSCRIPTION
+</div>
+<ul>
+<li>
+<a href="/athlete/training/log">Training Log</a>
+</li>
+<li class='' data-log-element='training_plans'>
+<a href="/training-plans">Training Plans
+</a></li>
+<li class='' data-log-element='power_curve'>
+<a href="/athlete/analysis">Power Curve
+</a></li>
+<li class='' data-log-element='fitness_and_freshness'>
+<a href="/athlete/fitness">Fitness &amp; Freshness
+</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class='nav-item drop-down-menu selected' data-log-category='explore' data-log-page='explore'>
+<a class="selection nav-link" href="/segments/explore">Explore
+</a><ul class='options'>
+<li class=''>
+<a href="/segments/explore">Segment Explore</a>
+</li>
+<li class='selected'>
+<a href="/segments/search">Segment Search</a>
+</li>
+<li class=''>
+<a href="/athletes/search">Athlete Search</a>
+</li>
+<li class=''>
+<a href="/clubs/search">Clubs</a>
+</li>
+<li class=''>
+<a href="/apps">Apps</a>
+</li>
+<li class=''>
+<a href="/featured-running-races">Running Races</a>
+</li>
+<li class=''>
+<a href="/local">Local</a>
+</li>
+<li class='premium opt-group'>
+<div class='text-caption4 subscription-callout'>
+SUBSCRIPTION
+</div>
+<ul>
+<li data-log-element='create_a_route'>
+<a href="/routes/new">Create a Route
+</a></li>
+<li class='' data-log-element='summit_perks'>
+<a href="/premium/perks">Subscriber Perks
+</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class='nav-item'>
+<a class="nav-link" href="/challenges">Challenges
+</a></li>
+</ul>
+
+<ul class='user-nav nav-group'>
+<li class='nav-item upgrade'>
+<a class="experiment btn btn-sm btn-primary" href="/premium?cta=premium&amp;element=link&amp;source=global-header">Subscribe
+</a></li>
+<li class='nav-item' id='notifications'>
+<button class='btn btn-unstyled empty' id='notifications-button' title='0 new notifications'>
+<div class='app-icon-wrapper'>
+<div class='app-icon icon-notification'>
+Notifications
+</div>
+</div>
+<div id='notifications-count'>0</div>
+</button>
+<div aria-labeledby='notifications-button' id='notifications-drop-down'>
+<ul>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/activities/5285697037#kudos'>
+<img class='avatar-img no-avatar' data-src='https://d3nn82uaxijpm6.cloudfront.net/assets/avatar/athlete/large-800a7033cc92b2a5548399e26b1ef42414dd1a9cb13b99454222d38d58fd28ef.png'>
+<div class='notification-text text-caption1'>
+<strong>Evie Morris-Gray</strong> and 3 others gave you kudos on <strong>5x1k (1', 4') 5x300 (1')</strong>.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/activities/5285697037'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/1619378/5071404/1/large.jpg'>
+<div class='notification-text text-caption1'>
+Your <strong>run</strong> is ready to view.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/activities/5274287541#kudos'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/39627931/11617963/3/large.jpg'>
+<div class='notification-text text-caption1'>
+<strong>🚁 Will Shardlow 🚁</strong> and 5 others gave you kudos on <strong>Afternoon Run</strong>.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/activities/5274287541'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/1619378/5071404/1/large.jpg'>
+<div class='notification-text text-caption1'>
+Your <strong>run</strong> is ready to view.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/segments/24979252'>
+<img class='avatar-img no-avatar' data-src='https://graph.facebook.com/840657822732680/picture?height=256&amp;width=256'>
+<div class='notification-text text-caption1'>
+Uh oh! You just lost your CR on <strong>Meadow cut thru South</strong> by <strong>1s</strong>.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/activities/5263350767#kudos'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/23241349/9087194/5/large.jpg'>
+<div class='notification-text text-caption1'>
+<strong>Meg Somers</strong> and 21 others gave you kudos on <strong>Afternoon Run</strong>.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/segments/21218634'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/10897836/3308286/4/large.jpg'>
+<div class='notification-text text-caption1'>
+Uh oh! You just lost your CR on <strong>Chiswell gravel of glory</strong> by <strong>9s</strong>.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/activities/5263350767'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/1619378/5071404/1/large.jpg'>
+<div class='notification-text text-caption1'>
+Your <strong>run</strong> is ready to view.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/activities/5252619932#kudos'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/39627931/11617963/3/large.jpg'>
+<div class='notification-text text-caption1'>
+<strong>🚁 Will Shardlow 🚁</strong> and 21 others gave you kudos on <strong>Afternoon Run</strong>.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/activities/5247271412#kudos'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/11164697/10320467/1/large.jpg'>
+<div class='notification-text text-caption1'>
+<strong>Luke Cotter</strong> and 16 others gave you kudos on <strong>8 x 3' (1')</strong>.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/activities/5257448169#kudos'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/49040679/14664632/4/large.jpg'>
+<div class='notification-text text-caption1'>
+<strong>Ellen Williams</strong> and 3 others gave you kudos on <strong>Afternoon Run</strong>.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/activities/5257448169'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/1619378/5071404/1/large.jpg'>
+<div class='notification-text text-caption1'>
+Your <strong>run</strong> is ready to view.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/activities/5252619932#comments'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/11164697/10320467/1/large.jpg'>
+<div class='notification-text text-caption1'>
+<strong>Luke Cotter</strong> commented on <strong>Afternoon Run</strong>.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/activities/5252619932'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/1619378/5071404/1/large.jpg'>
+<div class='notification-text text-caption1'>
+Your <strong>run</strong> is ready to view.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/activities/5241808300#kudos'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/23241349/9087194/5/large.jpg'>
+<div class='notification-text text-caption1'>
+<strong>Meg Somers</strong> and 4 others gave you kudos on <strong>Afternoon Run</strong>.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/activities/5247271412'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/1619378/5071404/1/large.jpg'>
+<div class='notification-text text-caption1'>
+Your <strong>run</strong> is ready to view.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/activities/5241808300'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/1619378/5071404/1/large.jpg'>
+<div class='notification-text text-caption1'>
+Your <strong>run</strong> is ready to view.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/activities/5234583096#kudos'>
+<img class='avatar-img no-avatar' data-src='https://lh3.googleusercontent.com/a-/AOh14GiIW9kRWjihlIzn9gx0sCWXtn6p4apbAUxLDAUA=s96-c'>
+<div class='notification-text text-caption1'>
+<strong>Rupert Allison</strong> and 15 others gave you kudos on <strong>Morning Run</strong>.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/activities/5234583096'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/1619378/5071404/1/large.jpg'>
+<div class='notification-text text-caption1'>
+Your <strong>run</strong> is ready to view.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/athletes/48148148'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/48148148/13727652/7/large.jpg'>
+<div class='notification-text text-caption1'>
+Nice! <strong>Adam Wilson</strong> is following you on Strava.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/activities/5225185044#kudos'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/1881280/557991/10/large.jpg'>
+<div class='notification-text text-caption1'>
+<strong>Liam Smith</strong> and 8 others gave you kudos on <strong>2x[8' (3') 4x1' (45")]</strong>.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/activities/5225185044'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/1619378/5071404/1/large.jpg'>
+<div class='notification-text text-caption1'>
+Your <strong>run</strong> is ready to view.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/segments/23762434'>
+<img class='avatar-img no-avatar' data-src='https://graph.facebook.com/10154002997550079/picture?height=256&amp;width=256'>
+<div class='notification-text text-caption1'>
+Uh oh! You just lost your CR on <strong>Mount Wormsley</strong> by <strong>30s</strong>.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/activities/5214047069#kudos'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/47014763/13946473/1/large.jpg'>
+<div class='notification-text text-caption1'>
+<strong>William Bowers</strong> and 12 others gave you kudos on <strong>Afternoon Run</strong>.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/activities/5214047069'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/1619378/5071404/1/large.jpg'>
+<div class='notification-text text-caption1'>
+Your <strong>run</strong> is ready to view.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/activities/5208963190#kudos'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/1362949/1531703/5/large.jpg'>
+<div class='notification-text text-caption1'>
+<strong>Nick Cunkelman</strong> and 15 others gave you kudos on <strong>3x[5', 2.5'] (2.5') @ 5k pace</strong>.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/segments/8527663'>
+<img class='avatar-img no-avatar' data-src='https://graph.facebook.com/10156153888392660/picture?height=256&amp;width=256'>
+<div class='notification-text text-caption1'>
+Uh oh! You just lost your CR on <strong>Lights to Bridge</strong> by <strong>3s</strong>.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/segments/1090301'>
+<img class='avatar-img no-avatar' data-src='https://graph.facebook.com/10156153888392660/picture?height=256&amp;width=256'>
+<div class='notification-text text-caption1'>
+Uh oh! You just lost your CR on <strong>Headington Hill Run</strong> by <strong>4s</strong>.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/segments/6445462'>
+<img class='avatar-img no-avatar' data-src='https://graph.facebook.com/10156153888392660/picture?height=256&amp;width=256'>
+<div class='notification-text text-caption1'>
+Uh oh! You just lost your CR on <strong>Up Headington Hill from car park</strong> by <strong>4s</strong>.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/segments/6004910'>
+<img class='avatar-img no-avatar' data-src='https://graph.facebook.com/10156153888392660/picture?height=256&amp;width=256'>
+<div class='notification-text text-caption1'>
+Uh oh! You just lost your CR on <strong>Up Headington Hill</strong> by <strong>3s</strong>.
+</div>
+</a>
+</li>
+<li class='read'>
+<a class='clearfix avatar-athlete' href='/segments/15739736'>
+<img class='avatar-img no-avatar' data-src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/11603325/19001459/2/large.jpg'>
+<div class='notification-text text-caption1'>
+Uh oh! You just lost your CR on <strong>Orbital Kingsway North (14) to Crichton Avenue (15)</strong> by <strong>2s</strong>.
+</div>
+</a>
+</li>
+</ul>
+</div>
+</li>
+<li class='nav-item drop-down-menu user-menu'>
+<a class='nav-link selection' href='/athletes/1619378'>
+<div class='avatar avatar-athlete'>
+<img alt="Jamie" class="avatar-img" src="https://dgalywyr863hv.cloudfront.net/pictures/athletes/1619378/5071404/1/medium.jpg" />
+</div>
+<span class='athlete-name'>
+Jamie Parkinson
+</span>
+</a>
+<ul class='options'>
+<li class='featured'>
+<span class='clickable find-and-invite' data-source='header menu'>
+Find Friends
+</span>
+</li>
+<li><a href="/athletes/1619378">My Profile</a></li>
+<li><a href="/settings/profile">Settings</a></li>
+<li><a rel="nofollow" data-method="delete" href="/session">Log Out</a></li>
+</ul>
+</li>
+<li class='nav-item drop-down-menu upload-menu'>
+<a class='nav-link selection' href='/upload'>
+<div class='upload-button-wrapper'>
+<div class='upload-button icon-upload app-icon icon-sm'>
+Upload
+</div>
+</div>
+</a>
+<ul class='options'>
+<li>
+<a href='/upload'>
+<span class='upload-activity app-icon icon-upload-activity'></span>
+Upload activity
+</a>
+</li>
+<li>
+<a href='/upload/manual'>
+<span class='upload-activity-manual app-icon icon-upload-activity-manual'></span>
+Add manual entry
+</a>
+</li>
+<li>
+<a href='/routes/new'>
+<span class='upload-route app-icon icon-upload-route'></span>
+Create a route
+</a>
+</li>
+<li>
+<a href='/athletes/1619378/posts/new'>
+<span class='create-post app-icon icon-create-post'></span>
+Create a post
+</a>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class='section sidebar-footer'>
+<ul class='mt-md mb-sm'>
+<li><a href="https://strava.zendesk.com/home">Support</a></li>
+<li><a href="/premium">Subscription</a></li>
+<li><a href="/legal/terms">Terms and Conditions</a></li>
+<li><a href="/legal/privacy">Privacy Policy</a></li>
+</ul>
+<ul class='mt-sm mb-md'>
+<li class='dropdown drop-down-menu drop-down-xs enabled' id='language-picker'>
+<button aria-haspopup class='btn btn-default btn-xs dropdown-selection btn-white selection' data-toggle='dropdown' id='dropdown-language-picker-button' tabindex='0'>
+British English
+</button>
+<ul aria-labeledby='dropdown-language-picker-button' class='dropdown-menu anchor-bottom' role='menu'>
+<li>
+<div class='replace-selection clickable language-pick' language-code='en-GB'>British English</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='de-DE'>Deutsch</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='en-US'>English (US)</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='es-ES'>español</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='es-419'>español latinoamericano</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='fr-FR'>français</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='it-IT'>italiano</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='nl-NL'>Nederlands</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='pt-PT'>português</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='pt-BR'>português do Brasil</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='ru-RU'>русский</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='ko-KR'>한국어</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='zh-CN'>中文</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='ja-JP'>日本語</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='zh-TW'>繁體中文</div>
+</li>
+</ul>
+</li>
+<li class='dropdown drop-down-menu drop-down-xs enabled' id='dropdown-more'>
+<button aria-haspopup class='btn btn-default btn-xs dropdown-selection btn-white selection' data-toggle='dropdown' id='dropdown-more-button' tabindex='0'>
+About
+</button>
+<ul aria-labeledby='dropdown-more-button' class='dropdown-menu anchor-bottom' role='menu'>
+<li><a href="/about">About</a></li>
+<li><a href="/careers">Careers</a></li>
+<li><a href="https://business.strava.com">Business</a></li>
+<li><a href="http://labs.strava.com/developers">Developers</a></li>
+<li><a href="http://labs.strava.com">Labs</a></li>
+<li><a href="https://strava.zendesk.com/entries/46363890-About-Strava-Maps">About Our Maps</a></li>
+<li><a href="/community-standards">Strava Community Standards</a></li>
+</ul>
+</li>
+<li class='dropdown drop-down-menu drop-down-xs enabled' id='dropdown-follow-us'>
+<button aria-haspopup class='btn btn-default btn-xs dropdown-selection btn-white selection' data-toggle='dropdown' id='dropdown-follow-us-button' tabindex='0'>
+Follow Us
+</button>
+<ul aria-labeledby='dropdown-follow-us-button' class='dropdown-menu anchor-bottom' role='menu'>
+<li><a target="_blank" href="http://www.facebook.com/Strava">Facebook</a></li>
+<li><a target="_blank" href="http://twitter.com/strava">Twitter</a></li>
+<li><a target="_blank" href="http://instagram.com/strava">Instagram</a></li>
+<li><a target="_blank" href="http://www.youtube.com/stravainc">YouTube</a></li>
+<li><a href="http://blog.strava.com">Blog</a></li>
+</ul>
+</li>
+</ul>
+<div class='copyright mt-md mb-md'>
+© 2021 Strava
+</div>
+</div>
+
+</div>
+</nav>
+</header>
+
+
+<div class='messages' id='system-messages-js'>
+<div class='flash-messages'>
+</div>
+<div class='container'></div>
+</div>
+
+
+<script id='custom-map-controls-show-privacy-fullscreen-template' type='text/template'>
+<div id='map-control-container' style='padding: 5px'>
+<div class='js-map-control' id='map-control-container' index='1'>
+<div class='inline-inputs' id='strava-map-controls'>
+
+
+<div class='drop-down-menu' id='map-type-control'>
+<a class='selection' data-map-type-id='standard' id='selected-map'>Standard Map</a>
+<ul class='options'>
+<li>
+<a class='map-type-selector' data-map-type-id='satellite'>Satellite Map</a>
+</li>
+<li>
+<a id='start-street-view'>Street View (Start)</a>
+</li>
+<li>
+<a id='end-street-view'>Street View (End)</a>
+</li>
+<li>
+<label>
+<input id='privacy_toggle' type='checkbox'>Show Privacy Zone</input>
+</label>
+</li>
+</ul>
+</div>
+
+<a class='button' id='toggle-fullscreen'></a>
+</div>
+</div>
+</div>
+</script>
+<script id='custom-map-controls-suggest-privacy-fullscreen-template' type='text/template'>
+<div id='map-control-container' style='padding: 5px'>
+<div class='js-map-control' id='map-control-container' index='1'>
+<div class='inline-inputs' id='strava-map-controls'>
+
+
+<div class='drop-down-menu' id='map-type-control'>
+<a class='selection' data-map-type-id='standard' id='selected-map'>Standard Map</a>
+<ul class='options'>
+<li>
+<a class='map-type-selector' data-map-type-id='satellite'>Satellite Map</a>
+</li>
+<li>
+<a id='start-street-view'>Street View (Start)</a>
+</li>
+<li>
+<a id='end-street-view'>Street View (End)</a>
+</li>
+<li>
+<a href='/settings/privacy'>Add Privacy Zone</a>
+</li>
+</ul>
+</div>
+
+<a class='button' id='toggle-fullscreen'></a>
+</div>
+</div>
+</div>
+</script>
+<script id='custom-map-controls-show-privacy-template' type='text/template'>
+<div id='map-control-container' style='padding: 5px'>
+<div class='js-map-control' id='map-control-container' index='1'>
+<div class='inline-inputs' id='strava-map-controls'>
+
+
+<div class='drop-down-menu' id='map-type-control'>
+<a class='selection' data-map-type-id='standard' id='selected-map'>Standard Map</a>
+<ul class='options'>
+<li>
+<a class='map-type-selector' data-map-type-id='satellite'>Satellite Map</a>
+</li>
+<li>
+<a id='start-street-view'>Street View (Start)</a>
+</li>
+<li>
+<a id='end-street-view'>Street View (End)</a>
+</li>
+<li>
+<label>
+<input id='privacy_toggle' type='checkbox'>Show Privacy Zone</input>
+</label>
+</li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+</script>
+<script id='custom-map-controls-suggest-privacy-template' type='text/template'>
+<div id='map-control-container' style='padding: 5px'>
+<div class='js-map-control' id='map-control-container' index='1'>
+<div class='inline-inputs' id='strava-map-controls'>
+
+
+<div class='drop-down-menu' id='map-type-control'>
+<a class='selection' data-map-type-id='standard' id='selected-map'>Standard Map</a>
+<ul class='options'>
+<li>
+<a class='map-type-selector' data-map-type-id='satellite'>Satellite Map</a>
+</li>
+<li>
+<a id='start-street-view'>Street View (Start)</a>
+</li>
+<li>
+<a id='end-street-view'>Street View (End)</a>
+</li>
+<li>
+<a href='/settings/privacy'>Add Privacy Zone</a>
+</li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+</script>
+<script id='custom-map-controls-fullscreen-template' type='text/template'>
+<div id='map-control-container' style='padding: 5px'>
+<div class='js-map-control' id='map-control-container' index='1'>
+<div class='inline-inputs' id='strava-map-controls'>
+
+
+<div class='drop-down-menu' id='map-type-control'>
+<a class='selection' data-map-type-id='standard' id='selected-map'>Standard Map</a>
+<ul class='options'>
+<li>
+<a class='map-type-selector' data-map-type-id='satellite'>Satellite Map</a>
+</li>
+<li>
+<a id='start-street-view'>Street View (Start)</a>
+</li>
+<li>
+<a id='end-street-view'>Street View (End)</a>
+</li>
+</ul>
+</div>
+
+<a class='button' id='toggle-fullscreen'></a>
+</div>
+</div>
+</div>
+</script>
+<script id='custom-map-controls-template' type='text/template'>
+<div id='map-control-container' style='padding: 5px'>
+<div class='js-map-control' id='map-control-container' index='1'>
+<div class='inline-inputs' id='strava-map-controls'>
+
+
+<div class='drop-down-menu' id='map-type-control'>
+<a class='selection' data-map-type-id='standard' id='selected-map'>Standard Map</a>
+<ul class='options'>
+<li>
+<a class='map-type-selector' data-map-type-id='satellite'>Satellite Map</a>
+</li>
+<li>
+<a id='start-street-view'>Street View (Start)</a>
+</li>
+<li>
+<a id='end-street-view'>Street View (End)</a>
+</li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+</script>
+
+<div class='container'>
+<div class='section row' id='segment'>
+<div class='segment-heading col-md-12'>
+<div class='segment-name col-md-8'>
+<div class='name'>
+<h1 class='mb-0'>
+<button class='btn btn-xs btn-icon-only btn-icon btn-unstyled starred' data-segment-id='3336587'>
+<span class="app-icon-wrapper  "><span class="app-icon icon-star icon-lg icon-dark"></span></span>
+</button>
+<span data-full-name='Marston Ferry Dash' id='js-full-name'>Marston Ferry Dash</span>
+</h1>
+</div>
+</div>
+<div class='segment-action col-md-4'>
+<div class='dropdown' id='segment-actions'>
+<button aria-haspopup class='btn btn-default dropdown-toggle track-click' data-toggle='dropdown' data-tracking-element='actions' data-tracking-properties='{&quot;button&quot;:&quot;actions&quot;}'>
+Actions
+<span class="app-icon-wrapper  "><span class="app-icon icon-strong-caret-down icon-dark icon-xs"></span></span>
+</button>
+<ul aria-labeledby='segment-actions' class='dropdown-menu' role='menu'>
+<li class='track-click' data-tracking-element='actions' data-tracking-properties='{&quot;button&quot;:&quot;flag&quot;}'>
+<a href="/segments/3336587/feedback">Tell us about this segment</a>
+</li>
+<li class='track-click' data-tracking-element='actions' data-tracking-properties='{&quot;button&quot;:&quot;refresh_my_results&quot;}'>
+<a rel="nofollow" data-method="put" href="/segments/3336587/reset_athlete_leaderboard">Refresh My Results</a>
+</li>
+</ul>
+</div>
+</div>
+<div class='col-md-8'>
+<div class='location'>
+<strong>Run Segment</strong>
+Oxford, Oxfordshire, United Kingdom
+</div>
+<ul class='list-stats inline-stats stats-lg mt-md'>
+<li><div class="stat"><span class="stat-subtext">Distance</span><b class="stat-text">1.39<abbr class='unit' title='kilometers'>km</abbr></b></div></li>
+<li><div class="stat"><span class="stat-subtext">Avg Grade</span><b class="stat-text">-0.1<abbr class='unit' title='percent'>%</abbr></b></div></li>
+<li><div class="stat"><span class="stat-subtext">Lowest Elev</span><b class="stat-text">57<abbr class='unit' title='meters'>m</abbr></b></div></li>
+<li><div class="stat"><span class="stat-subtext">Highest Elev</span><b class="stat-text">64<abbr class='unit' title='meters'>m</abbr></b></div></li>
+<li><div class="stat"><span class="stat-subtext">Elev Difference</span><b class="stat-text">7<abbr class='unit' title='meters'>m</abbr></b></div></li>
+<li><div class="stat attempts"><span class="stat-subtext">43,016 Attempts By 11,735 People</span><b class="stat-text"></b></div></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-md-8'>
+<div class='map-container map-large' id='map_canvas'></div>
+<div class='elevation-chart chart-container mb-sm mt-sm' id='chart-container'>
+<div id='elev-chart'></div>
+</div>
+</div>
+<div class='sidebar col-md-4'>
+<div data-react-class="SegmentDetailsSideBar" data-react-props="{&quot;loggedIn&quot;:true,&quot;sideBarProps&quot;:{&quot;segmentId&quot;:3336587,&quot;viewingAthlete&quot;:{&quot;athleteRestricted&quot;:true,&quot;id&quot;:1619378,&quot;name&quot;:&quot;Jamie Parkinson&quot;,&quot;profile&quot;:&quot;https://dgalywyr863hv.cloudfront.net/pictures/athletes/1619378/5071404/1/medium.jpg&quot;,&quot;date&quot;:&quot;16 Dec 2015&quot;,&quot;stats&quot;:[{&quot;label&quot;:&quot;All-Time PR&quot;,&quot;value&quot;:&quot;4:17&quot;},{&quot;label&quot;:&quot;Segment Efforts&quot;,&quot;value&quot;:30}],&quot;segmentEffortId&quot;:10840643841,&quot;segmentEffortCount&quot;:30,&quot;activityId&quot;:451014770},&quot;fastestTimes&quot;:{&quot;overall&quot;:{&quot;id&quot;:11402939,&quot;name&quot;:&quot;Miles Weatherseed&quot;,&quot;stats&quot;:[{&quot;label&quot;:&quot;CR&quot;,&quot;value&quot;:&quot;4:05&quot;}],&quot;date&quot;:&quot;16 Jan 2021&quot;,&quot;profile&quot;:&quot;https://dgalywyr863hv.cloudfront.net/pictures/athletes/11402939/3569843/4/large.jpg&quot;,&quot;segmentEffortId&quot;:2785571500965511472,&quot;activityId&quot;:4630916461},&quot;women&quot;:{&quot;id&quot;:36866508,&quot;name&quot;:&quot;Nicole Miranda&quot;,&quot;stats&quot;:[{&quot;label&quot;:&quot;CR&quot;,&quot;value&quot;:&quot;4:44&quot;}],&quot;date&quot;:&quot;8 Apr 2014&quot;,&quot;profile&quot;:&quot;https://graph.facebook.com/10161154644720035/picture?height=256\u0026width=256&quot;,&quot;segmentEffortId&quot;:50239490460,&quot;activityId&quot;:1994266866}},&quot;localLegend&quot;:{&quot;id&quot;:36180528,&quot;name&quot;:&quot;Run LangersRun&quot;,&quot;stats&quot;:[{&quot;label&quot;:&quot;Local Legend&quot;,&quot;value&quot;:&quot;80 efforts&quot;}],&quot;mayorEffortCount&quot;:80,&quot;profile&quot;:&quot;https://dgalywyr863hv.cloudfront.net/pictures/athletes/36180528/12853669/1/large.jpg&quot;}}}"></div>
+<div class='section border-top-light hidden' id='performance-goals'>
+<div class='mt-xl mb-xl'><div class='spinner sm vcentered' style=''>
+      <div class='graphic'></div>
+      <span class='status'></span>
+    </div></div>
+</div>
+
+</div>
+</div>
+<h2 class='text-title1'>Your Recent Efforts</h2>
+<div class='recent-efforts-upsell'>
+<div class='graph-bg'>
+<img class='graph-img' src='https://d3nn82uaxijpm6.cloudfront.net/assets/segments/recent_efforts_upsell/recent_efforts_bg-c6d05bcde27d76820c2c5b0d8e71d056b8b5830da3208bbaddfbe43192335e38.png'>
+</div>
+<div class='floating'>
+<div class='text-container'>
+<div class='heading'>
+Track Your Performance
+</div>
+<div class='text'>
+Compare your segment efforts and see how you’re trending over time.
+</div>
+<a class='btn btn-primary btn-outline btn-sm' href='/summit' id='recent-efforts-cta'>
+Subscribe
+</a>
+</div>
+</div>
+</div>
+<h2 class='text-title1'>Leaderboards</h2>
+<div id='segment-leaderboard'>
+<div class='leaderboard row' data-tracking='{&quot;segment_id&quot;:3336587,&quot;viewer_has_previous_effort&quot;:true,&quot;leaderboard_state&quot;:{&quot;total_entries&quot;:10,&quot;leaderboard_filter&quot;:&quot;overall&quot;,&quot;time_filter&quot;:&quot;all_time&quot;,&quot;gender_filter&quot;:&quot;all&quot;},&quot;viewer_rank&quot;:5}' id='segment-results'>
+<div class='col-lg-2 col-md-3'><ul class='filters list-unstyled'>
+<li>
+<a class="option selected" data-type="html" data-filter="overall" data-filter-hide="this-year" data-remote="true" href="/segments/3336587/leaderboard?filter=overall">All Time</a>
+</li>
+<li id='premium-enhanced'>
+<ul class='list-unstyled'>
+<li>
+<a class="filter-link" data-type="html" data-filter="current_year" data-filter-hide="all-time" data-remote="true" href="/segments/3336587/leaderboard?date_range=this_year&amp;filter=current_year">This Year</a>
+<li>
+<a class="filter-link" data-type="html" data-filter="my_results" data-segmentid="3336587" data-remote="true" href="/segments/3336587/leaderboard?filter=my_results">My Results</a>
+</li>
+<li>
+<a class="filter-link" data-type="html" data-filter="following" data-remote="true" href="/segments/3336587/leaderboard?filter=following">People I&#39;m Following</a>
+</li>
+<ul class='list-unstyled'>
+<li class='filter-header'>
+My Clubs
+</li>
+<li><a class="filter-link" data-type="html" data-filter="club" data-clubid="120580" data-remote="true" href="/segments/3336587/leaderboard?club_id=120580&amp;filter=club">OUCCC: Oxford University Cross Country Club</a></li>
+<li><a class="filter-link" data-type="html" data-filter="club" data-clubid="40991" data-remote="true" href="/segments/3336587/leaderboard?club_id=40991&amp;filter=club">Pudsey and Bramley AC</a></li>
+<li><a class="filter-link" data-type="html" data-filter="club" data-clubid="277086" data-remote="true" href="/segments/3336587/leaderboard?club_id=277086&amp;filter=club">Red Bull UK</a></li>
+<li><a class="filter-link" data-type="html" data-filter="club" data-clubid="71631" data-remote="true" href="/segments/3336587/leaderboard?club_id=71631&amp;filter=club">Thames Hare Hounds</a></li>
+<li><a class="filter-link" data-type="html" data-filter="club" data-clubid="697252" data-remote="true" href="/segments/3336587/leaderboard?club_id=697252&amp;filter=club">OUOC</a></li>
+<li><a class="filter-link" data-type="html" data-filter="club" data-clubid="699197" data-remote="true" href="/segments/3336587/leaderboard?club_id=699197&amp;filter=club">Cowley Club</a></li>
+</ul>
+<ul class='list-unstyled'>
+<li class='filter-header'>
+By Age Group
+</li>
+<li class='age-filter collapse'>
+<a class=" filter-link" data-type="html" data-filter="age_group" data-value="0_19" data-remote="true" href="/segments/3336587/leaderboard?age_group=0_19&amp;filter=age_group">19 and under</a>
+</li>
+<li class='age-filter collapse'>
+<a class=" filter-link" data-type="html" data-filter="age_group" data-value="20_24" data-remote="true" href="/segments/3336587/leaderboard?age_group=20_24&amp;filter=age_group">20 to 24</a>
+</li>
+<li class='age-filter collapse'>
+<a class=" filter-link" data-type="html" data-filter="age_group" data-value="25_34" data-remote="true" href="/segments/3336587/leaderboard?age_group=25_34&amp;filter=age_group">25 to 34</a>
+</li>
+<li class='age-filter collapse'>
+<a class=" filter-link" data-type="html" data-filter="age_group" data-value="35_44" data-remote="true" href="/segments/3336587/leaderboard?age_group=35_44&amp;filter=age_group">35 to 44</a>
+</li>
+<li class='age-filter collapse'>
+<a class=" filter-link" data-type="html" data-filter="age_group" data-value="45_54" data-remote="true" href="/segments/3336587/leaderboard?age_group=45_54&amp;filter=age_group">45 to 54</a>
+</li>
+<li class='age-filter collapse'>
+<a class=" filter-link" data-type="html" data-filter="age_group" data-value="55_64" data-remote="true" href="/segments/3336587/leaderboard?age_group=55_64&amp;filter=age_group">55 to 64</a>
+</li>
+<li class='age-filter collapse'>
+<a class=" filter-link" data-type="html" data-filter="age_group" data-value="65_69" data-remote="true" href="/segments/3336587/leaderboard?age_group=65_69&amp;filter=age_group">65 to 69</a>
+</li>
+<li class='age-filter collapse'>
+<a class=" filter-link" data-type="html" data-filter="age_group" data-value="70_74" data-remote="true" href="/segments/3336587/leaderboard?age_group=70_74&amp;filter=age_group">70 to 74</a>
+</li>
+<li class='age-filter collapse'>
+<a class=" filter-link" data-type="html" data-filter="age_group" data-value="75_plus" data-remote="true" href="/segments/3336587/leaderboard?age_group=75_plus&amp;filter=age_group">75+</a>
+</li>
+<li>
+<button aria-expanded='false' class='see-all' data-target='.age-filter' data-toggle='collapse' type='button'>
+<span class='expand'>
+See All
+<span class="app-icon-wrapper  "><span class="app-icon icon-dark icon-caret-down"></span></span>
+</span>
+<span class='less'>
+Show Less
+<span class="app-icon-wrapper  "><span class="app-icon icon-dark icon-caret-up"></span></span>
+</span>
+</button>
+</li>
+</ul>
+<ul class='list-unstyled'>
+<li class='filter-header'>
+By Weight Class
+</li>
+<li class='weight-filter collapse'>
+<a class=" filter-link" data-type="html" data-filter="weight_class" data-value="0_54" data-remote="true" href="/segments/3336587/leaderboard?filter=weight_class&amp;weight_class=0_54">54 kg and under</a>
+</li>
+<li class='weight-filter collapse'>
+<a class=" filter-link" data-type="html" data-filter="weight_class" data-value="55_64" data-remote="true" href="/segments/3336587/leaderboard?filter=weight_class&amp;weight_class=55_64">55 to 64 kg</a>
+</li>
+<li>
+<a class=" filter-link" data-type="html" data-filter="weight_class" data-value="65_74" data-remote="true" href="/segments/3336587/leaderboard?filter=weight_class&amp;weight_class=65_74">65 to 74 kg</a>
+</li>
+<li class='weight-filter collapse'>
+<a class=" filter-link" data-type="html" data-filter="weight_class" data-value="75_84" data-remote="true" href="/segments/3336587/leaderboard?filter=weight_class&amp;weight_class=75_84">75 to 84 kg</a>
+</li>
+<li class='weight-filter collapse'>
+<a class=" filter-link" data-type="html" data-filter="weight_class" data-value="85_94" data-remote="true" href="/segments/3336587/leaderboard?filter=weight_class&amp;weight_class=85_94">85 to 94 kg</a>
+</li>
+<li class='weight-filter collapse'>
+<a class=" filter-link" data-type="html" data-filter="weight_class" data-value="95_104" data-remote="true" href="/segments/3336587/leaderboard?filter=weight_class&amp;weight_class=95_104">95 kg to 104 kg</a>
+</li>
+<li class='weight-filter collapse'>
+<a class=" filter-link" data-type="html" data-filter="weight_class" data-value="105_114" data-remote="true" href="/segments/3336587/leaderboard?filter=weight_class&amp;weight_class=105_114">105 kg to 114 kg</a>
+</li>
+<li class='weight-filter collapse'>
+<a class=" filter-link" data-type="html" data-filter="weight_class" data-value="115_plus" data-remote="true" href="/segments/3336587/leaderboard?filter=weight_class&amp;weight_class=115_plus">115 kg and over</a>
+</li>
+<li>
+<button aria-expanded='false' class='see-all' data-target='.weight-filter' data-toggle='collapse' type='button'>
+<span class='expand'>
+See All
+<span class="app-icon-wrapper  "><span class="app-icon icon-dark icon-caret-down"></span></span>
+</span>
+<span class='less'>
+Show Less
+<span class="app-icon-wrapper  "><span class="app-icon icon-dark icon-caret-up"></span></span>
+</span>
+</button>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class='col-lg-10 col-md-9 leaders'>
+<div class='leaderboards-upsell'>
+<div class='no-padding'>
+<img src='https://d3nn82uaxijpm6.cloudfront.net/assets/segments/upsells/leaderboard_upsell-d22f8c9ac0c4ca5812fdb6b24ff7a62bb0a47a44e8274366115e4a1b56df1d6c.png'>
+<div class='upsell-content'>
+<div class='heading mb-sm pt-sm'>
+Subscribe for Segment Leaderboards
+</div>
+<div class='text'>
+Compete with friends, athletes in your clubs, those of similar age or weight, and more!
+</div>
+<a class='btn btn-primary btn-outline btn-sm' href='/summit' id='upsell-cta'>
+Subscribe
+</a>
+</div>
+</div>
+</div>
+<h4 data-role='active-filters'>Overall
+</h4>
+<table class='table layout summary mb-0'>
+<tr>
+<td class='standing text-nowrap'>
+</td>
+<td class='time text-nowrap'>
+<h5 class='mt-0 text-uppercase text-footnote'>
+My Best Time
+</h5>
+<div class='text-title1'>
+4:17
+</div>
+</td>
+<td class='text-nowrap'>
+</td>
+<td class='text-nowrap'>
+<div class='drop-down-menu minimal'>
+<button class="btn selection btn-unstyled">All</button>
+<ul class='options'>
+<li><a data-type="html" data-remote="true" href="/segments/3336587/leaderboard?club_id=40991&amp;filter=overall&amp;gender=all&amp;weight_class=65_74">All</a></li>
+<li><a data-type="html" data-remote="true" href="/segments/3336587/leaderboard?club_id=40991&amp;filter=overall&amp;gender=F&amp;weight_class=65_74">Women</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+<div id='results'><table class='table table-striped table-padded table-leaderboard'>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Name</th>
+<th>Date</th>
+<th>Pace</th>
+<th>HR</th>
+<th class='last-child'>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr class=''>
+<td class='text-center'>
+<div class='avatar avatar-athlete avatar-sm' title='Miles Weatherseed'>
+<div class="avatar-content"><div class='avatar-img-wrapper'>
+<div class='avatar-badge'><span class="app-icon-wrapper  "><span class="app-icon icon-badge-"></span></span></div>
+<img class='avatar-img' src='https://dgalywyr863hv.cloudfront.net/pictures/athletes/11402939/3569843/4/medium.jpg'>
+</div>
+</div></div>
+
+</td>
+<td class='athlete track-click' data-tracking-element='leaderboard_athlete' data-tracking-properties='{&quot;athlete_id&quot;:11402939,&quot;activity_id&quot;:4630916461,&quot;segment_effort_id&quot;:2785571500965511472,&quot;rank&quot;:1}'>
+<strong><a href="/athletes/11402939">Miles Weatherseed</a></strong>
+</td>
+<td class='track-click' data-tracking-element='leaderboard_effort' data-tracking-properties='{&quot;athlete_id&quot;:11402939,&quot;activity_id&quot;:4630916461,&quot;segment_effort_id&quot;:2785571500965511472,&quot;rank&quot;:1}'>
+<a href="/segment_efforts/2785571500965511472">16 Jan 2021</a>
+</td>
+<td>2:56<abbr class='unit' title='minutes per kilometer'>/km</abbr></td>
+<td>
+182<abbr class='unit' title='beats per minute'>bpm</abbr>
+</td>
+<td class='last-child'>4:05</td>
+</tr>
+<tr class=''>
+<td class='text-center'>
+2
+</td>
+<td class='athlete track-click' data-tracking-element='leaderboard_athlete' data-tracking-properties='{&quot;athlete_id&quot;:27270357,&quot;activity_id&quot;:5267220811,&quot;segment_effort_id&quot;:2826436974415086878,&quot;rank&quot;:2}'>
+<a href="/athletes/27270357">Craig Jardine</a>
+</td>
+<td class='track-click' data-tracking-element='leaderboard_effort' data-tracking-properties='{&quot;athlete_id&quot;:27270357,&quot;activity_id&quot;:5267220811,&quot;segment_effort_id&quot;:2826436974415086878,&quot;rank&quot;:2}'>
+<a href="/segment_efforts/2826436974415086878">8 May 2021</a>
+</td>
+<td>2:56<abbr class='unit' title='minutes per kilometer'>/km</abbr></td>
+<td>
+-
+</td>
+<td class='last-child'>4:06</td>
+</tr>
+<tr class=''>
+<td class='text-center'>
+3
+</td>
+<td class='athlete track-click' data-tracking-element='leaderboard_athlete' data-tracking-properties='{&quot;athlete_id&quot;:7421233,&quot;activity_id&quot;:1808590671,&quot;segment_effort_id&quot;:45371667031,&quot;rank&quot;:3}'>
+<a href="/athletes/7421233">Owen Stepney</a>
+</td>
+<td class='track-click' data-tracking-element='leaderboard_effort' data-tracking-properties='{&quot;athlete_id&quot;:7421233,&quot;activity_id&quot;:1808590671,&quot;segment_effort_id&quot;:45371667031,&quot;rank&quot;:3}'>
+<a href="/segment_efforts/45371667031">30 Aug 2018</a>
+</td>
+<td>3:02<abbr class='unit' title='minutes per kilometer'>/km</abbr></td>
+<td>
+-
+</td>
+<td class='last-child'>4:14</td>
+</tr>
+<tr class=''>
+<td class='text-center'>
+4
+</td>
+<td class='athlete track-click' data-tracking-element='leaderboard_athlete' data-tracking-properties='{&quot;athlete_id&quot;:7148002,&quot;activity_id&quot;:661799018,&quot;segment_effort_id&quot;:16205627845,&quot;rank&quot;:4}'>
+<a href="/athletes/7148002">Luuk Metselaar</a>
+</td>
+<td class='track-click' data-tracking-element='leaderboard_effort' data-tracking-properties='{&quot;athlete_id&quot;:7148002,&quot;activity_id&quot;:661799018,&quot;segment_effort_id&quot;:16205627845,&quot;rank&quot;:4}'>
+<a href="/segment_efforts/16205627845">2 Aug 2016</a>
+</td>
+<td>3:03<abbr class='unit' title='minutes per kilometer'>/km</abbr></td>
+<td>
+-
+</td>
+<td class='last-child'>4:15</td>
+</tr>
+<tr class='highlighted'>
+<td class='text-center'>
+5
+</td>
+<td class='athlete track-click' data-tracking-element='leaderboard_athlete' data-tracking-properties='{&quot;athlete_id&quot;:1619378,&quot;activity_id&quot;:451014770,&quot;segment_effort_id&quot;:10840643841,&quot;rank&quot;:5}'>
+<a href="/athletes/1619378">Jamie Parkinson</a>
+</td>
+<td class='track-click' data-tracking-element='leaderboard_effort' data-tracking-properties='{&quot;athlete_id&quot;:1619378,&quot;activity_id&quot;:451014770,&quot;segment_effort_id&quot;:10840643841,&quot;rank&quot;:5}'>
+<a href="/segment_efforts/10840643841">16 Dec 2015</a>
+</td>
+<td>3:04<abbr class='unit' title='minutes per kilometer'>/km</abbr></td>
+<td>
+-
+</td>
+<td class='last-child'>4:17</td>
+</tr>
+<tr class=''>
+<td class='text-center'>
+6
+</td>
+<td class='athlete track-click' data-tracking-element='leaderboard_athlete' data-tracking-properties='{&quot;athlete_id&quot;:10183415,&quot;activity_id&quot;:5050785579,&quot;segment_effort_id&quot;:2812753018668252282,&quot;rank&quot;:6}'>
+<a href="/athletes/10183415">Tim CS</a>
+</td>
+<td class='track-click' data-tracking-element='leaderboard_effort' data-tracking-properties='{&quot;athlete_id&quot;:10183415,&quot;activity_id&quot;:5050785579,&quot;segment_effort_id&quot;:2812753018668252282,&quot;rank&quot;:6}'>
+<a href="/segment_efforts/2812753018668252282">1 Apr 2021</a>
+</td>
+<td>3:06<abbr class='unit' title='minutes per kilometer'>/km</abbr></td>
+<td>
+152<abbr class='unit' title='beats per minute'>bpm</abbr>
+</td>
+<td class='last-child'>4:19</td>
+</tr>
+<tr class=''>
+<td class='text-center'>
+7
+</td>
+<td class='athlete track-click' data-tracking-element='leaderboard_athlete' data-tracking-properties='{&quot;athlete_id&quot;:28973954,&quot;activity_id&quot;:1808167194,&quot;segment_effort_id&quot;:45360390617,&quot;rank&quot;:7}'>
+<a href="/athletes/28973954">Maxwell Robinson</a>
+</td>
+<td class='track-click' data-tracking-element='leaderboard_effort' data-tracking-properties='{&quot;athlete_id&quot;:28973954,&quot;activity_id&quot;:1808167194,&quot;segment_effort_id&quot;:45360390617,&quot;rank&quot;:7}'>
+<a href="/segment_efforts/45360390617">30 Aug 2018</a>
+</td>
+<td>3:06<abbr class='unit' title='minutes per kilometer'>/km</abbr></td>
+<td>
+184<abbr class='unit' title='beats per minute'>bpm</abbr>
+</td>
+<td class='last-child'>4:20</td>
+</tr>
+<tr class=''>
+<td class='text-center'>
+8
+</td>
+<td class='athlete track-click' data-tracking-element='leaderboard_athlete' data-tracking-properties='{&quot;athlete_id&quot;:1496439,&quot;activity_id&quot;:1161994932,&quot;segment_effort_id&quot;:28627320924,&quot;rank&quot;:8}'>
+<a href="/athletes/1496439">James Bolton</a>
+</td>
+<td class='track-click' data-tracking-element='leaderboard_effort' data-tracking-properties='{&quot;athlete_id&quot;:1496439,&quot;activity_id&quot;:1161994932,&quot;segment_effort_id&quot;:28627320924,&quot;rank&quot;:8}'>
+<a href="/segment_efforts/28627320924">31 Aug 2017</a>
+</td>
+<td>3:07<abbr class='unit' title='minutes per kilometer'>/km</abbr></td>
+<td>
+-
+</td>
+<td class='last-child'>4:21</td>
+</tr>
+<tr class=''>
+<td class='text-center'>
+9
+</td>
+<td class='athlete track-click' data-tracking-element='leaderboard_athlete' data-tracking-properties='{&quot;athlete_id&quot;:10786482,&quot;activity_id&quot;:697237026,&quot;segment_effort_id&quot;:17094388708,&quot;rank&quot;:9}'>
+<a href="/athletes/10786482">Aaron Burgess 🏴󠁧󠁢󠁥󠁮󠁧󠁿</a>
+</td>
+<td class='track-click' data-tracking-element='leaderboard_effort' data-tracking-properties='{&quot;athlete_id&quot;:10786482,&quot;activity_id&quot;:697237026,&quot;segment_effort_id&quot;:17094388708,&quot;rank&quot;:9}'>
+<a href="/segment_efforts/17094388708">1 Sep 2016</a>
+</td>
+<td>3:08<abbr class='unit' title='minutes per kilometer'>/km</abbr></td>
+<td>
+-
+</td>
+<td class='last-child'>4:22</td>
+</tr>
+<tr class=''>
+<td class='text-center'>
+10
+</td>
+<td class='athlete track-click' data-tracking-element='leaderboard_athlete' data-tracking-properties='{&quot;athlete_id&quot;:11745632,&quot;activity_id&quot;:4190933603,&quot;segment_effort_id&quot;:2751177576479924992,&quot;rank&quot;:10}'>
+<a href="/athletes/11745632">David Barratt</a>
+</td>
+<td class='track-click' data-tracking-element='leaderboard_effort' data-tracking-properties='{&quot;athlete_id&quot;:11745632,&quot;activity_id&quot;:4190933603,&quot;segment_effort_id&quot;:2751177576479924992,&quot;rank&quot;:10}'>
+<a href="/segment_efforts/2751177576479924992">13 Oct 2020</a>
+</td>
+<td>3:09<abbr class='unit' title='minutes per kilometer'>/km</abbr></td>
+<td>
+112<abbr class='unit' title='beats per minute'>bpm</abbr>
+</td>
+<td class='last-child'>4:24</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='loading-panel' style='display: none;'>
+<div class='spinner vcentered'>
+<span class='graphic'></span>
+<span class='status'>Loading…</span>
+</div>
+</div>
+</div>
+</div>
+<div class='hidden' id='age-weight-dialog'>
+<form class="flow" id="edit_athlete_1619378" action="/athletes/1619378" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="patch" /><label for="athlete_sex">Sex</label>
+<select name="athlete[sex]" id="athlete_sex"><option value=""></option>
+<option selected="selected" value="M">Male</option>
+<option value="F">Female</option></select>
+<label for="athlete_weight">Weight (kg.)</label>
+<input value="65.0" class="narrow" type="text" name="athlete[weight]" id="athlete_weight" />
+<label for="athlete_dateofbirth">Date of birth</label>
+<input type="hidden" id="athlete_dateofbirth_3i" name="athlete[dateofbirth(3i)]" value="1" />
+<select id="athlete_dateofbirth_2i" name="athlete[dateofbirth(2i)]" class="date-select">
+<option value="1" selected="selected">January</option>
+<option value="2">February</option>
+<option value="3">March</option>
+<option value="4">April</option>
+<option value="5">May</option>
+<option value="6">June</option>
+<option value="7">July</option>
+<option value="8">August</option>
+<option value="9">September</option>
+<option value="10">October</option>
+<option value="11">November</option>
+<option value="12">December</option>
+</select>
+<select id="athlete_dateofbirth_1i" name="athlete[dateofbirth(1i)]" class="date-select">
+<option value="1930">1930</option>
+<option value="1931">1931</option>
+<option value="1932">1932</option>
+<option value="1933">1933</option>
+<option value="1934">1934</option>
+<option value="1935">1935</option>
+<option value="1936">1936</option>
+<option value="1937">1937</option>
+<option value="1938">1938</option>
+<option value="1939">1939</option>
+<option value="1940">1940</option>
+<option value="1941">1941</option>
+<option value="1942">1942</option>
+<option value="1943">1943</option>
+<option value="1944">1944</option>
+<option value="1945">1945</option>
+<option value="1946">1946</option>
+<option value="1947">1947</option>
+<option value="1948">1948</option>
+<option value="1949">1949</option>
+<option value="1950">1950</option>
+<option value="1951">1951</option>
+<option value="1952">1952</option>
+<option value="1953">1953</option>
+<option value="1954">1954</option>
+<option value="1955">1955</option>
+<option value="1956">1956</option>
+<option value="1957">1957</option>
+<option value="1958">1958</option>
+<option value="1959">1959</option>
+<option value="1960">1960</option>
+<option value="1961">1961</option>
+<option value="1962">1962</option>
+<option value="1963">1963</option>
+<option value="1964">1964</option>
+<option value="1965">1965</option>
+<option value="1966">1966</option>
+<option value="1967">1967</option>
+<option value="1968">1968</option>
+<option value="1969">1969</option>
+<option value="1970" selected="selected">1970</option>
+<option value="1971">1971</option>
+<option value="1972">1972</option>
+<option value="1973">1973</option>
+<option value="1974">1974</option>
+<option value="1975">1975</option>
+<option value="1976">1976</option>
+<option value="1977">1977</option>
+<option value="1978">1978</option>
+<option value="1979">1979</option>
+<option value="1980">1980</option>
+<option value="1981">1981</option>
+<option value="1982">1982</option>
+<option value="1983">1983</option>
+<option value="1984">1984</option>
+<option value="1985">1985</option>
+<option value="1986">1986</option>
+<option value="1987">1987</option>
+<option value="1988">1988</option>
+<option value="1989">1989</option>
+<option value="1990">1990</option>
+<option value="1991">1991</option>
+<option value="1992">1992</option>
+<option value="1993">1993</option>
+<option value="1994">1994</option>
+<option value="1995">1995</option>
+<option value="1996">1996</option>
+<option value="1997">1997</option>
+<option value="1998">1998</option>
+<option value="1999">1999</option>
+<option value="2000">2000</option>
+<option value="2001">2001</option>
+<option value="2002">2002</option>
+<option value="2003">2003</option>
+<option value="2004">2004</option>
+<option value="2005">2005</option>
+<option value="2006">2006</option>
+<option value="2007">2007</option>
+<option value="2008">2008</option>
+</select>
+
+<input type="submit" name="commit" value="Save Changes" class="callout button" data-disable-with="Save Changes" />
+</form><div class='message errorExplanation'></div>
+<div class='loading-panel' style='display: none'>
+<div class='status'>Saving…</div>
+</div>
+<a class='hidden' data-js='redirect' data-remote='true' href='/segments/3336587/leaderboard?club_id=40991&amp;filter=overall&amp;weight_class=65_74'></a>
+</div>
+
+</div>
+</div>
+
+<footer><div class='footer-promos'>
+<div class='container'>
+<div class='row'>
+<div class='promo js-channel-footer-left col-sm-4'>
+<h4 class='topless'>Your Recent Activities</h4>
+<ul class='list-unstyled recent-activities'>
+<li>
+<span class="app-icon-wrapper  "><span class="app-icon icon-run icon-dark icon-sm">Run</span></span>
+<a class='minimal' href='/activities/5285697037?source=global-footer'>5x1k (1&#39;, 4&#39;) 5x300 (1&#39;)</a>
+</li>
+<li>
+<span class="app-icon-wrapper  "><span class="app-icon icon-run icon-dark icon-sm">Run</span></span>
+<a class='minimal' href='/activities/5274287541?source=global-footer'>Afternoon Run</a>
+</li>
+<li>
+<span class="app-icon-wrapper  "><span class="app-icon icon-run icon-dark icon-sm">Run</span></span>
+<a class='minimal' href='/activities/5263350767?source=global-footer'>Afternoon Run</a>
+</li>
+<li>
+<span class="app-icon-wrapper  "><span class="app-icon icon-run icon-dark icon-sm">Run</span></span>
+<a class='minimal' href='/activities/5257448169?source=global-footer'>Afternoon Run</a>
+</li>
+<li>
+<span class="app-icon-wrapper  "><span class="app-icon icon-run icon-dark icon-sm">Run</span></span>
+<a class='minimal' href='/activities/5252619932?source=global-footer'>Afternoon Run</a>
+</li>
+</ul>
+</div>
+<div class='promo js-channel-footer-center col-sm-4'>
+<h4 class='topless'>Strava Blog</h4>
+<p>Read our blog - adventure stories, training tips and insights from the community.</p>
+<a href='http://blog.strava.com/'>Read our blog</a>
+</div>
+</div>
+</div>
+</div>
+<div class='footer-global container' role='navigation'>
+<div class='row'>
+<div class='col-sm-3'>
+<div title="Return to the Strava home page" class="branding logo-bw"><a class="branding-content" href="/"><span class="sr-only">Strava</span></a></div>
+<div class='copyright'>
+© 2021 Strava
+</div>
+</div>
+<div class='col-sm-2 col-sm-offset-1'>
+<h4>About</h4>
+<ul class='list-unstyled'>
+<li><a href="/about">About</a></li>
+<li><a href="/features">Features</a></li>
+<li><a href="/mobile">Mobile</a></li>
+<li><a href="/premium?cta=subscription&amp;element=nav&amp;source=global-footer">Subscription</a></li>
+<li><a href="/legal/privacy">Privacy Policy</a></li>
+<li><a href="/legal/terms">Terms and Conditions</a></li>
+<li><a href="https://strava.zendesk.com/entries/46363890-About-Strava-Maps">About Our Maps</a></li>
+</ul>
+</div>
+<div class='col-sm-2'>
+<h4>Follow</h4>
+<ul class='list-unstyled'>
+<li><a target="_blank" href="http://www.facebook.com/Strava">Facebook</a></li>
+<li><a target="_blank" href="http://twitter.com/strava">Twitter</a></li>
+<li><a target="_blank" href="http://instagram.com/strava">Instagram</a></li>
+<li><a target="_blank" href="http://www.youtube.com/stravainc">YouTube</a></li>
+<li><a href="http://blog.strava.com">Blog</a></li>
+</ul>
+</div>
+<div class='col-sm-2'>
+<h4>Help</h4>
+<ul class='list-unstyled'>
+<li><a href="https://strava.zendesk.com/home">Strava Support</a></li>
+</ul>
+
+</div>
+<div class='col-sm-2'>
+<h4>More</h4>
+<ul class='list-unstyled'>
+<li><a href="/local">Local</a></li>
+<li><a href="/careers">Careers</a></li>
+<li><a href="https://business.strava.com">Business</a></li>
+<li><a href="http://labs.strava.com/developers">Developers</a></li>
+<li><a href="http://labs.strava.com">Labs</a></li>
+<li><a href="/pros">Pros on Strava</a></li>
+<li><a href="/community-standards">Strava Community Standards</a></li>
+</ul>
+<div class='dropdown drop-down-menu drop-down-xs' id='language-picker'>
+<button class='btn btn-default btn-xs dropdown-selection btn-white selection'>British English</button>
+<ul class='options dropdown-menu anchor-right anchor-bottom'>
+<li>
+<div class='replace-selection clickable language-pick' language-code='en-GB'>British English</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='de-DE'>Deutsch</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='en-US'>English (US)</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='es-ES'>español</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='es-419'>español latinoamericano</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='fr-FR'>français</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='it-IT'>italiano</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='nl-NL'>Nederlands</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='pt-PT'>português</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='pt-BR'>português do Brasil</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='ru-RU'>русский</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='ko-KR'>한국어</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='zh-CN'>中文</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='ja-JP'>日本語</div>
+</li>
+<li>
+<div class='replace-selection clickable language-pick' language-code='zh-TW'>繁體中文</div>
+</li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+<a id="back-to-top" class="media-sm-show visible-sm-block" href="#">Top ↑</a>
+</footer>
+
+
+<script src="https://d3nn82uaxijpm6.cloudfront.net/assets/mapbox-04f75a62080d3f801750d3a4bb3973962d34f816d78f8997797210e678695808.js"></script>
+<script>
+  window._maps_api = "pk.eyJ1Ijoic3RyYXZhIiwiYSI6IlpoeXU2U0UifQ.c7yhlZevNRFCqHYm6G6Cyg"
+  jQuery(document).ready(function(){
+    // TODO: no need for locale
+    Strava.Maps.Mapbox.Base.setMapIds({"terrain_id":"mapbox/dark-v10","satellite_id":"mapbox/satellite-v9","standard_id":"strava/ck2gt6oil0c7y1cnvlz1uphnu"});
+  });
+</script>
+<script id='lightbox-template' type='text/template'>
+<div class='lightbox-window modal-content'>
+<div class='close-lightbox'>
+<button class='btn btn-unstyled btn-close'>
+<div class='app-icon icon-close icon-xs icon-white'></div>
+</button>
+</div>
+</div>
+</script>
+<script id='popover-template' type='text/template'>
+<div class='popover'></div>
+</script>
+<script>
+  window._asset_host = "https://d3nn82uaxijpm6.cloudfront.net";
+  window._measurement_preference = "meters";
+  window._date_preference = "%m/%d/%Y";
+  window._datepicker_preference_format = "mm/dd/yy";
+  
+  jQuery(document).ready(function() {
+    Strava.Util.EventLogging.createInstance("https://analytics.strava.com","7215fa60b5f01ecc3967543619f7e3d9", 1619378);
+  });
+</script>
+<script src="https://d3nn82uaxijpm6.cloudfront.net/assets/strava/i18n/locales/en-GB-a425a7435cdd46c1022488d47987d7690b1417bb3f968fcdf6a4a2be21c5e0b1.js"></script>
+<script src="https://d3nn82uaxijpm6.cloudfront.net/assets/application-d3053c351c87aec78aff8255ce329a35c9c3a3916646079e6ddb52c21d8d8bf1.js"></script>
+
+<script src="https://www.strava.com/cookie-banner"></script>
+<script>
+  jQuery(document).ready(function(){
+    typeof StravaCookieBanner !== 'undefined' && StravaCookieBanner.render();
+  });
+</script>
+
+
+<div id='fb-root'></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId: "284597785309",
+      status: true,
+      cookie: true,
+      xfbml: true,
+      version: "v3.2"
+    });
+    Strava.Facebook.PermissionsManager.getInstance().facebookReady();
+    jQuery('#fb-root').trigger('facebook:init');
+  };
+  (function(d){
+    var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement('script'); js.id = id; js.async = true;
+    js.src = "//connect.facebook.net/en_GB/sdk.js";
+    ref.parentNode.insertBefore(js, ref);
+  }(document));
+</script>
+
+
+<script>
+  var currentAthlete = new Strava.Models.CurrentAthlete({"id":1619378,"logged_in":true,"display_name":"Jamie Parkinson","first_name":"Jamie","last_name":"Parkinson","premium":false,"has_power_analysis_access":false,"photo_large":"https://dgalywyr863hv.cloudfront.net/pictures/athletes/1619378/5071404/1/large.jpg","photo":"https://dgalywyr863hv.cloudfront.net/pictures/athletes/1619378/5071404/1/large.jpg","badge":null,"measurement_preference":"meters","weight_measurement_unit":"kg","type":1,"member_type":"","display_location":"Oxford, England, United Kingdom","gender":"M","geo":{"city":"Oxford","state":"England","country":"United Kingdom","lat_lng":[51.7520209,-1.2577263]},"has_leaderboards_access":false,"has_pace_zone_analysis_access":false,"is_segments_restricted":true});
+  HAML.globals = function() {
+    return {
+      currentAthlete: currentAthlete,
+      renderPartial: function(name, context) {
+        if (context == null) {
+          context = this;
+        }
+        return JST[name](context);
+      }
+    }
+  }
+</script>
+
+<script>
+  new Strava.Initializer();
+</script>
+<script src="https://d3nn82uaxijpm6.cloudfront.net/assets/strava/maps/mapbox/manifest-73336c48709d93bd1fe33ebf7ab7e3634417aee2c69248fca833253239655b17.js"></script>
+<script src="https://d3nn82uaxijpm6.cloudfront.net/packs/js/segments-26fccfce2ea4dd8364a2.chunk.js"></script>
+<script>
+  jQuery(document).ready(function() {
+    var controller = new Strava.PerformanceGoals.Controller({
+      current_athlete_id: 1619378,
+      segment_id: 3336587,
+      segment_name: 'Marston Ferry Dash',
+      can_see_training_plans: false,
+      has_plan: false
+    });
+    controller.bind('goalCreated', function(goal) {
+      window.location = "/goals/segment/" + goal.get('id')
+    });
+  
+    var view = new Strava.PerformanceGoals.Sidebar.View(
+      controller,
+      '#performance-goals',
+      'segment');
+    controller.fetchUpcomingSegmentGoal();
+  });
+</script>
+<script>
+  jQuery(document).ready(function(){
+    Strava.ExternalAnalytics.trackV2({
+      category: 'segments',
+      page: 'segment_detail_leaderboard_upsell',
+      action: 'screen_enter',
+      properties: {
+        segment_id: 3336587
+      },
+      element: null,
+    });
+  
+    window.addEventListener('beforeunload', function (e) {
+      Strava.ExternalAnalytics.trackV2({
+        category: 'segments',
+        page: 'segment_detail_leaderboard_upsell',
+        action: 'screen_exit',
+        properties: {
+          segment_id: 3336587
+        },
+        element: null,
+      });
+    });
+  
+    jQuery('#upsell-cta').on('click', () => {
+      Strava.ExternalAnalytics.trackV2({
+        category: 'segments',
+        page: 'segment_detail_leaderboard_upsell',
+        action: 'click',
+        properties: {
+          segment_id: 3336587
+        },
+        element: 'subscribe_button',
+      });
+    });
+  });
+</script>
+<script>
+  function bindSidebarFilterEvents() {
+    jQuery('.filters')
+      .on('click', 'li a:not(.filter-link)', function(e) {
+        var data = jQuery(e.target).data();
+        var targetDetails = { leaderboard_filter: data.filter };
+        if (data.filter === 'club') {
+          targetDetails.club_id = data.clubid;
+        }
+        trackClick('filter_leaderboard', { target_details: targetDetails });
+      });
+  
+    jQuery('#premium-new')
+      .on('click', '.see-all', function() {
+        trackClick('filter_leaderboard_see_all');
+        jQuery(this).children().toggle();
+      })
+      .on('click', '.filter-link', function(e) {
+        var data = jQuery(e.target).data();
+        var targetDetails = { leaderboard_filter: data.filter };
+        targetDetails[data.filter] = data.value;
+        trackClick('filter_leaderboard', { target_details: targetDetails });
+      });
+  }
+  
+  function analyticsProperties() {
+    return jQuery('#segment-results').data().tracking;
+  }
+  
+  function trackScreenEnter() {
+    Strava.ExternalAnalytics.trackV2({
+      category: 'segments',
+      page: 'segment_detail',
+      action: 'screen_enter',
+      properties: analyticsProperties()
+    });
+  }
+  
+  function trackScreenExit() {
+    Strava.ExternalAnalytics.trackV2({
+      category: 'segments',
+      page: 'segment_detail',
+      action: 'screen_exit',
+      properties: analyticsProperties()
+    });
+  }
+  
+  function trackClick(element, properties) {
+    var props = properties || {};
+    Strava.ExternalAnalytics.trackV2({
+      category: 'segments',
+      page: 'segment_detail',
+      action: 'click',
+      element: element,
+      properties: Object.assign({}, analyticsProperties(), props)
+    });
+  }
+  
+  jQuery(function($) {
+  
+    bindSidebarFilterEvents();
+  
+    trackScreenEnter();
+    window.addEventListener('beforeunload', trackScreenExit);
+  
+    $('body')
+      .on(
+        'click',
+        '.track-click a, .track-click button, a.track-click, button.track-click',
+        function() {
+          var data = $(this).closest('.track-click').data();
+          var props = data.trackingProperties && { target_details: data.trackingProperties };
+          trackClick(data.trackingElement, props);
+        });
+  
+    $('#segment-leaderboard')
+      .on('ajax:before', '#segment-results .filters a, #age-weight-dialog a[data-js="redirect"]', function() {
+        $('#age-weight-dialog a[data-js="redirect"]').attr('href', $(this).attr('href'));
+        $('#segment-results').find('.filters a.selected').removeClass('selected');
+        $(this).addClass('selected');
+        $('#segment-results').find('.loading-panel').show();
+  
+        var params = $(this).data('params');
+        $(this).data('params', $.extend(params, { partial: true }));
+        return true;
+      })
+      .on("ajax:success", '#segment-results .filters a, #age-weight-dialog a[data-js="redirect"]', function(event, data, status, xhr) {
+        $('#segment-leaderboard').html(data);
+        $('#segment-results').find('.loading-panel').hide();
+        var filter = $('#segment-leaderboard').find('ul.filters .selected').data('filter-hide');
+        if (filter) {
+          $('#' + filter).hide();
+        }
+  
+        trackScreenEnter();
+        bindSidebarFilterEvents();
+  
+        if ($('#js-snw-segment-overview-upsell').length > 0) {
+          Strava.ExternalAnalytics.trackV2({
+            category: 'summit_upsell',
+            page: 'segment_overview',
+            action: 'screen_enter',
+            element: 'join_summit_age_weight'
+          });
+  
+          $('#js-snw-segment-overview-upsell-cta').on('click', function() {
+            Strava.ExternalAnalytics.trackV2({
+              category: 'summit_upsell',
+              page: 'segment_overview',
+              action: 'click',
+              element: 'join_summit_age_weight'
+            });
+          });
+        }
+      });
+  
+    $('#segment-leaderboard')
+      .on('ajax:before', '#segment-results .drop-down-menu a', function() {
+        $('#age-weight-dialog a[data-js="redirect"]').attr('href', $(this).attr('href'));
+        $('#segment-results').find('.loading-panel').show();
+  
+        var params = $(this).data('params');
+  
+        $(this).data('params', $.extend(params, { partial: true }));
+  
+        return true;
+      })
+      .on('ajax:success', '#segment-results .drop-down-menu a', function(event, data, status, xhr) {
+        $('#segment-leaderboard').html(data);
+        $('#segment-results').find('.loading-panel').hide();
+        trackScreenEnter();
+      });
+  
+    $('#segment-leaderboard')
+      .on('click', '#segment-results .pagination a', function(event) {
+        event.preventDefault();
+  
+        function getQueryParam(uri, name) {
+          try {
+            var q = uri.split('?')[1];
+            for (var p of q.split('&')) {
+              var s = p.split('=');
+              if (s[0] === name) {
+                return s[1];
+              }
+            }
+            return null;
+          } catch(e) {
+            return null;
+          }
+        }
+  
+        var href = $(this).attr('href');
+        trackClick('page', { target_details: { page: getQueryParam(href, 'page') }});
+  
+        $.ajax({
+          url: this.href,
+          data: { partial: true },
+          dataType: 'html',
+          beforeSend: function(xhr) {
+            $('#segment-results').find('.loading-panel').show();
+          },
+          success: function(data) {
+            $('#segment-leaderboard').html(data);
+            $('#segment-results').find('.loading-panel').hide();
+            trackScreenEnter();
+          }
+        });
+      });
+  
+    // weight/age dialog
+  
+    $('#age-weight-dialog form')
+      .on("ajax:before", function() {
+        $('#age-weight-dialog .loading-panel').show();
+        return true;
+      })
+      .on("ajax:success", function(event, data, status, xhr) {
+        $('#age-weight-dialog').dialog('close');
+        $('#age-weight-dialog a[data-js="redirect"]').click();
+      })
+      .on("ajax:error", function(event, data, status, xhr) {
+        json = jQuery.parseJSON(data.responseText)
+        $('#age-weight-dialog .loading-panel').hide();
+        if (json['messages']['athlete[weight]']) {
+          $('#age-weight-dialog .errorExplanation').html('<h5 class="error">' + json['messages']['athlete[weight]'][0] + '</h5>');
+        }
+      });
+  
+    $('a#age-weight').on('click', function() {
+      $('#age-weight-dialog').dialog({
+        autoOpen: false,
+        resizable: false,
+        draggable: false,
+        modal: true,
+        height: 400,
+        width: 420,
+        title: "Set Your Age and Weight",
+        open: Strava.Util.Dialog.setupModalCloseClick,
+        show: 'fade',
+        hide: 'fade'
+      });
+  
+      $('#age-weight-dialog').dialog('open');
+    });
+  }(jQuery));
+</script>
+<script src="https://d3nn82uaxijpm6.cloudfront.net/assets/strava/segments/manifest-2cd1a0531d1e1c72bad52a75a2e90f9575398d694407c1739493550d8e972956.js"></script>
+<script src="https://d3nn82uaxijpm6.cloudfront.net/assets/strava/segments/history/manifest-31cd8f62449bb3f7c0241666000452997e7e7b7f9458ea2d44ae4805b4a926e3.js"></script>
+<script src="https://d3nn82uaxijpm6.cloudfront.net/assets/strava/directory/manifest-5cc467395d7ea4e8c5100545f2d51fa1eb72477e9b0ad32291d3be507f2dbd7c.js"></script>
+<script>
+  Strava.Logging.AjaxLatency.logSegmentStreams = false
+</script>
+
+<script>
+  var segmentId = parseInt("3336587");
+  var pr_asset_path = "https://d3nn82uaxijpm6.cloudfront.net/assets/segments/pr-badge-0b7f793d48f3ec1b32860afb76c71273fee2af80405959f959310e66ccce88fc.png"
+  new Strava.Segments.History.AthleteHistoryChartController(segmentId, pr_asset_path);
+</script>
+<script>
+  jQuery(document).ready(function() {
+    Strava.ExternalAnalytics.trackV2({
+      category: 'segments',
+      page: 'segment_detail_compare_efforts_upsell',
+      action: 'screen_enter',
+      properties: {
+        segment_id: 3336587,
+      }
+    });
+    jQuery('#recent-efforts-cta').on('click', function() {
+      Strava.ExternalAnalytics.trackV2({
+        category: 'segments',
+        page: 'segment_detail_compare_efforts_upsell',
+        action: 'click',
+        element: 'subscribe_button',
+        properties: {
+          segment_id: 3336587
+        }
+      });
+    });
+  });
+</script>
+<script>
+  jQuery(document).ready(function() {
+    jQuery('#compare-efforts-cta').on('click', function() {
+      Strava.ExternalAnalytics.trackV2({
+        category: 'segments',
+        page: 'segment_detail',
+        action: 'click',
+        element: 'compare_efforts',
+        properties: {
+          segment_id: 3336587
+        }
+      });
+    });
+  
+    new Strava.Segments.Initializer({
+      segmentId: 3336587,
+      segmentName: "Marston Ferry Dash",
+      segmentHazard: false,
+      segmentHazardWaived: false,
+      showWaiver: false,
+      canStarSegment: true
+    });
+  });
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register("/service_worker.js?v=dLlWydWlG8").then(function(registration) {
+      }, function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    });
+  }
+</script>
+<script>
+  jQuery(document).ready(function() {
+    // Scroll Tracking
+    jQuery(document).one('scroll', function(){
+      Strava.ExternalAnalytics.trackV2({
+        category: 'page_scrolled'
+      });
+    });
+  });
+</script>
+<script>
+  (function(){
+    var options = {"peek_data":false,"campaign":null,"channel":"mobile web","feature":"segment show","data":{"strava_deeplink_url":"strava://segments/3336587"}}
+    var peekData = options.peek_data ? options.peek_data : false;
+  
+    if (true) {
+      Strava.BranchIO.data(peekData)
+        .done(function(data) {
+          if (data && data.has_app) {
+            jQuery('#branch-button').text('Open');
+          }
+        });
+    }
+  
+    Strava.BranchIO.createLink(options)
+      .done(function(link) {
+        jQuery('.js-download-app-link').attr('href', link);
+      })
+      .fail(function(err) {
+        console.log(err);
+        jQuery('#smartbanner-orion').remove();
+      });
+  })();
+</script>
+<script src="https://d3nn82uaxijpm6.cloudfront.net/assets/strava/ui/views/SmartbannerOrionView-14369f065f3110607a3aec2fd1775faf1804cc5c5857ef5790a321e0f190d8e8.js"></script>
+<script>
+  jQuery(document).ready(function() {
+    new Strava.Ui.Views.SmartbannerOrionView();
+  });
+</script>
+<script>
+  jQuery(document).ready(function($) {
+    new Strava.GlobalSearch.SearchFieldController(currentAthlete);
+  });
+</script>
+<script>
+  // Mobile Menu transition handler
+  jQuery('.collapsable-nav #container-nav')
+    .on('show.bs.collapse', function(){
+      jQuery('.smartbanner-content').slideUp(100);
+      jQuery('html').addClass('mobile-menu-open');
+    })
+    .on('hidden.bs.collapse', function(){
+      jQuery('.smartbanner-content').slideDown(100);
+      jQuery('html').removeClass('mobile-menu-open');
+    });
+</script>
+<script>
+  // Dismiss function for alert messages
+  jQuery('document').ready(function(){
+    var dismissController = new Strava.Util.DismissController("/dashboard/dismiss_ui");
+    jQuery('.message').on('click', '.dismiss', function(){
+      dismissController.dismiss("");
+      jQuery(this).parents('.message').slideUp('fast');
+    });
+  });
+</script>
+<script>
+  jQuery(document).ready(function() {
+    new Strava.Util.DropDownMenu('.drop-down-menu')
+    jQuery('.language-pick').each(function(index) {
+      jQuery( this ).click(function() {
+        language = jQuery( this ).attr('language-code');
+        expiration = new Date();
+        expiration.setTime(expiration.getTime() + (1825 * 24 * 60 * 60 * 1000));
+        // Reset any previously set cookie for this page
+        document.cookie = 'ui_language= ; expires=Thu, 01 Jan 1970 00:00:01 GMT;'
+        // Set a global cookie
+        document.cookie = 'ui_language=' + language + '; expires=' + expiration + '; path=/';
+        location.reload(true);
+      });
+    });
+  });
+</script>
+<script>
+  jQuery(document).ready(function() {
+    jQuery('#explore-strava, #challenge-list-view, .promo-simple, .promo-fancy, .promo-overlay, .sponsor-link-section, .sponsor').on('click', 'a', function(event) {
+      var link = jQuery(event.target).closest('a');
+      var adzerkClickUri = link.data('adzerk-click-uri');
+      if (adzerkClickUri != null) {
+        jQuery.get(adzerkClickUri); // this is fire-and-forget - we don't need to wait for a successful response from Adzerk
+      }
+    });
+  });
+</script>
+
+<script src="https://d3nn82uaxijpm6.cloudfront.net/assets/bootstrap.min-55483ca093070244e24730190b707a18467cb78d3262a0133d34b80fc82c8636.js"></script>
+<script src="https://d3nn82uaxijpm6.cloudfront.net/assets/strava/notifications/drop_down/manifest-075acd063186585f92edd9e56d4e329e7e2d8fbb2d25a9eac237a61a1873cc40.js"></script>
+<script>
+  jQuery(function($) {
+    var mark_all_read_notifications_path = "/notifications/mark_all_read";
+    var controller = new Strava.Notifications.DropDown.MarkAllReadController(mark_all_read_notifications_path);
+    var view = new Strava.Notifications.DropDown.View(controller);
+  })
+</script>
+<script src='https://apis.google.com/js/client.js' type='text/javascript'></script>
+
+<script src="https://d3nn82uaxijpm6.cloudfront.net/assets/strava/invites/manifest-40822ff9267b9be03a13810859a3055831859abdd614e1222fb9d1615325c8c8.js"></script>
+<script>
+  Strava.Google.CI = "541588808765.apps.googleusercontent.com";
+  
+  jQuery(document).ready(function() {
+    inviteController = new Strava.Invites.InviteController(
+      {
+        athlete_id: 1619378,
+        athlete_first_name: 'Jamie',
+        athlete_url: 'https://www.strava.com/athletes/1619378',
+        strava_logo_url: 'https://d3nn82uaxijpm6.cloudfront.net/assets/common/strava-logo-62b5d3764a6fa7a282bb2537b2a9619ba6b3fcb0ef5fcb0a431c98c003717b29.png',
+        invite_link: 'https://www.strava.com/?utm_content=1619378&amp;utm_medium=facebook&amp;utm_source=member_referral'
+      });
+  
+    inviteView = new Strava.Invites.InviteButtonView(inviteController, '.find-and-invite');
+  
+    if (window.location.hash === '#invite') {
+      Strava.Invites.InviteLightboxView.show(inviteController);
+    }
+  
+    jQuery('.drop-down-menu li').on('click', function() {
+      const $this = jQuery(this);
+      const element = $this.data('logElement');
+      if (element) {
+        const category = $this.closest('.drop-down-menu').data('logCategory');
+        const page = $this.closest('.drop-down-menu').data('logPage');
+        Strava.ExternalAnalytics.trackV2({
+          category: category,
+          page: page,
+          action: 'click',
+          element: element
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

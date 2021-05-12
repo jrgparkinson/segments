@@ -48,8 +48,41 @@
         </div>
         <!--end controls-->
         <div class="container" role="main">
-            <div class="jumbotron" id="main-jumbo">
-                <h2>Hello</h2>
+            <div>
+                <h2>Oxford segments</h2>
+                <table>
+                    <tr>
+                       
+                        <th>Name</th>
+                        <th>Distance/climb (m)</th>
+                        <th>Fastest athlete</th>
+                        <th>Time</th>
+                        <th>Pace (min/k)</th>
+                    </tr>
+                    <ul>
+                        {% for segment in segments %}
+                       <tr>
+                           <td>
+                               <a href="https://www.strava.com/segments/{{segment.id}}" target="_blank">{{segment.name}}</a>
+                            </td>
+
+                    
+                    <td>{{segment.distance}}/{{segment.climb}}</td>
+                    <td>{{segment.fastest_athlete}}</td>
+                    <td>{{segment.fastest_time}}</td>
+                    <td>{{segment.fastest_pace}}</td>
+                        {% endfor %}
+                       </tr>
+
+                <!-- <ul>
+                {% for segment in segments %}
+               <li> <a href="https://www.strava.com/segments/{{segment.id}}" target="_blank">{{segment.name}}</a>
+          
+            {{segment.distance}}m, fastest: {{segment.fastest_athlete}}/{{segment.fastest_time}} ({{segment.fastest_pace}} min/k)</li>
+                {% endfor %}
+            </ul> -->
+        </table>
+
             </div>
         </div>
     </div>
