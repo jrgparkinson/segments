@@ -60,6 +60,10 @@
     <div id="map"></div>
 
     <div id="controls">
+        <div style="text-align: right; padding-bottom: 5px">
+        <button class="btn btn-primary" onclick="toggleContent()">Show/hide options</button>
+    </div>
+        <div id="controls-content">
         <div class="mb-3 row">
             <label for="inputPassword" class="col-sm-4 col-form-label">Region</label>
             <div class="col-sm-8">
@@ -84,6 +88,7 @@
                   </select>
             </div>
         </div>
+    </div>
 
 
     </div>
@@ -249,6 +254,10 @@
             }
             var h = r * 0x10000 + g * 0x100 + b * 0x1;
             return '#' + ('000000' + h.toString(16)).slice(-6);
+        }
+
+        function toggleContent() {
+            $("#controls-content").toggle();
         }
     </script>
 </body>
