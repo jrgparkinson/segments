@@ -14,7 +14,7 @@ LOGGER.addHandler(handler)
 
 class RegionsData:
 
-    FILENAME = "data/regions.json"
+    FILENAME = "live_data/regions.json"
 
     def __init__(self):
         with open(self.FILENAME, "r") as f:

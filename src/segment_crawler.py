@@ -22,7 +22,7 @@ LOGGER.addHandler(handler)
 
 class SegmentsData:
 
-    FILENAME = "data/segments.json"
+    FILENAME = "live_data/segments.json"
 
     def __init__(self, client=None):
         self.client = client

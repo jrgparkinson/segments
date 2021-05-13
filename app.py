@@ -51,15 +51,6 @@ def index():
     return render_template("index.html", authorize_url=authorize_url, segments=segments.display_segments())
 
 
-@app.route("/map", methods=["GET"])
-def map():
-    """ Map """
-    client, authorize_url = get_client_or_authorize_url()
-    segments = SegmentsData()
-    regions = RegionsData()
-    return render_template("map.html", segments=segments.display_segments(), regions=regions.display())
-
-
 @app.route("/retrieve", methods=["GET"])
 def retrieve():
     """ Home page """
