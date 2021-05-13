@@ -9,3 +9,8 @@ export FLASK_APP=app.py; flask run
 ```
 
 
+```
+python3 -m http.server 8080
+```
+
+
