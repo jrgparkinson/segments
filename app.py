@@ -3,16 +3,12 @@ Flask server for Track Splits app
 """
 from flask import (
     Flask,
-    flash,
-    Response,
     request,
     redirect,
     url_for,
     session,
     render_template,
 )
-import json
-import re
 import os
 import socket
 import logging
@@ -39,8 +35,6 @@ coloredlogs.install(
 # Disable stravalib warnings due to "Warning: Unable to set attribute elevation_profile on entity"
 # with eveyr activity retrieved
 logging.getLogger("stravalib").setLevel(logging.ERROR)
-
-
 
 
 @app.route("/", methods=["GET"])
