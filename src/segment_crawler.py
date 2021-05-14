@@ -8,12 +8,8 @@ import re
 import matplotlib as mpl
 import matplotlib.cm as cm
 
-
-
 LOGGER = logging.getLogger(__name__)
-
 LOGGER.setLevel(logging.DEBUG)
-
 handler = logging.StreamHandler(sys.stdout)
 handler.setLevel(logging.DEBUG)
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -97,7 +93,6 @@ class SegmentsData:
         return self.data
 
 
-
 def retrieve_segments_recursively(client, bounds, segments_db, regions, zoom_level=0):
     if zoom_level > 8:
         return False
@@ -119,22 +114,7 @@ def retrieve_segments_recursively(client, bounds, segments_db, regions, zoom_lev
         return True
     else:
         # more segments to retrieve
-        # split area in 4
-        mid_point = [
-            (bounds[0][0] + bounds[1][0]) / 2,
-            (bounds[0][1] + bounds[1][1]) / 2,
-        ]
-        new_boxes = [
-            # bottom left quadrant
-            [bounds[0], mid_point],
-            # top left quadrant
-            [(bounds[0][0], mid_point[1]), (mid_point[0], bounds[1][1])],
-            # top right quadrant
-            [mid_point, bounds[1]],
-            # bottom right quadrant
-            [(mid_point[0], bounds[0][1]), (bounds[1][0], mid_point[1])],
-        ]
-
+        new_boxes = split_box(bounds)
         is_explored = True
         for box in new_boxes:
             is_explored = is_explored and retrieve_segments_recursively(client, box, segments_db, regions, zoom_level + 1)
@@ -145,35 +125,48 @@ def retrieve_segments_recursively(client, bounds, segments_db, regions, zoom_lev
 
     return False
 
+def split_box(bounds):
+    mid_point = [
+            (bounds[0][0] + bounds[1][0]) / 2,
+            (bounds[0][1] + bounds[1][1]) / 2,
+        ]
+    new_boxes = [
+            # bottom left quadrant
+            [bounds[0], mid_point],
+            # top left quadrant
+            [(bounds[0][0], mid_point[1]), (mid_point[0], bounds[1][1])],
+            # top right quadrant
+            [mid_point, bounds[1]],
+            # bottom right quadrant
+            [(mid_point[0], bounds[0][1]), (bounds[1][0], mid_point[1])],
+        ]
+    return new_boxes
+
+
+def retrieve_fastest_times(segments):
+    for segment in segments.data:
+        if "fastest_athlete" in segment:
+            continue
+
+        url = "https://www.strava.com/segments/" + str(segment["id"])
+        with urlopen(url) as response:
+            html = response.read().decode("utf8")
+
+        soup = BeautifulSoup(html, 'html.parser')
+        table = soup.find("table", {"class":"table-leaderboard"})
+        leader = table.find("tbody").find("tr")
+        rows = leader.find_all("td")
+
+        name = rows[1].text
+        time = rows[-1].text
+
+        LOGGER.info(f"{segment['name']}: {name}, {time}")
+            
+        segment["fastest_athlete"] = name
+        segment["fastest_time"] = time
+
 
 if __name__ == "__main__":
-
     segments = SegmentsData()
-
-    for segment in segments.data:
-
-        if "fastest_athlete" not in segment:
-
-            url = "https://www.strava.com/segments/" + str(segment["id"])
-            with urlopen(url) as response:
-                html = response.read().decode("utf8")
-            # with open("src/example_strava.html") as f:
-            #     html = f.read()
-            # print(html)
-            soup = BeautifulSoup(html, 'html.parser')
-
-            table = soup.find("table", {"class":"table-leaderboard"})
-
-            leader = table.find("tbody").find("tr")
-
-            rows = leader.find_all("td")
-
-            name = rows[1].text
-            time = rows[-1].text
-
-            LOGGER.info(f"{segment['name']}: {name}, {time}")
-            
-            segment["fastest_athlete"] = name
-            segment["fastest_time"] = time
-
+    retrieve_fastest_times(segments)
     segments.save()
