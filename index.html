@@ -50,6 +50,10 @@
             padding: 10px;
             background-color: white;
         }
+
+        #controls-content {
+            padding-top:5px;
+        }
     </style>
 
 </head>
@@ -60,10 +64,10 @@
     <div id="map"></div>
 
     <div id="controls">
-        <div style="text-align: right; padding-bottom: 5px">
+        <div style="text-align: right;">
         <button class="btn btn-primary" onclick="toggleContent()">Show/hide options</button>
     </div>
-        <div id="controls-content">
+    <div id="controls-content">
         <div class="mb-3 row">
             <label for="inputPassword" class="col-sm-4 col-form-label">Region</label>
             <div class="col-sm-8">
@@ -99,7 +103,7 @@
 
         // Options that should eventually be configurable
         var region = "oxford";
-        var highlightAthlete = "Jamie Parkinson";
+        var highlightAthlete = "";
         var colourCoding = "fastest_pace";
         colourCoding = "grade_adjusted_pace";
         colourCoding = "distance_gap";
