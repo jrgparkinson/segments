@@ -24,7 +24,7 @@ def test_split_box():
     ]
 
 
-def test_retrieve_fastest_times(mocker):
+def test_retrieve_fastest_times(mocker, segments_db):
     """
     Should do a single web look up for segment 1, and retrieve fastest athlete correctly
     """
@@ -32,8 +32,7 @@ def test_retrieve_fastest_times(mocker):
         mock_html = f.read()
     mocker.patch("src.segment_crawler.get_html_from_url", return_value=mock_html)
     spy = mocker.spy(src.segment_crawler, "get_html_from_url")
-    segments = SegmentsData()
-    segments.data = [
+    segments_db.data = [
         {
             "id": 1,
             "name": "Segment name",
@@ -58,13 +57,13 @@ def test_retrieve_fastest_times(mocker):
         },
     ]
 
-    retrieve_fastest_times(segments)
+    retrieve_fastest_times(segments_db)
 
     assert spy.called_with("https://www.strava.com/segments/1")
     assert spy.call_count == 1
 
-    assert segments.data[0]["fastest_athlete"] == "Miles Weatherseed"
-    assert segments.data[0]["fastest_time"] == "4:05"
+    assert segments_db.data[0]["fastest_athlete"] == "Miles Weatherseed"
+    assert segments_db.data[0]["fastest_time"] == "4:05"
 
 
 def test_retrieve_segments_none(mock_stravalib, segments_db, regions_db):
