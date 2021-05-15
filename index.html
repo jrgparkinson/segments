@@ -237,9 +237,10 @@
 
                     seg.colour = val2color(seg[colourCoding], colourCodingScale);
 
-                    var popupText = "<a href='" + seg.url + "'>" + seg.name + "</a>, distance: " + seg.distance;
-                    popupText += "m, <br> min/k: " + decimalPaceToMinSec(seg.fastest_pace);
-                    popupText += "<br>GAP: " + decimalPaceToMinSec(seg.grade_adjusted_pace);
+                    var popupText = "<a href='" + seg.url + "'>" + seg.name + "</a>, distance: " + seg.distance + "m";
+                    popupText += "<br>Fastest: " + seg.fastest_athlete + " (" + seg.fastest_time + ")";
+                    popupText += "<br>Pace (min/k): " + decimalPaceToMinSec(seg.fastest_pace);
+                    popupText += "<br>Grade adjusted pace: " + decimalPaceToMinSec(seg.grade_adjusted_pace);
                     popupText += "<br>1km flat equivalent pace: " + decimalPaceToMinSec(seg.distance_gap);
 
                     // var marker_opts = 
