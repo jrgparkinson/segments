@@ -178,7 +178,7 @@
             //     }
             // });
 
-            $.getJSON(`/data/${region}/segments.json`, function(segments) {
+            $.getJSON(`data/${region}/segments.json`, function(segments) {
                 // Compute diagnostics
                 for (i = 0; i < segments.length; i++) {
                     var seg = segments[i];
