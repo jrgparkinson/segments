@@ -7,7 +7,7 @@ LOGGER.setLevel(logging.DEBUG)
 
 handler = logging.StreamHandler(sys.stdout)
 handler.setLevel(logging.DEBUG)
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 handler.setFormatter(formatter)
 LOGGER.addHandler(handler)
 
@@ -16,8 +16,11 @@ class RegionsData:
 
     FILENAME = "live_data/regions.json"
 
-    def __init__(self):
-        with open(self.FILENAME, "r") as f:
+    def __init__(self, filename=None):
+        if not filename:
+            filename = self.FILENAME
+        self.filename = filename
+        with open(self.filename, "r") as f:
             self.data = json.load(f)
 
     def set_explored(self, bounds, is_explored):
@@ -33,7 +36,9 @@ class RegionsData:
         return region
 
     def get_region(self, bounds):
-        region = next((region for region in self.data if region["bounds"] == bounds), None)
+        region = next(
+            (region for region in self.data if region["bounds"] == bounds), None
+        )
 
         if region is None:
             region = self.init_region(bounds)
@@ -41,10 +46,9 @@ class RegionsData:
         return region
 
     def save(self):
-        with open(self.FILENAME, "w") as f:
+        with open(self.filename, "w") as f:
             json.dump(self.data, f)
-            LOGGER.info(f"Saved {len(self.data)} regions to {self.FILENAME}")
+            LOGGER.info(f"Saved {len(self.data)} regions to {self.filename}")
 
-    
     def display(self):
         return self.data

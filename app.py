@@ -15,7 +15,7 @@ import logging
 import datetime
 import coloredlogs
 from stravalib.client import Client
-from src.segment_crawler import SegmentsData, retrieve_segments_recursively
+from src.segment_crawler import SegmentsData, retrieve_segments_recursively, SegmentCrawler
 from src.regions import RegionsData
 
 app = Flask(__name__)
@@ -57,8 +57,10 @@ def retrieve():
     segments = SegmentsData(client)
     regions = RegionsData()
 
+    crawler = SegmentCrawler(client, segments, regions)
+
     if authorize_url is None:
-        retrieve_segments_recursively(client, bounds, segments, regions)
+        crawler.retrieve_segments_recursively(bounds)
     segments.save()
     regions.save()
 

@@ -2,3 +2,5 @@ secrets
 .venv
 __pycache__
 segments copy.json
+.coverage
+htmlcov

@@ -12,17 +12,21 @@ LOGGER = logging.getLogger(__name__)
 LOGGER.setLevel(logging.DEBUG)
 handler = logging.StreamHandler(sys.stdout)
 handler.setLevel(logging.DEBUG)
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 handler.setFormatter(formatter)
 LOGGER.addHandler(handler)
+
 
 class SegmentsData:
 
     FILENAME = "live_data/segments.json"
 
-    def __init__(self, client=None):
+    def __init__(self, client=None, filename=None):
+        if not filename:
+            filename = self.FILENAME
         self.client = client
-        with open(self.FILENAME, "r") as f:
+        self.filename = filename
+        with open(self.filename, "r") as f:
             self.data = json.load(f)
 
     def get_segment(self, id):
@@ -35,18 +39,15 @@ class SegmentsData:
         self.data.append(segment)
 
     def save(self):
-        with open(self.FILENAME, "w") as f:
+        with open(self.filename, "w") as f:
             json.dump(self.data, f)
-            LOGGER.info(f"Saved {len(self.data)} segments to {self.FILENAME}")
+            LOGGER.info(f"Saved {len(self.data)} segments to {self.filename}")
 
     def save_segments(self, retrieved_segments):
         for segment in retrieved_segments:
             if self.segment_exists(segment.id):
                 continue
-
             seg_details = self.client.get_segment(segment.id)
-            # LOGGER.info(seg_details)
-
             key_details = {
                 "id": seg_details.id,
                 "name": seg_details.name,
@@ -68,15 +69,17 @@ class SegmentsData:
 
             if "fastest_time" in segment:
                 if re.match(r"^\d+:\d+$", segment["fastest_time"]):
-                    t = datetime.strptime(segment["fastest_time"],"%M:%S")
+                    t = datetime.strptime(segment["fastest_time"], "%M:%S")
                 elif re.match(r"^\d+:\d+:\d+$", segment["fastest_time"]):
-                    t = datetime.strptime(segment["fastest_time"],"%H:%M:%S")
+                    t = datetime.strptime(segment["fastest_time"], "%H:%M:%S")
                 elif re.match(r"^\d+s$", segment["fastest_time"]):
-                    t = datetime.strptime(segment["fastest_time"][:-1],"%S")
+                    t = datetime.strptime(segment["fastest_time"][:-1], "%S")
                 else:
                     raise Exception("Unknown time format: %s" % segment["fastest_time"])
                 delta = timedelta(minutes=t.minute, seconds=t.second)
-                segment["fastest_pace"] = round((delta.total_seconds()/60.0)/(segment["distance"]/1000.0), 1)
+                segment["fastest_pace"] = round(
+                    (delta.total_seconds() / 60.0) / (segment["distance"] / 1000.0), 1
+                )
             else:
                 segment["fastest_pace"] = float("NaN")
 
@@ -89,58 +92,75 @@ class SegmentsData:
             rgb = m.to_rgba(segment["fastest_pace"])
             segment["colour"] = mpl.colors.to_hex(rgb)
 
-        self.data.sort(key=lambda x:x["fastest_pace"], reverse=True)
+        self.data.sort(key=lambda x: x["fastest_pace"], reverse=True)
         return self.data
 
 
-def retrieve_segments_recursively(client, bounds, segments_db, regions, zoom_level=0):
-    if zoom_level > 8:
-        return False
+class SegmentCrawler:
+    def __init__(self, client, segments_db, regions_db, max_zoom=5):
+        self.client = client
+        self.segments_db = segments_db
+        self.regions_db = regions_db
+        self.max_zoom = max_zoom
 
-    # Check if this region has been fully explored
-    if regions.is_explored(bounds):
-        return True
+    def retrieve_segments_recursively(self, bounds, zoom_level=0):
+        if zoom_level > self.max_zoom:
+            return False
 
-    retrieved_segments = client.explore_segments(bounds, activity_type="running")
-    LOGGER.info(
-        f"Retrieve {len(retrieved_segments)} in bounding box on level {zoom_level}"
-    )
-    segments_db.save_segments(retrieved_segments)
-
-    segments_db.save()
-
-    if len(retrieved_segments) < 10:
-        regions.set_explored(bounds, True)
-        return True
-    else:
-        # more segments to retrieve
-        new_boxes = split_box(bounds)
-        is_explored = True
-        for box in new_boxes:
-            is_explored = is_explored and retrieve_segments_recursively(client, box, segments_db, regions, zoom_level + 1)
-
-        if is_explored:
-            regions.set_explored(bounds, True)
+        # Check if this region has been fully explored
+        if self.regions_db.is_explored(bounds):
             return True
 
-    return False
+        retrieved_segments = self.client.explore_segments(
+            bounds, activity_type="running"
+        )
+        LOGGER.info(
+            f"Retrieved {len(retrieved_segments)} segments on level {zoom_level}"
+        )
+        self.segments_db.save_segments(retrieved_segments)
+        self.segments_db.save()
+
+        if len(retrieved_segments) < 10:
+            self.regions_db.set_explored(bounds, True)
+            return True
+        else:
+            # more segments to retrieve
+            new_boxes = split_box(bounds)
+            is_explored = True
+            for box in new_boxes:
+                is_explored = is_explored and self.retrieve_segments_recursively(
+                    box, zoom_level + 1
+                )
+
+            if is_explored:
+                self.regions_db.set_explored(bounds, True)
+                return True
+
+        return False
+
 
 def split_box(bounds):
-    mid_point = [
-            (bounds[0][0] + bounds[1][0]) / 2,
-            (bounds[0][1] + bounds[1][1]) / 2,
-        ]
+    mid_point = (
+        (bounds[0][0] + bounds[1][0]) / 2,
+        (bounds[0][1] + bounds[1][1]) / 2,
+    )
     new_boxes = [
-            # bottom left quadrant
-            [bounds[0], mid_point],
-            # top left quadrant
-            [(bounds[0][0], mid_point[1]), (mid_point[0], bounds[1][1])],
-            # top right quadrant
-            [mid_point, bounds[1]],
-            # bottom right quadrant
-            [(mid_point[0], bounds[0][1]), (bounds[1][0], mid_point[1])],
-        ]
+        # bottom left quadrant
+        [bounds[0], mid_point],
+        # top left quadrant
+        [(bounds[0][0], mid_point[1]), (mid_point[0], bounds[1][1])],
+        # top right quadrant
+        [mid_point, bounds[1]],
+        # bottom right quadrant
+        [(mid_point[0], bounds[0][1]), (bounds[1][0], mid_point[1])],
+    ]
     return new_boxes
+
+
+def get_html_from_url(url):
+    with urlopen(url) as response:
+        html = response.read().decode("utf8")
+    return html
 
 
 def retrieve_fastest_times(segments):
@@ -149,19 +169,18 @@ def retrieve_fastest_times(segments):
             continue
 
         url = "https://www.strava.com/segments/" + str(segment["id"])
-        with urlopen(url) as response:
-            html = response.read().decode("utf8")
+        html = get_html_from_url(url)
 
-        soup = BeautifulSoup(html, 'html.parser')
-        table = soup.find("table", {"class":"table-leaderboard"})
+        soup = BeautifulSoup(html, "html.parser")
+        table = soup.find("table", {"class": "table-leaderboard"})
         leader = table.find("tbody").find("tr")
         rows = leader.find_all("td")
 
-        name = rows[1].text
+        name = rows[1].text.strip()
         time = rows[-1].text
 
         LOGGER.info(f"{segment['name']}: {name}, {time}")
-            
+
         segment["fastest_athlete"] = name
         segment["fastest_time"] = time
 
