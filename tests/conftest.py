@@ -53,9 +53,3 @@ def mock_stravalib(mocker):
     )
     return mocker
 
-
-@pytest.fixture
-def mock_stravalib_no_results(mock_stravalib):
-    mocker.patch("stravalib.client.Client.explore_segments", return_value=[])
-    mocker.patch("stravalib.client.Client.get_segment", return_value=[])
-    return mocker

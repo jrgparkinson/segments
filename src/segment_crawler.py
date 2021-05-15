@@ -30,7 +30,7 @@ class SegmentsData:
             self.data = json.load(f)
 
     def get_segment(self, id):
-        return next((seg for seg in self.data if seg["id"] == id), None)
+        return next((seg for seg in self.data if "id" in seg and seg["id"] == id), None)
 
     def segment_exists(self, id) -> bool:
         return self.get_segment(id) is not None
@@ -65,7 +65,7 @@ class SegmentsData:
 
         for segment in self.data:
 
-            segment["url"] = f"https://www.strava.com/segments/{segment['id']}"
+            segment["url"] = f"https://www.strava.com/segments/{segment['id']}" if "id" in segment else "#"
 
             if "fastest_time" in segment:
                 if re.match(r"^\d+:\d+$", segment["fastest_time"]):
@@ -164,9 +164,9 @@ def get_html_from_url(url):
 
 
 def retrieve_fastest_times(segments):
-    for segment in segments.data:
-        if "fastest_athlete" in segment:
-            continue
+    segments_to_fill = [seg for seg in segments.data if "fastest_athlete" not in seg]
+    count = 0
+    for segment in segments_to_fill.data:
 
         url = "https://www.strava.com/segments/" + str(segment["id"])
         html = get_html_from_url(url)
@@ -179,13 +179,15 @@ def retrieve_fastest_times(segments):
         name = rows[1].text.strip()
         time = rows[-1].text
 
-        LOGGER.info(f"{segment['name']}: {name}, {time}")
-
         segment["fastest_athlete"] = name
         segment["fastest_time"] = time
 
+        count += 1
+        LOGGER.info(f"{segment['name']}: {name}, {time} ({count}/{len(segments_to_fill)}")
+
 
 if __name__ == "__main__":
-    segments = SegmentsData()
+    location = "oxford"
+    segments = SegmentsData(filename=f"data/{location}/segments.json")
     retrieve_fastest_times(segments)
     segments.save()

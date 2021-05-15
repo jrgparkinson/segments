@@ -37,7 +37,7 @@ class RegionsData:
 
     def get_region(self, bounds):
         region = next(
-            (region for region in self.data if region["bounds"] == bounds), None
+            (region for region in self.data if "bounds" in region and region["bounds"] == bounds), None
         )
 
         if region is None:

@@ -15,7 +15,7 @@ import logging
 import datetime
 import coloredlogs
 from stravalib.client import Client
-from src.segment_crawler import SegmentsData, retrieve_segments_recursively, SegmentCrawler
+from src.segment_crawler import SegmentsData, SegmentCrawler
 from src.regions import RegionsData
 
 app = Flask(__name__)
@@ -36,12 +36,15 @@ coloredlogs.install(
 # with eveyr activity retrieved
 logging.getLogger("stravalib").setLevel(logging.ERROR)
 
+def get_data_path(location="oxford", filetype="segments"):
+    return f"data/{location}/{filetype}.json"
 
 @app.route("/", methods=["GET"])
 def index():
     """ Home page """
     client, authorize_url = get_client_or_authorize_url()
-    segments = SegmentsData()
+    location = "oxford"
+    segments = SegmentsData(None, get_data_path())
     return render_template("index.html", authorize_url=authorize_url, segments=segments.display_segments())
 
 
@@ -53,9 +56,11 @@ def retrieve():
     # Oxford bounds
     # bottom left, top right
     bounds = [(51.723917, -1.301553), (51.792771, -1.185510)]
+    bounds = [(51.720917, -1.302553), (51.799771, -1.189510)]
+    location = "oxford"
 
-    segments = SegmentsData(client)
-    regions = RegionsData()
+    segments = SegmentsData(client, get_data_path())
+    regions = RegionsData(get_data_path(regions))
 
     crawler = SegmentCrawler(client, segments, regions)
 
@@ -135,6 +140,7 @@ if __name__ == "__main__":
     Run web server with:
     python app.py
     """
+
     if DEBUG_MODE:
         # For local development
         app.run(debug=True)

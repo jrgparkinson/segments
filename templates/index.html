@@ -20,9 +20,11 @@
                     <h1>
                         <a href="{{ authorize_url }}">Authorize with Strava</a>
                     </h1>
-       
+
+                    {% else %} 
+                    <a href="/retrieve">Retrieve segments</a> / <a href="/">View segments</a> 
                     {% endif %}
-                <h2>Oxford segments</h2>
+                <h2>Oxford segments (total: {{segments|length}})</h2>
                 <table>
                     <tr>     
                         <th>Name</th>
