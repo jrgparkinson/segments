@@ -131,7 +131,7 @@
     </div>
 
 
-
+    <script src="js/Polyline.encoded.js"></script>
     <script type="text/javascript">
         var map = null;
 
@@ -266,6 +266,13 @@
                                 sticky: true
                             }).openPopup()
                             .addTo(map);
+                    }
+
+                    if (seg.polyline != undefined) {
+                        L.Polyline.fromEncoded(seg.polyline,{
+                            color:  seg.colour,
+                            weight: 3,
+                        }).addTo(map);
                     }
 
                 }

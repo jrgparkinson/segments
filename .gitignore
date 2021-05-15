@@ -1,4 +1,4 @@
-secrets
+secrets.sh
 .venv
 __pycache__
 segments copy.json

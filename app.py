@@ -15,7 +15,7 @@ import logging
 import datetime
 import coloredlogs
 from stravalib.client import Client
-from src.segment_crawler import SegmentsData, SegmentCrawler
+from src.segment_crawler import SegmentsData, SegmentCrawler, retrieve_fastest_times
 from src.regions import RegionsData
 
 app = Flask(__name__)
@@ -58,10 +58,11 @@ def retrieve():
     bounds = [(51.723917, -1.301553), (51.792771, -1.185510)]
     bounds = [(51.720917, -1.302553), (51.799771, -1.189510)]
     bounds = [(51.713917, -1.303553), (51.804771, -1.190510)]
+    bounds = [(51.713917, -1.308553), (51.804771, -1.190510)]
     location = "oxford"
 
-    segments = SegmentsData(client, get_data_path())
-    regions = RegionsData(get_data_path(filetype="regions"))
+    segments = SegmentsData(client, get_data_path(location))
+    regions = RegionsData(get_data_path(location, filetype="regions"))
 
     crawler = SegmentCrawler(client, segments, regions)
 
@@ -69,6 +70,9 @@ def retrieve():
         crawler.retrieve_segments_recursively(bounds)
     segments.save()
     regions.save()
+
+    retrieve_fastest_times(segments)
+    segments.save()
 
     return render_template("index.html", authorize_url=authorize_url, segments=segments.display_segments())
 

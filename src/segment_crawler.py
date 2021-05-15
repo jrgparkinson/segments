@@ -7,6 +7,7 @@ import logging
 import re
 import matplotlib as mpl
 import matplotlib.cm as cm
+from stravalib.model import Segment
 
 LOGGER = logging.getLogger(__name__)
 LOGGER.setLevel(logging.DEBUG)
@@ -47,7 +48,8 @@ class SegmentsData:
         for segment in retrieved_segments:
             if self.segment_exists(segment.id):
                 continue
-            seg_details = self.client.get_segment(segment.id)
+            seg_details = self.client.get_segment(segment.id) # type: Segment
+            LOGGER.info(seg_details.to_dict())
             key_details = {
                 "id": seg_details.id,
                 "name": seg_details.name,
@@ -57,6 +59,7 @@ class SegmentsData:
                 "effort_count": int(seg_details.effort_count),
                 "start_latlng": seg_details.start_latlng,
                 "end_latlng": seg_details.end_latlng,
+                "polyline": seg_details.map.polyline
             }
 
             self.add_segment(key_details)
