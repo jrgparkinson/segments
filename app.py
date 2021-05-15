@@ -57,10 +57,11 @@ def retrieve():
     # bottom left, top right
     bounds = [(51.723917, -1.301553), (51.792771, -1.185510)]
     bounds = [(51.720917, -1.302553), (51.799771, -1.189510)]
+    bounds = [(51.713917, -1.303553), (51.804771, -1.190510)]
     location = "oxford"
 
     segments = SegmentsData(client, get_data_path())
-    regions = RegionsData(get_data_path(regions))
+    regions = RegionsData(get_data_path(filetype="regions"))
 
     crawler = SegmentCrawler(client, segments, regions)
 

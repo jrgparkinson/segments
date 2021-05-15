@@ -166,7 +166,7 @@ def get_html_from_url(url):
 def retrieve_fastest_times(segments):
     segments_to_fill = [seg for seg in segments.data if "fastest_athlete" not in seg]
     count = 0
-    for segment in segments_to_fill.data:
+    for segment in segments_to_fill:
 
         url = "https://www.strava.com/segments/" + str(segment["id"])
         html = get_html_from_url(url)
@@ -183,7 +183,7 @@ def retrieve_fastest_times(segments):
         segment["fastest_time"] = time
 
         count += 1
-        LOGGER.info(f"{segment['name']}: {name}, {time} ({count}/{len(segments_to_fill)}")
+        LOGGER.info(f"{segment['name']}: {name}, {time} ({count}/{len(segments_to_fill)})")
 
 
 if __name__ == "__main__":

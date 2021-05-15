@@ -190,19 +190,20 @@
                     var seconds = 0;
                     if (seg.fastest_time.match(/\d+s/)) {
                         seconds = Number(seg.fastest_time.substr(0, seg.fastest_time.length - 1));
-                    } else if (seg.fastest_time.match(/\d+:\d+/)) {
-                        var array = seg.fastest_time.split(":");
-                        seconds = (Number(array[0]) * 60) + Number(array[1]);
                     } else if (seg.fastest_time.match(/\d+:\d+:\d+/)) {
                         var array = seg.fastest_time.split(":");
                         seconds = (parseInt(array[0], 10) * 60 * 60) + (parseInt(array[1], 10) * 60) + parseInt(array[2], 10);
+                    } else if (seg.fastest_time.match(/\d+:\d+/)) {
+                        var array = seg.fastest_time.split(":");
+                        seconds = (Number(array[0]) * 60) + Number(array[1]);
                     }
 
                     seg.fastest_pace = (seconds / 60) / (seg.distance / 1000);
 
                     var climb_per_km = seg.climb / (seg.distance / 1000);
-                    // GAP: - 1 minute for 100 metres
-                    seg.grade_adjusted_pace = seg.fastest_pace - climb_per_km / 100;
+                    // GAP: -1 minute for 200 metres of climb
+                    // e.g. 4 min/k flat = 3min/k with 200m climb per km 
+                    seg.grade_adjusted_pace = seg.fastest_pace - climb_per_km / 200;
 
                     // Adjusted for 1k
                     // for every 100m under 1k, add 5 seconds/km
@@ -210,11 +211,11 @@
                     // e.g. 800 in 2:00 (2:24/km)
                     //    = 1k in 2:34  (2:34/km)
                     //    = 3k in 8:42  (2:54/km)
-                    var secondsPerHundred = 5;
+                    var secondsPerHundred = 4 * Math.sqrt(1000/seg.distance);
                     if (seg.distance > 1000) {
-                        secondsPerHundred = 1;
+                        secondsPerHundred = 1 * 1000/seg.distance;
                     }
-                    seg.distance_gap = seg.grade_adjusted_pace + (secondsPerHundred / 60) * (1 - seg.distance / 1000);
+                    seg.distance_gap = seg.grade_adjusted_pace + (secondsPerHundred/60) * (1000 -seg.distance)/100;
                 }
 
                 var colourCodingScale = [
@@ -232,8 +233,10 @@
 
                     seg.colour = val2color(seg[colourCoding], colourCodingScale);
 
-                    var popupText = "<a href='" + seg.url + "'>" + seg.name + "</a>, distance: " + seg.distance + "m, <br> min/k: " + Number(seg.fastest_pace).toFixed(2) + " GAP: " + Number(seg.grade_adjusted_pace).toFixed(2);
-                    popupText += " 1km flat equivalent pace: " + Number(seg.distance_gap).toFixed(2);
+                    var popupText = "<a href='" + seg.url + "'>" + seg.name + "</a>, distance: " + seg.distance;
+                    popupText += "m, <br> min/k: " + decimalPaceToMinSec(seg.fastest_pace);
+                    popupText += "<br>GAP: " + decimalPaceToMinSec(seg.grade_adjusted_pace);
+                    popupText += "<br>1km flat equivalent pace: " + decimalPaceToMinSec(seg.distance_gap);
 
                     // var marker_opts = 
                     if (highlightAthlete != null && seg.fastest_athlete == highlightAthlete) {
@@ -330,6 +333,16 @@
 
             return athletes
 
+        }
+        
+
+        function decimalPaceToMinSec(pace) {
+            // Number(seg.fastest_pace).toFixed(2)
+            var mins = Math.floor(pace);
+            var secs = Math.round(60*(pace-mins));
+    
+            const zeroPad = (num, places) => String(num).padStart(places, '0');
+            return `${mins}:${zeroPad(secs, 2)}`;
         }
     </script>
 </body>
