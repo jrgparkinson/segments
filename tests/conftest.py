@@ -1,5 +1,5 @@
 import pytest
-from stravalib.model import SegmentExplorerResult, Segment
+from stravalib.model import Map, Segment
 from stravalib.client import Client
 import json
 import os
@@ -49,6 +49,7 @@ def mock_stravalib(mocker):
             effort_count=0,
             start_latlng=(0.0, 0.0),
             end_latlng=(1.0, 0.0),
+            map=Map(polyline="abc")
         ),
     )
     return mocker

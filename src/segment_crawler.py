@@ -41,7 +41,7 @@ class SegmentsData:
 
     def save(self):
         with open(self.filename, "w") as f:
-            json.dump(self.data, f)
+            json.dump(self.data, f, indent=4, sort_keys=True)
             LOGGER.info(f"Saved {len(self.data)} segments to {self.filename}")
 
     def save_segments(self, retrieved_segments):
@@ -49,7 +49,6 @@ class SegmentsData:
             if self.segment_exists(segment.id):
                 continue
             seg_details = self.client.get_segment(segment.id) # type: Segment
-            LOGGER.info(seg_details.to_dict())
             key_details = {
                 "id": seg_details.id,
                 "name": seg_details.name,
@@ -63,6 +62,17 @@ class SegmentsData:
             }
 
             self.add_segment(key_details)
+
+    def fill_polyline(self):
+        to_fill = [seg for seg in self.data if "polyline" not in seg or seg["polyline"] is None]
+        n = 0
+        LOGGER.info(f"Polyline to fill: {len(to_fill)}")
+        for segment in to_fill:
+            seg_details = self.client.get_segment(segment["id"]) # type: Segment
+            segment["polyline"] = seg_details.map.polyline
+            n += 1
+            LOGGER.info(f"Process {n}/{len(to_fill)}")
+            self.save()
 
     def display_segments(self, sort_by="fastest_pace"):
 
@@ -140,6 +150,7 @@ class SegmentCrawler:
                 return True
 
         return False
+
 
 
 def split_box(bounds):

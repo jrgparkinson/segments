@@ -148,7 +148,7 @@ if __name__ == "__main__":
 
     if DEBUG_MODE:
         # For local development
-        app.run(debug=True)
+        app.run(debug=True, port=5001)
     else:
         LOGGER.info("Starting app on %s", socket.gethostname())
         # Threaded option to enable multiple instances for multiple user access support
