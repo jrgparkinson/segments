@@ -48,7 +48,7 @@ class SegmentsData:
         for segment in retrieved_segments:
             if self.segment_exists(segment.id):
                 continue
-            seg_details = self.client.get_segment(segment.id) # type: Segment
+            seg_details = self.client.get_segment(segment.id)  # type: Segment
             key_details = {
                 "id": seg_details.id,
                 "name": seg_details.name,
@@ -58,17 +58,19 @@ class SegmentsData:
                 "effort_count": int(seg_details.effort_count),
                 "start_latlng": seg_details.start_latlng,
                 "end_latlng": seg_details.end_latlng,
-                "polyline": seg_details.map.polyline
+                "polyline": seg_details.map.polyline,
             }
 
             self.add_segment(key_details)
 
     def fill_polyline(self):
-        to_fill = [seg for seg in self.data if "polyline" not in seg or seg["polyline"] is None]
+        to_fill = [
+            seg for seg in self.data if "polyline" not in seg or seg["polyline"] is None
+        ]
         n = 0
         LOGGER.info(f"Polyline to fill: {len(to_fill)}")
         for segment in to_fill:
-            seg_details = self.client.get_segment(segment["id"]) # type: Segment
+            seg_details = self.client.get_segment(segment["id"])  # type: Segment
             segment["polyline"] = seg_details.map.polyline
             n += 1
             LOGGER.info(f"Process {n}/{len(to_fill)}")
@@ -78,7 +80,11 @@ class SegmentsData:
 
         for segment in self.data:
 
-            segment["url"] = f"https://www.strava.com/segments/{segment['id']}" if "id" in segment else "#"
+            segment["url"] = (
+                f"https://www.strava.com/segments/{segment['id']}"
+                if "id" in segment
+                else "#"
+            )
 
             if "fastest_time" in segment:
                 if re.match(r"^\d+:\d+$", segment["fastest_time"]):
@@ -152,7 +158,6 @@ class SegmentCrawler:
         return False
 
 
-
 def split_box(bounds):
     mid_point = (
         (bounds[0][0] + bounds[1][0]) / 2,
@@ -197,7 +202,9 @@ def retrieve_fastest_times(segments):
         segment["fastest_time"] = time
 
         count += 1
-        LOGGER.info(f"{segment['name']}: {name}, {time} ({count}/{len(segments_to_fill)})")
+        LOGGER.info(
+            f"{segment['name']}: {name}, {time} ({count}/{len(segments_to_fill)})"
+        )
 
 
 if __name__ == "__main__":

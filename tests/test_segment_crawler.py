@@ -97,25 +97,23 @@ def test_retrieve_segments_one_region(mock_stravalib, segments_db, regions_db):
 
 
 def test_retrieve_segments_recursive(mock_stravalib, segments_db, regions_db):
-
     def segments_for_region(bounds, activity_type):
         segments_range = None
         if bounds == [(0, 0), (2, 2)]:
             segments_range = range(10)
         elif bounds == [(0, 0), (1.0, 1.0)]:
-            segments_range =  range(5)
+            segments_range = range(5)
         elif bounds == [(0, 1.0), (1.0, 2)]:
-            segments_range =  range(5, 10)
+            segments_range = range(5, 10)
         elif bounds == [(1.0, 1.0), (2, 2)]:
-            segments_range =  range(10, 15)
+            segments_range = range(10, 15)
         elif bounds == [(1.0, 0), (2, 1.0)]:
             segments_range = range(15, 20)
 
         return [SegmentExplorerResult(id=id) for id in segments_range]
 
     mock_stravalib.patch(
-        "stravalib.client.Client.explore_segments",
-        side_effect=segments_for_region
+        "stravalib.client.Client.explore_segments", side_effect=segments_for_region
     )
     client = Client()
     bounds = [(0, 0), (2, 2)]
@@ -127,26 +125,25 @@ def test_retrieve_segments_recursive(mock_stravalib, segments_db, regions_db):
     assert is_explored
     assert len(segments_db.data) == 20
 
-def test_not_explored(mock_stravalib, segments_db, regions_db):
 
+def test_not_explored(mock_stravalib, segments_db, regions_db):
     def segments_for_region(bounds, activity_type):
         segments_range = None
         if bounds == [(0, 0), (2, 2)]:
             segments_range = range(10)
         elif bounds == [(0, 0), (1.0, 1.0)]:
-            segments_range =  range(5)
+            segments_range = range(5)
         elif bounds == [(0, 1.0), (1.0, 2)]:
-            segments_range =  range(5, 10)
+            segments_range = range(5, 10)
         elif bounds == [(1.0, 1.0), (2, 2)]:
-            segments_range =  range(10, 15)
+            segments_range = range(10, 15)
         elif bounds == [(1.0, 0), (2, 1.0)]:
             segments_range = range(15, 25)
 
         return [SegmentExplorerResult(id=id) for id in segments_range]
 
     mock_stravalib.patch(
-        "stravalib.client.Client.explore_segments",
-        side_effect=segments_for_region
+        "stravalib.client.Client.explore_segments", side_effect=segments_for_region
     )
     client = Client()
     bounds = [(0, 0), (2, 2)]

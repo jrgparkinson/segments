@@ -36,35 +36,42 @@ coloredlogs.install(
 # with eveyr activity retrieved
 logging.getLogger("stravalib").setLevel(logging.ERROR)
 
+
 def get_data_path(location="oxford", filetype="segments"):
     return f"data/{location}/{filetype}.json"
 
+
 def get_default_bounds(location):
-    """ Get first bounds from db for region """
+    """Get first bounds from db for region"""
     bounds = None
     regions = RegionsData(get_data_path(location, filetype="regions"))
     if regions.data:
         bounds = regions.data[0]["bounds"]
     if not bounds:
-        raise Exception(f"No bounds found for {location}") 
+        raise Exception(f"No bounds found for {location}")
     return bounds
 
+
 @app.route("/<location>", methods=["GET"])
-def index(location = "oxford"):
-    """ Home page """
+def index(location="oxford"):
+    """Home page"""
     client, authorize_url = get_client_or_authorize_url()
-    
+
     segments = SegmentsData(None, get_data_path(location=location))
-    return render_template("index.html", authorize_url=authorize_url, 
-segments=segments.display_segments(), location=location)
+    return render_template(
+        "index.html",
+        authorize_url=authorize_url,
+        segments=segments.display_segments(),
+        location=location,
+    )
 
 
 @app.route("/retrieve/<location>/<bounds>", methods=["GET"])
 def retrieve(location="oxford", bounds=None):
-    """ Home page
-e.g.
-/retrieve/oxford/51.2,-1.3,51.8,-1.2
- """
+    """Home page
+    e.g.
+    /retrieve/oxford/51.2,-1.3,51.8,-1.2
+    """
     client, authorize_url = get_client_or_authorize_url()
 
     # Oxford bounds
@@ -92,14 +99,17 @@ e.g.
     retrieve_fastest_times(segments)
     segments.save()
 
-    return render_template("index.html", authorize_url=authorize_url,
- segments=segments.display_segments(), 
-location=location)
+    return render_template(
+        "index.html",
+        authorize_url=authorize_url,
+        segments=segments.display_segments(),
+        location=location,
+    )
 
 
 @app.route("/authenticate")
 def authenticate():
-    """ Authenticate user from Strava """
+    """Authenticate user from Strava"""
     client = Client()
     code = request.args.get("code", None)
 
@@ -122,7 +132,7 @@ def authenticate():
 
 
 def get_client_or_authorize_url():
-    """ Get strava client, or authorization URL if not authenticated """
+    """Get strava client, or authorization URL if not authenticated"""
     client = Client()
     authorize_url = None
 
