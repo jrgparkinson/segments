@@ -39,31 +39,49 @@ logging.getLogger("stravalib").setLevel(logging.ERROR)
 def get_data_path(location="oxford", filetype="segments"):
     return f"data/{location}/{filetype}.json"
 
-@app.route("/", methods=["GET"])
-def index():
+def get_default_bounds(location):
+    """ Get first bounds from db for region """
+    bounds = None
+    regions = RegionsData(get_data_path(location, filetype="regions"))
+    if regions.data:
+        bounds = regions.data[0]["bounds"]
+    if not bounds:
+        raise Exception(f"No bounds found for {location}") 
+    return bounds
+
+@app.route("/<location>", methods=["GET"])
+def index(location = "oxford"):
     """ Home page """
     client, authorize_url = get_client_or_authorize_url()
-    location = "oxford"
-    segments = SegmentsData(None, get_data_path())
-    return render_template("index.html", authorize_url=authorize_url, segments=segments.display_segments())
+    
+    segments = SegmentsData(None, get_data_path(location=location))
+    return render_template("index.html", authorize_url=authorize_url, 
+segments=segments.display_segments(), location=location)
 
 
-@app.route("/retrieve", methods=["GET"])
-def retrieve():
-    """ Home page """
+@app.route("/retrieve/<location>/<bounds>", methods=["GET"])
+def retrieve(location="oxford", bounds=None):
+    """ Home page
+e.g.
+/retrieve/oxford/51.2,-1.3,51.8,-1.2
+ """
     client, authorize_url = get_client_or_authorize_url()
 
     # Oxford bounds
     # bottom left, top right
-    bounds = [(51.723917, -1.301553), (51.792771, -1.185510)]
-    bounds = [(51.720917, -1.302553), (51.799771, -1.189510)]
-    bounds = [(51.713917, -1.303553), (51.804771, -1.190510)]
-    bounds = [(51.713917, -1.308553), (51.804771, -1.190510)]
-    location = "oxford"
+    if bounds:
+        p = bounds.split(",")
+        bounds = [(p[0], p[1]), (p[2], p[3])]
+    else:
+        bounds = get_default_bounds(location)
+
+    # bounds = [(51.723917, -1.301553), (51.792771, -1.185510)]
+    # bounds = [(51.720917, -1.302553), (51.799771, -1.189510)]
+    # bounds = [(51.713917, -1.303553), (51.804771, -1.190510)]
+    # bounds = [(51.713917, -1.308553), (51.804771, -1.190510)]
 
     segments = SegmentsData(client, get_data_path(location))
     regions = RegionsData(get_data_path(location, filetype="regions"))
-
     crawler = SegmentCrawler(client, segments, regions)
 
     if authorize_url is None:
@@ -74,7 +92,9 @@ def retrieve():
     retrieve_fastest_times(segments)
     segments.save()
 
-    return render_template("index.html", authorize_url=authorize_url, segments=segments.display_segments())
+    return render_template("index.html", authorize_url=authorize_url,
+ segments=segments.display_segments(), 
+location=location)
 
 
 @app.route("/authenticate")

@@ -7,7 +7,7 @@
     <!-- <meta name="description" content="App to convert images to GPS traces"> -->
     <meta name="author" content="Cowley Club">
     <!-- <meta name="google-site-verification" content="XgQIxzadoD1l96u2A3av9GPyRdSBQRkXLOQr019BDD4" /> -->
-    <title>Track Splits</title>
+    <title>Segments</title>
 
     <!-- <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnY4r8Huth48Tx-7rN565bmajelV0zqoU&callback=initMap&libraries=&v=weekly">
     </script> -->
@@ -100,22 +100,26 @@
         </div>
         <div id="controls-content">
             <div class="mb-3 row">
-                <label for="inputPassword" class="col-sm-4 col-form-label">Region</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="region" value="Oxford" readonly onchange="updateMap()">
+                <label for="region" class="col-sm-4 col-form-label">Region</label>
+                <div class="col-sm-6">
+
+                    <select class="form-select" aria-label="Default select example" id="region" onchange="updateMap()">
+                    <option selected value="oxford">Oxford</option>
+                    
+                  </select>
                 </div>
             </div>
 
             <div class="mb-3 row">
-                <label for="inputPassword" class="col-sm-4 col-form-label">Athlete</label>
-                <div class="col-sm-8">
+                <label for="athlete" class="col-sm-4 col-form-label">Athlete</label>
+                <div class="col-sm-6">
                     <input type="text" class="form-control" id="athlete" onblur="updateMap()">
                 </div>
             </div>
 
             <div class="mb-3 row">
-                <label for="inputPassword" class="col-sm-4 col-form-label">Colour scale</label>
-                <div class="col-sm-8">
+                <label for="colourScale" class="col-sm-4 col-form-label">Colour scale</label>
+                <div class="col-sm-6">
                     <select class="form-select" aria-label="Default select example" id="colourScale" onchange="updateMap()">
                     <option selected value="distance_gap">Equivalent 1k flat pace</option>
                     <option value="fastest_pace">Pace</option>
@@ -135,8 +139,15 @@
     <script type="text/javascript">
         var map = null;
 
+        var circleMarkers = [],
+            markers = [],
+            polylines = [];
+
+        var mapLayer = null;
+
         // Options that should eventually be configurable
-        var region = "oxford";
+        var region = "";
+        var regionChanged = false;
         var highlightAthlete = "";
         var colourCoding = "fastest_pace";
         colourCoding = "grade_adjusted_pace";
@@ -149,7 +160,9 @@
         function updateMap() {
             highlightAthlete = $("#athlete").val();
             colourCoding = $("#colourScale option:selected").val();
-            region = $("#region").val().toLowerCase();
+            var newregion = $("#region option:selected").val();
+            regionChanged = newregion != region;
+            region = newregion;
 
             console.log(highlightAthlete);
             console.log(colourCoding);
@@ -161,27 +174,44 @@
             $(".leaflet-pane.leaflet-shadow-pane").remove();
             $('.leaflet-interactive').remove();
 
+
+            // map.removeLayer(mapLayer);
+
             populateMap();
 
         }
 
         function populateMap() {
-            // $.getJSON(`data/${region}/regions.json`, function(regions) {
 
-            //     for (i = 0; i < regions.length; i++) {
-            //         var region = regions[i];
+            // Auto move to area
+            if (regionChanged) {
+                $.getJSON(`data/${region}/regions.json`, function(regions) {
 
-            //         var opts = {
-            //             color: "red",
-            //             weight: 1,
-            //             fill: false,
-            //         };
-            //         L.rectangle(region.bounds, opts).addTo(map);
-            //     }
-            // });
+                    var bounds = regions[0].bounds;
+                    map.setView([
+                        (bounds[0][0] + bounds[1][0]) / 2,
+                        (bounds[0][1] + bounds[1][1]) / 2
+                    ], 13);
+
+                    //  for (i = 0; i < regions.length; i++) {
+                    //         var region = regions[i];
+
+                    //         var opts = {
+                    //             color: "red",
+                    //             weight: 1,
+                    //             fill: false,
+                    //         };
+                    //         L.rectangle(region.bounds, opts).addTo(map);
+                    //     }
+                });
+            }
 
             $.getJSON(`data/${region}/segments.json`, function(segments) {
+                markers = [];
+                circleMarkers = [];
+                polylines = [];
                 // Compute diagnostics
+
                 for (i = 0; i < segments.length; i++) {
                     var seg = segments[i];
 
@@ -215,7 +245,7 @@
                     // e.g. 800 in 2:00 (2:24/km)
                     //    = 1k in 2:34  (2:34/km)
                     //    = 3k in 8:42  (2:54/km)
-                    var secondsPerHundred = 4 * Math.sqrt(1000 / seg.distance);
+                    var secondsPerHundred = 4 * Math.pow(1000 / seg.distance, 1 / 3);
                     if (seg.distance > 1000) {
                         secondsPerHundred = 1 * 1000 / seg.distance;
                     }
@@ -239,41 +269,64 @@
 
                     seg.colour = val2color(seg[colourCoding], colourCodingScale);
 
+                    var polyline;
+                    if (seg.polyline != undefined) {
+                        polyline = L.Polyline.fromEncoded(seg.polyline, {
+                            color: seg.colour,
+                            weight: 3,
+                            opacity: 0.6,
+                        }); //.addTo(map);
+                        polylines.push(polyline);
+                    }
+
+
                     var popupText = "<a href='" + seg.url + "'>" + seg.name + "</a>, distance: " + seg.distance + "m";
                     popupText += "<br>Fastest: " + seg.fastest_athlete + " (" + seg.fastest_time + ")";
                     popupText += "<br>Pace (min/k): " + decimalPaceToMinSec(seg.fastest_pace);
                     popupText += "<br>Grade adjusted pace: " + decimalPaceToMinSec(seg.grade_adjusted_pace);
                     popupText += "<br>1km flat equivalent pace: " + decimalPaceToMinSec(seg.distance_gap);
 
-                    // var marker_opts = 
+                    var marker;
                     if (highlightAthlete != null && seg.fastest_athlete == highlightAthlete) {
-                        L.marker(seg.start_latlng, {
-                                // color: seg.colour,
+                        marker = L.marker(seg.start_latlng, {
+                                color: seg.colour,
                                 // weight: 1
-                            })
-                            .bindPopup(popupText, {
-                                sticky: true
-                            }).openPopup()
-                            .addTo(map);
+                            });
                     } else {
-                        L.circleMarker(seg.start_latlng, {
+                        marker = L.circleMarker(seg.start_latlng, {
                                 color: 'black',
                                 fillColor: seg.colour,
                                 fillOpacity: 0.6,
                                 weight: 1
-                            })
-                            .bindPopup(popupText, {
-                                sticky: true
-                            }).openPopup()
-                            .addTo(map);
+                            });
                     }
 
-                    if (seg.polyline != undefined) {
-                        L.Polyline.fromEncoded(seg.polyline,{
-                            color:  seg.colour,
-                            weight: 3,
-                        }).addTo(map);
+                    marker.bindPopup(popupText, {
+                                sticky: true
+                            }).openPopup();
+
+                    if (polyline != undefined) {
+                        marker.i = polylines.length - 1;
                     }
+
+                    marker.on('click', function(ev) {
+                        for (var i = 0; i < polylines.length; i++) {
+                            polylines[i].setStyle({
+                                opacity: 0.5,
+                                weight: 3
+                            });
+                        }
+
+                        if (ev.target.i != undefined) {
+                            var polyline = polylines[ev.target.i];
+                            polyline.setStyle({
+                                opacity: 1.0,
+                                weight: 4
+                            });
+                        }
+                    });
+
+                    markers.push(marker);
 
                 }
 
@@ -288,9 +341,13 @@
                     $("ol#athletesList").append(`<li>${ath.name} (${ath.count})</li>`);
                 }
 
+                mapLayer = L.layerGroup(polylines.concat(markers)).addTo(map);
+
             });
         }
         $(document).ready(function() {
+
+            toggleContent();
 
             map = L.map('map').setView([51.753788, -1.247394], 13);
 
@@ -298,7 +355,7 @@
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(map);
 
-            populateMap();
+            updateMap();
 
             L.control.scale().addTo(map);
 
