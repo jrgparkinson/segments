@@ -11075,5 +11075,3729 @@
             51.804148,
             -1.302557
         ]
+    },
+    {
+        "avg_grade": 1.5,
+        "climb": 3.6,
+        "distance": 225.7,
+        "effort_count": 4660,
+        "end_latlng": [
+            51.768135,
+            -1.265886
+        ],
+        "fastest_athlete": "Michael B.",
+        "fastest_time": "33s",
+        "id": 13684068,
+        "name": "Polstead Rd (W-E)",
+        "polyline": "az}zH|yvFMaASaCo@yDKgBY}B",
+        "start_latlng": [
+            51.767532,
+            -1.268949
+        ]
+    },
+    {
+        "avg_grade": 0.0,
+        "climb": 11.2,
+        "distance": 2046.6,
+        "effort_count": 20224,
+        "end_latlng": [
+            51.791952,
+            -1.262997
+        ],
+        "fastest_athlete": "Luuk M.",
+        "fastest_time": "6:24",
+        "id": 13087049,
+        "name": "New Parkrun Course Lap",
+        "polyline": "qib{HnpuFb@I^Fn@XdAp@b@Pf@Jv@FHCB}@GiAB{@H_ADaAXi@bAg@Ru@\\kFL_AH_AYg@sBeA}@m@eA{@g@KGIPs@Zk@Nq@l@yHLyB?SIw@Ys@c@We@LSR}@bAyEdGa@b@a@\\a@VgAh@c@Z_@\\eCbB_@`@u@pAOt@@bAbC|MTp@f@@nAi@j@MLTTt@Hl@Gz@Mx@{@zE",
+        "start_latlng": [
+            51.790498,
+            -1.262314
+        ]
+    },
+    {
+        "avg_grade": 0.1,
+        "climb": 3.7,
+        "distance": 685.3,
+        "effort_count": 15960,
+        "end_latlng": [
+            51.761964,
+            -1.270898
+        ],
+        "fastest_athlete": "Igor Drobnjak",
+        "fastest_time": "1:29",
+        "id": 8149833,
+        "name": "Canal Lock to Bridge",
+        "polyline": "yr{zH`}vFGFSh@ML@LGHk@He@Pa@^UHONQVED{Ar@MDWC_@Ig@CQDi@Vm@TSEOFO@w@?m@Dc@?u@Ea@FQCS@QCc@K]DaBA_@@_@I_@BKCYB",
+        "start_latlng": [
+            51.756131,
+            -1.26945
+        ]
+    },
+    {
+        "avg_grade": -0.1,
+        "climb": 2.6,
+        "distance": 514.9,
+        "effort_count": 9912,
+        "end_latlng": [
+            51.758034,
+            -1.26358
+        ],
+        "fastest_athlete": "Igor Drobnjak",
+        "fastest_time": "1:18",
+        "id": 7867989,
+        "name": "Walton Street",
+        "polyline": "gu|zH~tvFl@i@v@cAXWv@}At@gApAsBnAgBhEcHf@m@f@_@f@Y",
+        "start_latlng": [
+            51.761649,
+            -1.26816
+        ]
+    },
+    {
+        "avg_grade": 0.3,
+        "climb": 5.9,
+        "distance": 1015.2,
+        "effort_count": 821,
+        "end_latlng": [
+            51.763125,
+            -1.250361
+        ],
+        "fastest_athlete": "Markus Rummel | aiendurance.com",
+        "fastest_time": "3:21",
+        "id": 7152407,
+        "name": "Arlington Drive to Rainbow Bridge",
+        "polyline": "aa~zH`yqFEEBdB?b@J^Vd@lAhAVHZX|@l@p@`A`@b@^|@Nn@TRl@ZFT?TD^E\\NZF^HJPv@j@nALHKb@@T`@`A`@p@Z\\^HDB@H@LOnA\\hA]xBPHlADj@Kd@?`AQRAPBNKFG`@O`@Ab@WNEJ?CQQLDDPd@HJ",
+        "start_latlng": [
+            51.768653,
+            -1.243202
+        ]
+    },
+    {
+        "avg_grade": 1.4,
+        "climb": 4.7,
+        "distance": 325.3,
+        "effort_count": 1023,
+        "end_latlng": [
+            51.769548,
+            -1.261468
+        ],
+        "fastest_athlete": "Peter Burnett",
+        "fastest_time": "51s",
+        "id": 23835430,
+        "name": "Sprint up Linton",
+        "polyline": "{m~zHdptFv@fFZ|AZlBR|@P|@ZfCf@nBLv@",
+        "start_latlng": [
+            51.770701,
+            -1.257146
+        ]
+    },
+    {
+        "avg_grade": -0.0,
+        "climb": 0.0,
+        "distance": 1273.53,
+        "effort_count": 12896,
+        "end_latlng": [
+            51.7672594,
+            -1.2322399
+        ],
+        "fastest_athlete": "Jamie Parkinson",
+        "fastest_time": "3:45",
+        "id": 3335949,
+        "name": "Marston kilo",
+        "polyline": "ks{zHhipFc@FyAb@]@wAO[A_ANyBRaAFc@Im@JiAKs@Oa@@cACkBFgBJ{@?sAGcAQuA[cBi@y@YcCmA[Cy@i@q@s@{B{Ac@Wk@QEYs@s@_AoAo@q@}@yA",
+        "start_latlng": [
+            51.7562196,
+            -1.2355607
+        ]
+    },
+    {
+        "avg_grade": 3.0,
+        "climb": 34.8,
+        "distance": 1101.3,
+        "effort_count": 843,
+        "end_latlng": [
+            51.765405,
+            -1.214179
+        ],
+        "fastest_athlete": "Salim Hammad",
+        "fastest_time": "3:57",
+        "id": 22117514,
+        "name": "uphill foxy",
+        "polyline": "ao~zHx`mF\\`@LFBAr@sBZOLAZSXm@J[BY@k@C}@F_AdBqFPYXKb@J`@l@DN@z@OvD?z@D|@Rv@d@vAx@hA`@PXQRYh@gAt@sAd@m@z@s@b@g@f@m@Vi@Tm@p@iD`@gBh@kBZ{A",
+        "start_latlng": [
+            51.770893,
+            -1.218843
+        ]
+    },
+    {
+        "avg_grade": 7.0,
+        "climb": 37.3,
+        "distance": 529.2,
+        "effort_count": 3550,
+        "end_latlng": [
+            51.756311,
+            -1.228087
+        ],
+        "fastest_athlete": "Peter Burnett",
+        "fastest_time": "1:50",
+        "id": 5094788,
+        "name": "Marston Rd to Pullens Ln UP",
+        "polyline": "wp{zHzgpFAc@@w@Ig@C}@?qCAG@YEq@Kw@k@cA]aAQk@SoAIeBL_BAk@Ds@FoC`@wDGyA",
+        "start_latlng": [
+            51.755808,
+            -1.235333
+        ]
+    },
+    {
+        "avg_grade": -0.7,
+        "climb": 0.0,
+        "distance": 699.3,
+        "effort_count": 12262,
+        "end_latlng": [
+            51.756472,
+            -1.222442
+        ],
+        "fastest_athlete": "Luuk M.",
+        "fastest_time": "2:14",
+        "id": 8932862,
+        "name": "London Road, New High St to Grays Rd",
+        "polyline": "gg|zHr_lFTv@d@fB`@pBX`AFb@l@dCVlANf@Vj@j@tCb@zA\\pAZ~AJt@JVHr@J\\Xn@\\bAl@xCPnAR|@VtB",
+        "start_latlng": [
+            51.759409,
+            -1.213536
+        ]
+    },
+    {
+        "avg_grade": -1.7,
+        "climb": 0.0,
+        "distance": 717.8,
+        "effort_count": 1345,
+        "end_latlng": [
+            51.757608,
+            -1.219513
+        ],
+        "fastest_athlete": "Noah H.",
+        "fastest_time": "2:22",
+        "id": 6610218,
+        "name": "Osler Road entrance to White Horse",
+        "polyline": "mv|zHjelFzAc@ZEl@Oj@UdAYp@KfA_@X?PHRNXh@t@dDtAjFp@bDFd@CJR\\l@zBX~A|@vDDj@",
+        "start_latlng": [
+            51.761839,
+            -1.214453
+        ]
+    },
+    {
+        "avg_grade": 4.3,
+        "climb": 41.2,
+        "distance": 961.86,
+        "effort_count": 147,
+        "end_latlng": [
+            51.76423827186227,
+            -1.2176481261849403
+        ],
+        "fastest_athlete": "Neil Pinnell",
+        "fastest_time": "3:57",
+        "id": 1236703,
+        "name": "Staunton Rd Climb",
+        "polyline": "oa~zHtjnFX}BFy@Eg@K_@M[GU@IJm@bB}FJs@TcAL_@Lm@DIRO\\C\\@n@LN?JB`@Vz@|@v@nBRPVHBCB]BgBJ_@?Q`@y@LsA?{@DYAi@VcANe@Va@La@d@{@Vo@`CcEXm@",
+        "start_latlng": [
+            51.768728122115135,
+            -1.2255400232970715
+        ]
+    },
+    {
+        "avg_grade": 0.0,
+        "climb": 26.1818,
+        "distance": 6306.65,
+        "effort_count": 1711,
+        "end_latlng": [
+            51.77127,
+            -1.2373556
+        ],
+        "fastest_athlete": "Jamie Parkinson",
+        "fastest_time": "19:26",
+        "id": 1737505,
+        "name": "HRR 4mile TT",
+        "polyline": "gl_{HzkoFiAbAUVa@p@Yl@c@fBc@zAcBbE{AdE_DnJiA`Di@fBeAhEUv@Ud@y@|CWv@Sf@m@pBeA|DkG~SKv@sBrGc@jA[l@y@nCi@pA[`AQ\\m@jB[xA}@fCa@x@Yt@[bAw@lBW`Ay@rBq@vAg@lAg@dAm@bBeAjCq@lCg@`CYbBIt@o@dDKx@U~CO|DC`BI`ACtDI~BA|FBpBLXdB@VBZSJa@\\sI@w@J_BPwBj@_Db@{@PAND\\Pf@H^Ed@[f@g@b@k@b@Uz@I|CEp@Dn@E\\TH`@NFfAKj@AVFNFXn@ZpA\\jCX~AVTz@Yj@]v@_@zBqAx@]j@i@fAo@nAi@rBq@^Q`@c@hCqAt@En@@ZIdADn@Jb@B`@@r@Ep@QR]?sAWsD?c@DSC{@YcIGcAGiEEu@AuEFaE?_AFsC^kJFe@RsDNwBTcBRcC^gFDgA\\}CZaB`@kDb@{Bn@kCb@aB\\eAn@cBz@uB`AuB`AiBfAeBVi@fBwB",
+        "start_latlng": [
+            51.7755636,
+            -1.2308526
+        ]
+    },
+    {
+        "avg_grade": 0.5,
+        "climb": 0.0,
+        "distance": 1054.1,
+        "effort_count": 2878,
+        "end_latlng": [
+            51.779679,
+            -1.23976
+        ],
+        "fastest_athlete": "James Kennedy",
+        "fastest_time": "3:44",
+        "id": 5109770,
+        "name": "To the horse sign!",
+        "polyline": "}|~zHdgoFcAGq@@o@Ci@@WFIFE@g@Tu@PWLKPOP}A|@QPaAhA]d@u@zAc@rAu@nB_B`Fa@`AoCxIg@hB}@dCW|@]`Ai@hBWbAg@tA]rA",
+        "start_latlng": [
+            51.773115,
+            -1.230102
+        ]
+    },
+    {
+        "avg_grade": -0.6,
+        "climb": 0.0,
+        "distance": 1006.0,
+        "effort_count": 8881,
+        "end_latlng": [
+            51.786349,
+            -1.254981
+        ],
+        "fastest_athlete": "Jamie Parkinson",
+        "fastest_time": "3:03",
+        "id": 12798582,
+        "name": "Second K A40",
+        "polyline": "wn`{HzxqFuBjHo@bB[pAw@jCUj@sB~GSf@o@xB_BrEa@bAe@zAm@~Ac@~@_ApCUb@Od@uBdFmAfDo@~A",
+        "start_latlng": [
+            51.781081,
+            -1.243176
+        ]
+    },
+    {
+        "avg_grade": -0.7,
+        "climb": 5.28016,
+        "distance": 1305.54,
+        "effort_count": 2501,
+        "end_latlng": [
+            51.76188547164202,
+            -1.1623536329716444
+        ],
+        "fastest_athlete": "Tom P.",
+        "fastest_time": "4:28",
+        "id": 2775557,
+        "name": "Sanhills to FH junc",
+        "polyline": "u_}zHxreFIcB@c@Ey@AaCc@wHKcCKgACy@CyB@mBEcADmDAkCBwDJsBHsHNmDFiDAoBBw@Dw@NaBNu@d@mBLs@t@kDzAgG`@sAn@_D",
+        "start_latlng": [
+            51.763315591961145,
+            -1.1807692609727383
+        ]
+    },
+    {
+        "avg_grade": 0.2,
+        "climb": 2.5,
+        "distance": 609.3,
+        "effort_count": 1801,
+        "end_latlng": [
+            51.762411,
+            -1.182686
+        ],
+        "fastest_athlete": "Harry G.",
+        "fastest_time": "2:06",
+        "id": 23611141,
+        "name": "Before the hill...",
+        "polyline": "}x|zHjugFAwAJiB?aBHaAN_GE}ABy@IoB?{@EgACgDO{AA_A@cASeDQcB?y@BS",
+        "start_latlng": [
+            51.762236,
+            -1.19142
+        ]
+    },
+    {
+        "avg_grade": -0.9,
+        "climb": 0.0,
+        "distance": 671.5,
+        "effort_count": 2272,
+        "end_latlng": [
+            51.769016,
+            -1.156732
+        ],
+        "fastest_athlete": "Tom P.",
+        "fastest_time": "2:00",
+        "id": 14373804,
+        "name": "Rec to Rec",
+        "polyline": "od_{HlxaFb@c@bAy@dAo@|@c@xCgAnBkAnBeAbAaA^e@vA{A~@gA`AcA`AkA\\k@`@e@",
+        "start_latlng": [
+            51.774325,
+            -1.16119
+        ]
+    },
+    {
+        "avg_grade": 5.3,
+        "climb": 19.7,
+        "distance": 368.1,
+        "effort_count": 1852,
+        "end_latlng": [
+            51.763799,
+            -1.156949
+        ],
+        "fastest_athlete": "Jon Barker",
+        "fastest_time": "1:19",
+        "id": 12297158,
+        "name": "Up to forest hill",
+        "polyline": "wx|zHhxaFSuAQ}ASq@GoB[cBSs@SaAS}AGy@GY[k@YYYOWCa@MIA",
+        "start_latlng": [
+            51.762201,
+            -1.161161
+        ]
+    },
+    {
+        "avg_grade": 0.2,
+        "climb": 3.0,
+        "distance": 488.7,
+        "effort_count": 1121,
+        "end_latlng": [
+            51.757284,
+            -1.203794
+        ],
+        "fastest_athlete": "Alec Leslie (TZA)",
+        "fastest_time": "1:39",
+        "id": 22054167,
+        "name": "wharton way",
+        "polyline": "ir|zHdvjFJ@^Wf@_@h@_@dBwAp@o@^m@vBwB`@WZEr@s@`@[hD{BHAR@",
+        "start_latlng": [
+            51.761173,
+            -1.206903
+        ]
+    },
+    {
+        "avg_grade": -0.6,
+        "climb": 5.0,
+        "distance": 1005.4,
+        "effort_count": 920,
+        "end_latlng": [
+            51.765714,
+            -1.164361
+        ],
+        "fastest_athlete": "Harry G.",
+        "fastest_time": "3:30",
+        "id": 18989672,
+        "name": "Sandhills through the fields ",
+        "polyline": "yo}zHhaeFASFsBDeK@SRoAH_A?UIi@e@qAaA{Bg@uBAS@[XcB@g@IY]QGO@{@QgACq@FcC|@yI^}ELkAdAsL",
+        "start_latlng": [
+            51.765899,
+            -1.17797
+        ]
+    },
+    {
+        "avg_grade": -0.6,
+        "climb": 12.5,
+        "distance": 1878.8,
+        "effort_count": 283,
+        "end_latlng": [
+            51.766036,
+            -1.181094
+        ],
+        "fastest_athlete": "Ryan Burke",
+        "fastest_time": "6:50",
+        "id": 16055854,
+        "name": "Forest Hill to Sandhills",
+        "polyline": "gn}zHjw`FUd@ATDRXd@H\\Tj@NpAFfAG^Qp@El@Sp@Mr@a@lCAj@H`AVnIZtENxEGh@EHIBQ@KHMRG^MlC[hCStCKp@GfA?r@MxAOf@CfAa@rCSnCDn@At@`@lBBdAHJPLDVEr@YnAA^@TLf@Vt@Jf@JPXb@n@rBHf@?TE`AAl@Iz@If@ArCIxBDfDEhFH~BCjA?`@C^Od@GLUPCHXfA?b@",
+        "start_latlng": [
+            51.765649,
+            -1.155895
+        ]
+    },
+    {
+        "avg_grade": -1.6,
+        "climb": 0.0,
+        "distance": 613.9,
+        "effort_count": 589,
+        "end_latlng": [
+            51.781618,
+            -1.166454
+        ],
+        "fastest_athlete": "Ryan Burke",
+        "fastest_time": "1:52",
+        "id": 19883338,
+        "name": "To the allotments",
+        "polyline": "ara{H``cFT@FED@`@KDBJCFDDCFFD?DCNDJIF?DBFAHBBGFDL?TFVGNDLKZNJGDD`@SJABBFAF?VKD@DE\\MPBFADBb@AFDRKND`@?NDTGH?PGHMDFFANQDHATH?j@a@HCFDHIREDG^S^Md@a@TID?RMH@NKTE",
+        "start_latlng": [
+            51.786732,
+            -1.167522
+        ]
+    },
+    {
+        "avg_grade": -0.4,
+        "climb": 6.1,
+        "distance": 776.6,
+        "effort_count": 667,
+        "end_latlng": [
+            51.776016,
+            -1.16279
+        ],
+        "fastest_athlete": "Ryan Burke",
+        "fastest_time": "2:22",
+        "id": 19883347,
+        "name": "Sprint through Stanton",
+        "polyline": "yq`{HdybFDA?HP[FCR[@KXi@@MHEBIJMLe@LUJ]NYZ}@TURg@NQ?OXg@RKFCN@ZKJ@BC^BNEH?NFJMZMFKH?^_@v@kA^Ub@SLKBGFA\\m@RQ\\s@L]JIDAD@FETDLFHPTND?FENFF?FGH@FDVBLFREBJ?AT?@LLHD?@FNEDBBJHNT@HD",
+        "start_latlng": [
+            51.781573,
+            -1.166422
+        ]
+    },
+    {
+        "avg_grade": 2.2,
+        "climb": 43.9,
+        "distance": 1876.5,
+        "effort_count": 564,
+        "end_latlng": [
+            51.787179,
+            -1.186164
+        ],
+        "fastest_athlete": "Jamie Parkinson",
+        "fastest_time": "7:30",
+        "id": 26554611,
+        "name": "Climb to Stow Wood",
+        "polyline": "qx~zHf}hF_C_A{@i@WUgDcBu@W}@a@a@Mk@G}AEgAIyAqAkAs@{Ak@wA[k@YIMQ_@s@aAu@qAeAwAiEwGe@m@c@i@i@c@w@w@gE{D_AuA_@g@oBsCQc@QUWe@aAeAc@mAKSOQ[Qg@OQQQIs@i@w@QwBs@kBg@iAUcCo@",
+        "start_latlng": [
+            51.772413,
+            -1.1978
+        ]
+    },
+    {
+        "avg_grade": 3.9,
+        "climb": 59.4,
+        "distance": 1504.7,
+        "effort_count": 997,
+        "end_latlng": [
+            51.796803,
+            -1.180224
+        ],
+        "fastest_athlete": "Duncan Lawrence",
+        "fastest_time": "5:48",
+        "id": 9623569,
+        "name": "Otmoor Lane up hill",
+        "polyline": "__f{HvjdFRDXNTDXNDNDBdBd@nBx@lAj@~@h@bDbCbClBVNj@`@`@`@l@\\pB|BjAdCb@x@TX^LDAdAl@\\Jr@b@l@Vp@b@ZLtAhA~@HNA\\BrDIpAFVCp@FTDZAl@S|@e@x@GX@XC`@@r@JNHj@FVAr@MDF",
+        "start_latlng": [
+            51.809287,
+            -1.17436
+        ]
+    },
+    {
+        "avg_grade": 3.1,
+        "climb": 10.8,
+        "distance": 342.8,
+        "effort_count": 1116,
+        "end_latlng": [
+            51.803152,
+            -1.179323
+        ],
+        "fastest_athlete": "Jamie Parkinson",
+        "fastest_time": "1:14",
+        "id": 16516291,
+        "name": "otmoor lane uphill sprint",
+        "polyline": "she{HvydFFDJDRLTR^TZZ\\TFJPF`@b@JDt@`ABJ\\^P^DBNVJVn@nALNv@VZR",
+        "start_latlng": [
+            51.805707,
+            -1.176752
+        ]
+    },
+    {
+        "avg_grade": 1.7,
+        "climb": 8.4,
+        "distance": 248.1,
+        "effort_count": 980,
+        "end_latlng": [
+            51.797937,
+            -1.177287
+        ],
+        "fastest_athlete": "Harry G.",
+        "fastest_time": "51s",
+        "id": 15493749,
+        "name": "High st steep segment",
+        "polyline": "sqc{HtneFCm@@OCCBQCc@EI?SGYMIAG?MGSMSAMIO?WEC?MGMASEA@KCKECIu@IWc@i@OOa@k@",
+        "start_latlng": [
+            51.796908,
+            -1.180108
+        ]
+    },
+    {
+        "avg_grade": 0.7,
+        "climb": 19.2,
+        "distance": 1232.1,
+        "effort_count": 600,
+        "end_latlng": [
+            51.79618,
+            -1.185656
+        ],
+        "fastest_athlete": "Duncan Lawrence",
+        "fastest_time": "4:39",
+        "id": 9435868,
+        "name": "Common road (east)",
+        "polyline": "wlb{HhfiFgAwC_@s@u@}@c@SQCY?CCc@Fe@AsAMo@Y{@iAyAgC{AiDSq@Sc@k@cBkAuDWq@YwAMiAGaAj@yIBs@C{DCe@Mo@S{AEOI{@Me@SwAIy@E{@G_@Gw@I[G_@KsBGO",
+        "start_latlng": [
+            51.791,
+            -1.199243
+        ]
+    },
+    {
+        "avg_grade": 0.0,
+        "climb": 9.7,
+        "distance": 1133.0,
+        "effort_count": 408,
+        "end_latlng": [
+            51.796611,
+            -1.18144
+        ],
+        "fastest_athlete": "Duncan Lawrence",
+        "fastest_time": "4:22",
+        "id": 16236383,
+        "name": "Woodperry Rd",
+        "polyline": "ukb{H~hcFKv@UfASnAu@`C[r@Y|@}@zAy@~AYfA_@|@Uv@a@jAo@vBmAtCi@dAa@bAK\\M|@oAnFYfBe@fBWvAu@`DO~@e@zBu@lD[j@QFM?c@IWQMCO@YNM?KG",
+        "start_latlng": [
+            51.79083,
+            -1.168956
+        ]
+    },
+    {
+        "avg_grade": 7.3,
+        "climb": 42.7,
+        "distance": 581.9,
+        "effort_count": 360,
+        "end_latlng": [
+            51.797095,
+            -1.185287
+        ],
+        "fastest_athlete": "Ross Handley",
+        "fastest_time": "2:30",
+        "id": 7916600,
+        "name": "Church Street climb",
+        "polyline": "kjd{HhjgFLc@BaA`@uEXgCNo@L]^w@HI@IDGl@SlAETBXCNE`Bq@h@OhAa@hCuAv@g@",
+        "start_latlng": [
+            51.800865,
+            -1.189649
+        ]
+    },
+    {
+        "avg_grade": 0.3,
+        "climb": 3.6,
+        "distance": 463.5,
+        "effort_count": 431,
+        "end_latlng": [
+            51.810566,
+            -1.203908
+        ],
+        "fastest_athlete": "Duncan Lawrence",
+        "fastest_time": "1:32",
+        "id": 16462699,
+        "name": "past the pond to the chickens",
+        "polyline": "avf{HveiFr@dANLb@n@VXnAnBHFr@v@TJj@z@l@l@`@XJPPn@d@bCB|@Ex@@TEt@G^?R@PHF",
+        "start_latlng": [
+            51.812977,
+            -1.199154
+        ]
+    },
+    {
+        "avg_grade": 4.0,
+        "climb": 57.4,
+        "distance": 1438.8,
+        "effort_count": 60,
+        "end_latlng": [
+            51.797529,
+            -1.177822
+        ],
+        "fastest_athlete": "Duncan Lawrence",
+        "fastest_time": "6:51",
+        "id": 4414072,
+        "name": "Otmoor Lane Climb",
+        "polyline": "mkd{HjkaF?jBLjAHZD^CFBp@DRCFLt@@hAh@rBFp@HZ@NEFAJRp@N`AHnACl@DPLXPrAf@nAf@lB@|@KhAEz@Dh@?\\OvAAh@FzAA|@?\\Eb@ElBDx@LfAHnBN|@Cz@BnALZJ`@XZL^EH\\tBd@fBLTB`@CDNnARf@`@rBT`@@l@HbBALGRZ|@R\\@n@Hh@HXAPTjAZt@j@v@\\n@",
+        "start_latlng": [
+            51.801038,
+            -1.159091
+        ]
+    },
+    {
+        "avg_grade": -0.7,
+        "climb": 10.1,
+        "distance": 1222.5,
+        "effort_count": 370,
+        "end_latlng": [
+            51.791008,
+            -1.199149
+        ],
+        "fastest_athlete": "Huw Charles",
+        "fastest_time": "4:35",
+        "id": 9428672,
+        "name": "Common road (west)",
+        "polyline": "ulc{H|pfF^dDZlDXrBHdAHd@^hEDjDChBWjEC`DDlAJx@Lt@VdArA|DnA`DzBrEbA|Aj@`ATTRLhAV\\?d@Ep@AXDd@RXVh@n@^r@Vx@^x@",
+        "start_latlng": [
+            51.796114,
+            -1.185581
+        ]
+    },
+    {
+        "avg_grade": 11.4,
+        "climb": 19.2,
+        "distance": 164.6,
+        "effort_count": 162,
+        "end_latlng": [
+            51.80021,
+            -1.186592
+        ],
+        "fastest_athlete": "Ben Phillips",
+        "fastest_time": "45s",
+        "id": 10475101,
+        "name": "Church Street footpath (hill repeat)",
+        "polyline": "ood{HnwfFhAAhBIpBB",
+        "start_latlng": [
+            51.801687,
+            -1.186632
+        ]
+    },
+    {
+        "avg_grade": 13.1,
+        "climb": 16.2,
+        "distance": 123.8,
+        "effort_count": 491,
+        "end_latlng": [
+            51.798939,
+            -1.186392
+        ],
+        "fastest_athlete": "Ben Phillips",
+        "fastest_time": "33s",
+        "id": 16860260,
+        "name": "Church street - short hill repeat",
+        "polyline": "eed{H`wfF\\ErAG`@DXEl@S",
+        "start_latlng": [
+            51.800034,
+            -1.186567
+        ]
+    },
+    {
+        "avg_grade": -0.0,
+        "climb": 9.2,
+        "distance": 1128.4,
+        "effort_count": 350,
+        "end_latlng": [
+            51.790785,
+            -1.168982
+        ],
+        "fastest_athlete": "Rob Hallifax",
+        "fastest_time": "4:44",
+        "id": 16236368,
+        "name": "Pub to Woodperry Hill",
+        "polyline": "soc{HpweFRCXST@n@NT?ZGJIJQn@_Cr@oDh@{BLy@XeAF_@v@qDNe@VsAV{Ap@{C\\{@x@_Bz@aCvAeFf@sAp@uBh@iAn@eAZe@f@aAfAeDd@{BNiA",
+        "start_latlng": [
+            51.796589,
+            -1.181525
+        ]
+    },
+    {
+        "avg_grade": 2.9,
+        "climb": 9.5,
+        "distance": 327.3,
+        "effort_count": 469,
+        "end_latlng": [
+            51.79495,
+            -1.178882
+        ],
+        "fastest_athlete": "Mark Tuthill",
+        "fastest_time": "38s",
+        "id": 16462815,
+        "name": "From High st up Woodperry Rd",
+        "polyline": "cpc{HjveFj@?GCJCFFZDFDLANJNAH@DCJ@CJFOEIJMH?DEPe@PcADKFq@FWDCPuA`@oA`@qB",
+        "start_latlng": [
+            51.79666,
+            -1.181336
+        ]
+    },
+    {
+        "avg_grade": 12.1,
+        "climb": 30.4,
+        "distance": 241.5,
+        "effort_count": 203,
+        "end_latlng": [
+            51.799617,
+            -1.169957
+        ],
+        "fastest_athlete": "Mattia Poletto",
+        "fastest_time": "1:12",
+        "id": 27586631,
+        "name": "Sledging hill steep bit",
+        "polyline": "gcd{HxybF@z@C|@@|@EZA`@BRC\\B`AEn@?x@CRLlCTv@",
+        "start_latlng": [
+            51.799724,
+            -1.166529
+        ]
+    },
+    {
+        "avg_grade": 0.7,
+        "climb": 7.5,
+        "distance": 845.5,
+        "effort_count": 278,
+        "end_latlng": [
+            51.805905,
+            -1.17661
+        ],
+        "fastest_athlete": "Duncan Lawrence",
+        "fastest_time": "3:21",
+        "id": 16482054,
+        "name": "Bird reserve bridge to farm gate",
+        "polyline": "{qf{HdudFPEDBTCNDVCJ@ZErBCHCH@dAGHB\\Ab@Ed@BJEh@CNGTEHEJOHg@AiAAKEA@]ASB}@Le@L?f@ZVHRL`@HVLPTx@XdAh@RH^XdCxAZXDJVRVJVPRHBDp@^Z^D@",
+        "start_latlng": [
+            51.812303,
+            -1.176022
+        ]
+    },
+    {
+        "avg_grade": -0.1,
+        "climb": 0.0,
+        "distance": 641.4,
+        "effort_count": 56,
+        "end_latlng": [
+            51.809403,
+            -1.174218
+        ],
+        "fastest_athlete": "Mattia Poletto",
+        "fastest_time": "2:47",
+        "id": 12189420,
+        "name": "Gate avoidance (out)",
+        "polyline": "urf{H~sdFCm@@iBE}EDeEMwDLB^\\l@b@bB|@r@f@f@T`C|Ax@b@tCjB",
+        "start_latlng": [
+            51.81243,
+            -1.175839
+        ]
+    },
+    {
+        "avg_grade": 0.2,
+        "climb": 2.4,
+        "distance": 603.1,
+        "effort_count": 89,
+        "end_latlng": [
+            51.812283,
+            -1.175709
+        ],
+        "fastest_athlete": "Harry G.",
+        "fastest_time": "2:20",
+        "id": 12189415,
+        "name": "Gate avoidance (in)",
+        "polyline": "g`f{HjjdFcE_CwAcAu@c@gAu@gCyA]_@CAM@Ff@LrDJtM",
+        "start_latlng": [
+            51.809483,
+            -1.1743
+        ]
+    },
+    {
+        "avg_grade": -0.3,
+        "climb": 3.2,
+        "distance": 940.8,
+        "effort_count": 104,
+        "end_latlng": [
+            51.812346,
+            -1.172023
+        ],
+        "fastest_athlete": "Harry G.",
+        "fastest_time": "2:58",
+        "id": 16462578,
+        "name": "it gets muddy",
+        "polyline": "wie{H`xdFE?AIg@G?IGMMFGC]q@GACIMCGKOKE?CGGADC]GFEEECKENDOEGDCSOAIGAGBGAAIWUGOT@CGI?WOs@BUEQSIAOO[k@QFc@@N?]FN@HHKMEAG?IGGEE?k@_@LK]Ue@C_@WOAWOKAEGK?QQMGE@GIGASK[WKMYOKAMIKUIAEMECI?SI[S]OIIMECGUSKCEEQGWQIIc@SIMMGOKa@OQWSQ",
+        "start_latlng": [
+            51.80588,
+            -1.176487
+        ]
+    },
+    {
+        "avg_grade": 0.1,
+        "climb": 29.2,
+        "distance": 2536.4,
+        "effort_count": 110,
+        "end_latlng": [
+            51.810498,
+            -1.204018
+        ],
+        "fastest_athlete": "Chris Prince",
+        "fastest_time": "12:02",
+        "id": 16482039,
+        "name": "the long field towards Noke",
+        "polyline": "wze{HvwfFDRDGf@PJL?JVXNHDAVRFr@Vn@?HHZ@\\F^DBFTb@b@DBJATl@^R@DRFNLXHLAl@BHDX?LDFADJFCLDVC\\BJHX@j@NNBF?HDV?JCL?DCb@@h@FBCNFVGn@LF?DFF@BJZCLJJA\\DDFLAH@TNHBBHJH^PJPPLDLLLTb@F@DJH@?HFRPHHFEp@GDERIPALGTKDEH?PNXPd@DRLXHh@RV?HPRBLARDX?LCTBd@DXLVGhBBFALB`@ARJv@?vAFT?^Fv@ALDl@NxA@|@D\\?LQT[HSXQJGBU@GJEBIAMLAHIJGBQTWj@e@p@Yn@W^Wh@MNM\\g@t@GX]f@w@bBQVc@dAk@r@Sf@QRENOTMb@QVO^QHw@B]Jo@B_@L_Ap@KJc@JWNI?q@ZI@_@Pe@b@MTMAOUKEMAKBKLOHOTGPWjBAZKvAYLK@QHKRGBUDGCQ@ICOSUGWUQGYSKEa@?WI_@AIGU?EEO@a@ECDGC",
+        "start_latlng": [
+            51.808603,
+            -1.186678
+        ]
+    },
+    {
+        "avg_grade": -0.8,
+        "climb": 0.0,
+        "distance": 498.3,
+        "effort_count": 757,
+        "end_latlng": [
+            51.812412,
+            -1.206999
+        ],
+        "fastest_athlete": "Ben Phillips",
+        "fastest_time": "1:41",
+        "id": 6348809,
+        "name": "Noke - 0.5 km notice board dash (return)",
+        "polyline": "y_g{HbwkFNsB@k@FSN_@l@i@n@U`@?TIVu@@QXaBFmA?UKkAW_BE_@@SFUR]b@]^UTWz@yA`@e@",
+        "start_latlng": [
+            51.814537,
+            -1.212173
+        ]
+    },
+    {
+        "avg_grade": 0.0,
+        "climb": 0.0,
+        "distance": 1260.5,
+        "effort_count": 51,
+        "end_latlng": [
+            51.821759,
+            -1.189725
+        ],
+        "fastest_athlete": "Nicholas Westley",
+        "fastest_time": "5:51",
+        "id": 18050982,
+        "name": "To the last hide",
+        "polyline": "sqf{Hh|fFa@Ew@YI?y@OECMCEGk@OIGg@KQGG?EEe@MWCOEOAYIo@I_@M[AMGk@EQGCEG?i@QQ?UGGBk@KQ?IIW?GHK~@CvAAbB@XArBHjBC\\GLGFYHcBLQ?YCg@Hi@@KEQBEAKBYC[?{@PK?QF{@?iBXG?Q@WHEA]DcALSAs@FS?SDs@?W@e@LU@EDWAGB",
+        "start_latlng": [
+            51.812265,
+            -1.187409
+        ]
+    },
+    {
+        "avg_grade": 0.0,
+        "climb": 0.0,
+        "distance": 805.5,
+        "effort_count": 413,
+        "end_latlng": [
+            51.812995,
+            -1.198738
+        ],
+        "fastest_athlete": "Jamie Parkinson",
+        "fastest_time": "3:04",
+        "id": 18374188,
+        "name": "Swamp or not (in).",
+        "polyline": "cqf{Hl~fF`@|Kb@jFLdALbCJhH?nFEp@Kp@}@bEe@jBi@hBSz@{AlF",
+        "start_latlng": [
+            51.812189,
+            -1.187744
+        ]
+    },
+    {
+        "avg_grade": -0.2,
+        "climb": 0.0,
+        "distance": 352.7,
+        "effort_count": 646,
+        "end_latlng": [
+            51.812024,
+            -1.206499
+        ],
+        "fastest_athlete": "Alex Troth",
+        "fastest_time": "1:07",
+        "id": 6925018,
+        "name": "Final sprint",
+        "polyline": "sag{Hf_kFNANIzAg@\\QR?`ARh@GLGNMj@[^_@\\e@Vi@b@m@Pa@~@gA",
+        "start_latlng": [
+            51.814826,
+            -1.208352
+        ]
+    },
+    {
+        "avg_grade": 0.8,
+        "climb": 4.8,
+        "distance": 501.0,
+        "effort_count": 868,
+        "end_latlng": [
+            51.814513,
+            -1.212148
+        ],
+        "fastest_athlete": "Lucy Tapper Howe",
+        "fastest_time": "1:19",
+        "id": 6348703,
+        "name": "Noke - 0.5 km notice board dash",
+        "polyline": "yrf{HpvjFyAbCi@j@w@p@Qb@Dh@XnAJh@FlACfA_@bCOd@SZMH]Js@Fk@VKNQj@E|AIt@",
+        "start_latlng": [
+            51.812457,
+            -1.206965
+        ]
+    },
+    {
+        "avg_grade": -0.5,
+        "climb": 0.0,
+        "distance": 719.2,
+        "effort_count": 133,
+        "end_latlng": [
+            51.81312,
+            -1.198951
+        ],
+        "fastest_athlete": "Luke Cotter",
+        "fastest_time": "2:49",
+        "id": 6924990,
+        "name": "The easy bit to the pond",
+        "polyline": "ipf{HxrjF\\YZc@Vi@f@aAXa@LWbAyAVq@TuAR}BBqBGaBk@qCGQm@c@s@o@c@i@i@i@MSO_@u@mAsA_B}A_CCEK@",
+        "start_latlng": [
+            51.81205,
+            -1.206364
+        ]
+    },
+    {
+        "avg_grade": 0.3,
+        "climb": 2.2,
+        "distance": 664.9,
+        "effort_count": 4279,
+        "end_latlng": [
+            51.814271,
+            -1.270367
+        ],
+        "fastest_athlete": "Duncan Lawrence",
+        "fastest_time": "2:00",
+        "id": 4500315,
+        "name": "Up and Over",
+        "polyline": "oag{HjvuFQUa@Ja@^[h@Up@oAjLWjAe@fAAx@\\j@jBfBhA`ATVXb@x@tBb@zAXdCDv@",
+        "start_latlng": [
+            51.814805,
+            -1.263255
+        ]
+    },
+    {
+        "avg_grade": 0.1,
+        "climb": 3.1,
+        "distance": 898.2,
+        "effort_count": 4031,
+        "end_latlng": [
+            51.816124,
+            -1.266536
+        ],
+        "fastest_athlete": "Simon M.",
+        "fastest_time": "2:53",
+        "id": 10576747,
+        "name": "Two Bridges",
+        "polyline": "gef{HdhuFe@Ac@Na@X_@f@uAxBkAbB]`@y@pA{B|C_@`@e@\\g@Lk@?sA]oBmA}BYc@JWr@u@dIWdBDOm@pB",
+        "start_latlng": [
+            51.810283,
+            -1.260984
+        ]
+    },
+    {
+        "avg_grade": 0.0,
+        "climb": 19.0,
+        "distance": 2718.1,
+        "effort_count": 282,
+        "end_latlng": [
+            51.821844,
+            -1.23595
+        ],
+        "fastest_athlete": "Angus Nicolson",
+        "fastest_time": "11:12",
+        "id": 27446731,
+        "name": "Islip Loop",
+        "polyline": "kmh{HjlpFOrC?x@IpBLdDP|BDnCXxEDVZ|@d@bAf@rANPAKAAF\\Xt@dA`EHPTrAFdACHQZ{BdBMFE?IQQ{@WaAo@aDKQMAGBOPS`@m@|@Od@eAvGANFf@Nt@@LCHW?aAX}@b@qAr@IAEMEU?_AWyEKkAKKAGAg@Kg@Gc@OwKOiCG[Uq@GYFeA\\y@F[H_B]_@qAwBGQBSHKXSj@YLKZc@Tg@Na@Lm@B_@Fc@?SIw@@YJ]TYBI?Ue@}B]q@Qg@YcAOSQk@YsC@IJQRK`@EL?`@HNGl@oAJQLILDJLr@b@j@d@r@jATn@JLLFRd@n@z@Nd@N`AJb@D~@FT",
+        "start_latlng": [
+            51.821821,
+            -1.236054
+        ]
+    },
+    {
+        "avg_grade": -1.1,
+        "climb": 4.8,
+        "distance": 1274.8,
+        "effort_count": 569,
+        "end_latlng": [
+            51.819056,
+            -1.232636
+        ],
+        "fastest_athlete": "Duncan Lawrence",
+        "fastest_time": "4:36",
+        "id": 12101930,
+        "name": "Noke going back",
+        "polyline": "_{f{H~ulFMzA@RG`BCdAKz@@H[|@]lBEDCDuAxGYdAOZS|AE@CDKf@Ij@OVGj@ENMPy@pEUn@ALEBKj@c@pAETSf@c@fBY|@EDETKHQ^WfA@KAVEFu@|B[rAW~@_@nASh@S|@]z@JIGAAJCDCNKV[jBM^IRMx@EGc@lB]t@IX[v@a@xA",
+        "start_latlng": [
+            51.813765,
+            -1.217119
+        ]
+    },
+    {
+        "avg_grade": 1.2,
+        "climb": 20.0,
+        "distance": 1343.1,
+        "effort_count": 355,
+        "end_latlng": [
+            51.813835,
+            -1.217297
+        ],
+        "fastest_athlete": "Duncan Lawrence",
+        "fastest_time": "5:20",
+        "id": 12007522,
+        "name": "Noke only",
+        "polyline": "u_h{Hz_pFASD[h@{A`@_BLWTs@p@_CLQDFBIpAcFl@mCDCBU`BeFp@eCf@yA\\yAjAiDbCgInCyMFWFC\\{ADIT{@Xy@x@cDJy@J]l@eDFw@JaDDUFiA",
+        "start_latlng": [
+            51.819639,
+            -1.23406
+        ]
+    },
+    {
+        "avg_grade": 4.7,
+        "climb": 18.2,
+        "distance": 383.5,
+        "effort_count": 112,
+        "end_latlng": [
+            51.81104,
+            -1.220558
+        ],
+        "fastest_athlete": "James Kennedy",
+        "fastest_time": "1:27",
+        "id": 16760779,
+        "name": "Death hill - turn to turn",
+        "polyline": "qve{Hp}lFgA`@eBx@aA\\aBv@s@j@a@^g@n@y@n@a@`@e@\\[^",
+        "start_latlng": [
+            51.807933,
+            -1.218326
+        ]
+    },
+    {
+        "avg_grade": 8.5,
+        "climb": 106.6,
+        "distance": 1261.5,
+        "effort_count": 57,
+        "end_latlng": [
+            51.812104,
+            -1.221989
+        ],
+        "fastest_athlete": "Robert Alden",
+        "fastest_time": "3:47",
+        "id": 4694345,
+        "name": "B4027 Climb",
+        "polyline": "oah{HvbpFlE{@v@Yd@Yd@g@`@k@pDsG^w@\\_AlAuEp@mB`AoBfCaEj@mAf@wAv@uC^iAzEwMr@kBt@eBzBsE",
+        "start_latlng": [
+            51.819925,
+            -1.234512
+        ]
+    },
+    {
+        "avg_grade": 0.2,
+        "climb": 0.0,
+        "distance": 111.3,
+        "effort_count": 14,
+        "end_latlng": [
+            51.818986,
+            -1.246194
+        ],
+        "fastest_athlete": "Daniel Bundred",
+        "fastest_time": "53s",
+        "id": 24025667,
+        "name": "Water Splash",
+        "polyline": "_bh{HbkrFh@JZAf@i@\\A`@T\\^",
+        "start_latlng": [
+            51.820006,
+            -1.246097
+        ]
+    },
+    {
+        "avg_grade": 0.1,
+        "climb": 3.5,
+        "distance": 1640.1,
+        "effort_count": 9405,
+        "end_latlng": [
+            51.706027,
+            -1.238254
+        ],
+        "fastest_athlete": "Liam S.",
+        "fastest_time": "5:20",
+        "id": 7158036,
+        "name": "The Official Sir Roger Bannister Mile",
+        "polyline": "qrtzHx|qFBEZ@dD}A|@q@`Ai@h@}@n@]b@OXAb@OPSf@Y~@U~@k@lCs@fAa@bAWfDiA`EeAfDw@^MXCbDo@`AW|@[\\CpB_@fAI~@MdCg@fBWdBe@dAShBWvBc@bAK",
+        "start_latlng": [
+            51.720252,
+            -1.243801
+        ]
+    },
+    {
+        "avg_grade": -0.1,
+        "climb": 2.6,
+        "distance": 1621.1,
+        "effort_count": 9929,
+        "end_latlng": [
+            51.720234,
+            -1.244008
+        ],
+        "fastest_athlete": "Jake P.",
+        "fastest_time": "5:13",
+        "id": 6561626,
+        "name": "The Giles Mile",
+        "polyline": "o{qzHzypFa@RgA\\eAR_@AYLuA\\q@Ji@LOHY?g@Le@FoBl@w@Ds@Po@@[Hk@Bm@N_@?q@JIBa@Vc@FeAZS?y@ZQB}@TOJg@Fm@Po@DkA`@YDSHUBg@P]HOHW?mB`AO?k@L[BkAZe@RkAFWNe@j@MHYCQF_@VIN_@XMRw@^w@RQL]f@QF[Xi@T}@n@e@PoBxAM@",
+        "start_latlng": [
+            51.706327,
+            -1.238216
+        ]
+    },
+    {
+        "avg_grade": 10.1,
+        "climb": 0.0,
+        "distance": 295.6,
+        "effort_count": 3981,
+        "end_latlng": [
+            51.714595,
+            -1.281229
+        ],
+        "fastest_athlete": "Jason Houlsby",
+        "fastest_time": "1:00",
+        "id": 16518150,
+        "name": "Bayworth hill",
+        "polyline": "y_szHt|xFc@Xe@`@o@b@a@\\SFMJa@`@m@`@c@LWL{@j@i@T{@J",
+        "start_latlng": [
+            51.712136,
+            -1.27963
+        ]
+    },
+    {
+        "avg_grade": 0.1,
+        "climb": 3.4,
+        "distance": 997.1,
+        "effort_count": 772,
+        "end_latlng": [
+            51.703515,
+            -1.303854
+        ],
+        "fastest_athlete": "Henry Delacave",
+        "fastest_time": "3:53",
+        "id": 15274695,
+        "name": "Blagrove Farm",
+        "polyline": "kxpzHfc{FONSv@s@bFu@fJc@rDWrDOpCMvAC|@@VLl@Pn@@bAAz@_@|A[`@g@d@QTWd@YfAE?GDWp@g@lBkA~DYvBIjBAlC",
+        "start_latlng": [
+            51.700707,
+            -1.290917
+        ]
+    },
+    {
+        "avg_grade": 6.5,
+        "climb": 0.0,
+        "distance": 267.6,
+        "effort_count": 7124,
+        "end_latlng": [
+            51.704079,
+            -1.287275
+        ],
+        "fastest_athlete": "Jack Hunter",
+        "fastest_time": "46s",
+        "id": 7954156,
+        "name": "Sunningwell Feckin Hell",
+        "polyline": "_bqzHd`zFF@?B?AB?C?@A@@A?BEuA~As@r@w@dAu@l@oApAw@p@B?",
+        "start_latlng": [
+            51.702242,
+            -1.285305
+        ]
+    },
+    {
+        "avg_grade": -8.8,
+        "climb": 0.0,
+        "distance": 236.0,
+        "effort_count": 7368,
+        "end_latlng": [
+            51.702182,
+            -1.285269
+        ],
+        "fastest_athlete": "\ud83c\udf44Sagar Rai \ud83c\udf44",
+        "fastest_time": "31s",
+        "id": 16846133,
+        "name": "Sunningwell Down Hill",
+        "polyline": "ylqzHjkzFbAgAdAcA|CiD|@w@",
+        "start_latlng": [
+            51.703974,
+            -1.287094
+        ]
+    },
+    {
+        "avg_grade": 4.0,
+        "climb": 39.5,
+        "distance": 994.4,
+        "effort_count": 160,
+        "end_latlng": [
+            51.715936,
+            -1.296584
+        ],
+        "fastest_athlete": "Chris Lamb",
+        "fastest_time": "4:58",
+        "id": 4988540,
+        "name": "Ridgeway Climb",
+        "polyline": "}sszHbv~FoAaBwAmC}AiDQs@Ik@I{DMsAK_B@aAPaBd@mCNo@JYDYAmAMmA@g@AQDi@GoADwA?{@W_BA]@aBAAHwAJi@JqAAYEOHm@Je@v@mBXa@Pa@Fc@",
+        "start_latlng": [
+            51.715357,
+            -1.309291
+        ]
+    },
+    {
+        "avg_grade": 1.6,
+        "climb": 15.0,
+        "distance": 864.2,
+        "effort_count": 2245,
+        "end_latlng": [
+            51.706486,
+            -1.314558
+        ],
+        "fastest_athlete": "Aaron Burgess \ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
+        "fastest_time": "3:08",
+        "id": 8622760,
+        "name": "Lamborough Slog",
+        "polyline": "e}pzHh}}FYCa@^y@|@QXe@h@e@t@KV_CjGc@dBeAfCy@`DuAfEQr@Sr@a@|Am@nB]p@qAfDeAvAc@`@_AzA",
+        "start_latlng": [
+            51.701476,
+            -1.305322
+        ]
+    },
+    {
+        "avg_grade": -0.8,
+        "climb": 0.0,
+        "distance": 204.8,
+        "effort_count": 4424,
+        "end_latlng": [
+            51.694002,
+            -1.297362
+        ],
+        "fastest_athlete": "Richard Barnett",
+        "fastest_time": "35s",
+        "id": 14126055,
+        "name": "down Whitecross",
+        "polyline": "}xozHbs|F`@W\\c@^[`Aq@dCmAd@Y",
+        "start_latlng": [
+            51.695675,
+            -1.298574
+        ]
+    },
+    {
+        "avg_grade": 0.5,
+        "climb": 8.9,
+        "distance": 1034.4,
+        "effort_count": 526,
+        "end_latlng": [
+            51.720021,
+            -1.321674
+        ],
+        "fastest_athlete": "Alex Wimborne",
+        "fastest_time": "4:03",
+        "id": 23912048,
+        "name": "Track to Henwood",
+        "polyline": "mjszHl~bGgBsDkAqCeAmCCM@C[u@s@wAmE_K]m@{@mA]a@c@QmCcBgCqBgAw@cAy@}ByCq@wAUq@E_@DEd@O`@W",
+        "start_latlng": [
+            51.713838,
+            -1.331107
+        ]
+    },
+    {
+        "avg_grade": -1.6,
+        "climb": 0.0,
+        "distance": 539.5,
+        "effort_count": 3119,
+        "end_latlng": [
+            51.70659,
+            -1.314257
+        ],
+        "fastest_athlete": "Peter Wiblin",
+        "fastest_time": "56s",
+        "id": 26876703,
+        "name": "Flying start",
+        "polyline": "murzH`c_GN?@FC@PKD?`@HJHRAHBbAf@dAHNFNJv@Nt@^P?HDt@`A`@`Ab@x@PT`@^NRPBPPFBBE\\?\\UJCP@JJLTDf@EfACE?B@\\",
+        "start_latlng": [
+            51.710476,
+            -1.311362
+        ]
+    },
+    {
+        "avg_grade": -0.0,
+        "climb": 2.0,
+        "distance": 1537.8,
+        "effort_count": 630,
+        "end_latlng": [
+            51.701604,
+            -1.305305
+        ],
+        "fastest_athlete": "Gayle B.",
+        "fastest_time": "4:11",
+        "id": 8622755,
+        "name": "Honeybottom Straight ",
+        "polyline": "wtozHfuaGM}@SaAc@iCcAoFOkAQcAw@wDWaA}AoHo@}Bg@wBuCgIm@wB[{Aw@sCIg@Q_BEeAm@yHg@sCeB}Hc@_B{@{B[o@e@sAa@q@O]Wu@eBiESYYC",
+        "start_latlng": [
+            51.695008,
+            -1.324514
+        ]
+    },
+    {
+        "avg_grade": -0.3,
+        "climb": 2.0,
+        "distance": 933.1,
+        "effort_count": 913,
+        "end_latlng": [
+            51.701154,
+            -1.321235
+        ],
+        "fastest_athlete": "Aaron Burgess \ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
+        "fastest_time": "3:14",
+        "id": 8214717,
+        "name": "Besselsleigh Rd - Green Lane",
+        "polyline": "slrzHniaGXCVDfDjAfBv@d@Hv@?t@Er@Kd@[\\]~AwB~@eA`CwB`@W`Aa@b@GPBvAOn@Et@Kt@?bBPj@J`B?V@RFPP",
+        "start_latlng": [
+            51.709066,
+            -1.322636
+        ]
+    },
+    {
+        "avg_grade": -0.5,
+        "climb": 0.0,
+        "distance": 838.8,
+        "effort_count": 430,
+        "end_latlng": [
+            51.704713,
+            -1.31765
+        ],
+        "fastest_athlete": "Paul H.",
+        "fastest_time": "2:54",
+        "id": 26876691,
+        "name": "On the lash",
+        "polyline": "gkrzHvhaGBLXPv@Pf@Vb@Jh@Z^JXR`@PhA?nBUTId@e@f@u@Z[xBiCrAkAh@_@ZMf@YHQLc@@]KgAS]@mASwA@YIe@C}@Ig@QmCKYGEOG",
+        "start_latlng": [
+            51.708849,
+            -1.322517
+        ]
+    },
+    {
+        "avg_grade": -1.3,
+        "climb": 0.0,
+        "distance": 219.4,
+        "effort_count": 179,
+        "end_latlng": [
+            51.703765,
+            -1.314942
+        ],
+        "fastest_athlete": "Oliver Elly",
+        "fastest_time": "50s",
+        "id": 26876669,
+        "name": "Through the woods",
+        "polyline": "orqzH|h`GF{@\\iAp@oBLo@h@iBb@u@ZMN[",
+        "start_latlng": [
+            51.704885,
+            -1.317424
+        ]
+    },
+    {
+        "avg_grade": 0.1,
+        "climb": 4.6,
+        "distance": 1604.1,
+        "effort_count": 649,
+        "end_latlng": [
+            51.694834,
+            -1.324883
+        ],
+        "fastest_athlete": "Madan Rai \ud83c\udf44",
+        "fastest_time": "5:52",
+        "id": 6983801,
+        "name": "Honeybottom ",
+        "polyline": "g}pzHb|}F[DDEDDDRb@j@`BdDZhARZN\\fAjDVd@Z\\Lf@JNPh@^nBPr@j@jC`@nCXtAXvC?h@DXF`A@p@Nt@PzA^zAXp@Nx@Zp@h@`CP~@Z`Ab@bAF\\j@|Af@lBh@dBHZd@pA\\dBL~@HXDb@TnAf@|BFf@T`ATh@PdAL\\DZFPLt@H`ATxALb@Hv@Px@Db@TnA",
+        "start_latlng": [
+            51.701486,
+            -1.305139
+        ]
+    },
+    {
+        "avg_grade": -0.4,
+        "climb": 0.0,
+        "distance": 380.0,
+        "effort_count": 285,
+        "end_latlng": [
+            51.708747,
+            -1.322114
+        ],
+        "fastest_athlete": "Tristan Clarke",
+        "fastest_time": "1:23",
+        "id": 26876680,
+        "name": "New estate dash",
+        "polyline": "oorzHdh`GLnAN|@?f@FNPF\\`@HP?v@Gv@BfANv@^|@Jx@Al@F|@C`ABd@CNAVEPKJ?HTr@",
+        "start_latlng": [
+            51.709529,
+            -1.317304
+        ]
+    },
+    {
+        "avg_grade": 2.2,
+        "climb": 16.1,
+        "distance": 741.8,
+        "effort_count": 69,
+        "end_latlng": [
+            51.708869,
+            -1.311589
+        ],
+        "fastest_athlete": "Martin J.",
+        "fastest_time": "3:20",
+        "id": 20196349,
+        "name": "Stile Challenge",
+        "polyline": "cnqzHb}}FAx@KTGFs@b@{Ar@q@`@c@J_@^k@b@EN@RI`@Cl@g@dEAXINa@b@W`@i@\\e@d@e@p@{@j@CXEvAUv@OLa@Le@Xm@b@QRm@b@_A|@G@",
+        "start_latlng": [
+            51.704184,
+            -1.305297
+        ]
+    },
+    {
+        "avg_grade": -0.9,
+        "climb": 2.0,
+        "distance": 912.1,
+        "effort_count": 1298,
+        "end_latlng": [
+            51.694996,
+            -1.324793
+        ],
+        "fastest_athlete": "Monika Ksiazek",
+        "fastest_time": "1:47",
+        "id": 8214725,
+        "name": "Church Lane",
+        "polyline": "e{pzHv`aGH\\?\\UlDG~A@`AFx@Jr@Rl@NXPRNN^Vt@VxAl@PDPBx@Vf@Vh@TNNdAp@dBp@`@Jd@B`AKdAAf@Cf@@lB[l@[z@m@nAy@RGNW",
+        "start_latlng": [
+            51.701154,
+            -1.321235
+        ]
+    },
+    {
+        "avg_grade": 2.5,
+        "climb": 21.6,
+        "distance": 870.9,
+        "effort_count": 17,
+        "end_latlng": [
+            51.710227,
+            -1.31006
+        ],
+        "fastest_athlete": "Keith W.",
+        "fastest_time": "3:54",
+        "id": 15274708,
+        "name": "Fox Lane to Old Boars Hill",
+        "polyline": "ajqzHrv}Fg@l@m@~AWh@C~@Ul@cAr@i@VgAr@c@LYN_@`@gBnAsCzA}ClBaA`AgBnB_Ap@mDlBgAd@c@N",
+        "start_latlng": [
+            51.703534,
+            -1.30426
+        ]
+    },
+    {
+        "avg_grade": 2.6,
+        "climb": 8.8,
+        "distance": 306.0,
+        "effort_count": 2618,
+        "end_latlng": [
+            51.694946,
+            -1.273906
+        ],
+        "fastest_athlete": "David Z.",
+        "fastest_time": "56s",
+        "id": 8245200,
+        "name": "Up the hill-track",
+        "polyline": "gtozHbrxFHe@TeBFOHs@PcAM]c@k@Qe@CcBCmEBoB",
+        "start_latlng": [
+            51.694926,
+            -1.277931
+        ]
+    },
+    {
+        "avg_grade": 0.8,
+        "climb": 4.2,
+        "distance": 505.5,
+        "effort_count": 3678,
+        "end_latlng": [
+            51.702634,
+            -1.277174
+        ],
+        "fastest_athlete": "Jason Houlsby",
+        "fastest_time": "1:31",
+        "id": 14532155,
+        "name": "Green Lane south from Bayworth",
+        "polyline": "s`rzHrixF`BXdAPV?z@VV@fDU|ACV@f@Hj@@d@Hh@BhCh@d@D",
+        "start_latlng": [
+            51.707142,
+            -1.276571
+        ]
+    },
+    {
+        "avg_grade": 7.4,
+        "climb": 21.5,
+        "distance": 268.7,
+        "effort_count": 575,
+        "end_latlng": [
+            51.710775,
+            -1.289761
+        ],
+        "fastest_athlete": "Liam Clogger",
+        "fastest_time": "47s",
+        "id": 15594063,
+        "name": "Foxcombe hill",
+        "polyline": "}qrzH`m{F@Ng@kBSiAKy@_@sBgAuDWs@AMZj@",
+        "start_latlng": [
+            51.709919,
+            -1.292484
+        ]
+    },
+    {
+        "avg_grade": 0.0,
+        "climb": 2.9,
+        "distance": 347.0,
+        "effort_count": 123,
+        "end_latlng": [
+            51.700192,
+            -1.288115
+        ],
+        "fastest_athlete": "Simon F.",
+        "fastest_time": "1:11",
+        "id": 26320878,
+        "name": "Sunningwell cricket ground lap",
+        "polyline": "cupzHbqzF?{@A[M{@I[MUKE_A?MJIN[~@Or@EpADt@FRJNNJLBRAhAy@VYLU",
+        "start_latlng": [
+            51.700184,
+            -1.288015
+        ]
+    },
+    {
+        "avg_grade": 5.8,
+        "climb": 13.6,
+        "distance": 236.5,
+        "effort_count": 975,
+        "end_latlng": [
+            51.70344,
+            -1.292088
+        ],
+        "fastest_athlete": "Netra Bahadur Rana \ud83c\udf44\ud83c\udf44\ud83c\udf44",
+        "fastest_time": "53s",
+        "id": 13742987,
+        "name": "Gravel hill",
+        "polyline": "e~pzHpt{FUHYOoAkA}@k@eA{@UW}@_BQM",
+        "start_latlng": [
+            51.701638,
+            -1.293683
+        ]
+    },
+    {
+        "avg_grade": -5.2,
+        "climb": 5.0,
+        "distance": 657.3,
+        "effort_count": 449,
+        "end_latlng": [
+            51.71023,
+            -1.278857
+        ],
+        "fastest_athlete": "Cameron Taylor",
+        "fastest_time": "2:28",
+        "id": 18854843,
+        "name": "Brumcombe Lane descent",
+        "polyline": "ojrzHdnzFRsBWyCIi@IeAAy@J{AOYM]Gc@Y_AWkBScAM]Q[UKAe@Dg@BeA_@qB]mC@c@Ae@EI@qACi@WcAg@{B",
+        "start_latlng": [
+            51.708729,
+            -1.287544
+        ]
+    },
+    {
+        "avg_grade": -2.1,
+        "climb": 0.0,
+        "distance": 861.1,
+        "effort_count": 979,
+        "end_latlng": [
+            51.695438,
+            -1.279216
+        ],
+        "fastest_athlete": "Richard M.",
+        "fastest_time": "2:51",
+        "id": 16338954,
+        "name": "Green Lane to A34",
+        "polyline": "ecqzHhlxF\\Pd@Ft@DjHa@|@?|@EdAAx@HhARlANdCPt@L~Bh@XLV@LFNRFPZnAn@~CTbAJHN@j@q@",
+        "start_latlng": [
+            51.702434,
+            -1.277009
+        ]
+    },
+    {
+        "avg_grade": -0.0,
+        "climb": 14.4,
+        "distance": 881.0,
+        "effort_count": 5234,
+        "end_latlng": [
+            51.695531,
+            -1.279355
+        ],
+        "fastest_athlete": "Harrison R.",
+        "fastest_time": "2:58",
+        "id": 26102692,
+        "name": "Flowing Well to A34",
+        "polyline": "{_qzH|myF\\e@CU@CbA}A@QPQ@OLSZQTKDEhBk@b@SpB_@~BQXQb@k@DWb@e@j@y@VWb@[r@q@Ze@j@m@d@u@hA{AZo@TWRFVRBFd@hAVv@T`@DNBZFXj@fALP",
+        "start_latlng": [
+            51.7019,
+            -1.282382
+        ]
+    },
+    {
+        "avg_grade": 1.6,
+        "climb": 20.6,
+        "distance": 817.6,
+        "effort_count": 914,
+        "end_latlng": [
+            51.702379,
+            -1.277164
+        ],
+        "fastest_athlete": "Daniel Harvey",
+        "fastest_time": "2:50",
+        "id": 20219887,
+        "name": "A34 to Green Lane",
+        "polyline": "qyozHr{xFO_@_@cCQcBQy@e@a@OC}Fy@yAOo@Mq@GsB[m@AcCFmAHqDNs@Hg@Dc@E}@O",
+        "start_latlng": [
+            51.695779,
+            -1.279457
+        ]
+    },
+    {
+        "avg_grade": 5.2,
+        "climb": 8.8,
+        "distance": 169.3,
+        "effort_count": 3051,
+        "end_latlng": [
+            51.694863,
+            -1.273547
+        ],
+        "fastest_athlete": "Edward Gronbech",
+        "fastest_time": "22s",
+        "id": 12860094,
+        "name": "west face of Lodge Hill",
+        "polyline": "qtozHvexF?kAFuBDi@A{@HyD",
+        "start_latlng": [
+            51.694973,
+            -1.275958
+        ]
+    },
+    {
+        "avg_grade": -0.0,
+        "climb": 15.2,
+        "distance": 1754.1,
+        "effort_count": 256,
+        "end_latlng": [
+            51.701842,
+            -1.282789
+        ],
+        "fastest_athlete": "David B.",
+        "fastest_time": "5:57",
+        "id": 19610362,
+        "name": "Sunningwell & Bayworth Loop (Clockwise cutting corner)",
+        "polyline": "i`qzHnpyFWkAk@yA_@o@sAmAWSc@QcAW_AOeAa@uAcAk@o@YMYUQC_@SYWc@MMIq@m@i@k@s@oAc@k@]q@SUy@{CE[Fe@^u@JMRKNAZFr@BrATN?lDg@~AM\\BVCfARxC`@jAX^FHHJZPhCP~@Z`AzAtDjAvBRb@Jp@NvB@\\G\\KRk@t@u@nAUp@OdA",
+        "start_latlng": [
+            51.701972,
+            -1.282798
+        ]
+    },
+    {
+        "avg_grade": 1.4,
+        "climb": 6.9,
+        "distance": 497.6,
+        "effort_count": 2239,
+        "end_latlng": [
+            51.702521,
+            -1.27683
+        ],
+        "fastest_athlete": "Jason Houlsby",
+        "fastest_time": "1:38",
+        "id": 14192530,
+        "name": "Sunningwell Climb",
+        "polyline": "o_qzHtpyFL}@Rq@Xs@|@qAXk@B_AA_AKy@Us@s@qAgB}DWq@Qs@My@_@qDG}@",
+        "start_latlng": [
+            51.701842,
+            -1.282824
+        ]
+    },
+    {
+        "avg_grade": 6.1,
+        "climb": 34.0,
+        "distance": 556.3,
+        "effort_count": 425,
+        "end_latlng": [
+            51.708836,
+            -1.287638
+        ],
+        "fastest_athlete": "Ben Hope",
+        "fastest_time": "3:05",
+        "id": 25937522,
+        "name": "Bayworth Park Ascent",
+        "polyline": "irrzHnayFQDEJCPRdBTzAl@~EHPBND@HLLt@Nj@JPLf@X`B^bBFJJFNh@@NC^S`A@r@HnAHhCAfAIfA",
+        "start_latlng": [
+            51.70997,
+            -1.280397
+        ]
+    },
+    {
+        "avg_grade": -6.6,
+        "climb": 3.0,
+        "distance": 516.5,
+        "effort_count": 436,
+        "end_latlng": [
+            51.709864,
+            -1.280679
+        ],
+        "fastest_athlete": "Cameron Taylor",
+        "fastest_time": "1:54",
+        "id": 18912050,
+        "name": "Foxcombe descent",
+        "polyline": "mjrzHvmzFPeBWyCIi@IeAAy@J{AOYM]Gc@Y_AWkBScAM]Q[UKAe@Dg@BeAo@{DMcA@c@",
+        "start_latlng": [
+            51.708714,
+            -1.287477
+        ]
+    },
+    {
+        "avg_grade": -3.5,
+        "climb": 0.0,
+        "distance": 528.8,
+        "effort_count": 1091,
+        "end_latlng": [
+            51.704639,
+            -1.291951
+        ],
+        "fastest_athlete": "Josh B.",
+        "fastest_time": "1:42",
+        "id": 19610437,
+        "name": "Lincombe Lane Fork to Forest",
+        "polyline": "ggrzHb{zFNZJ\\\\rBd@rBTvAPb@NRJDPAp@Y~Ac@dASvAOz@SRAL@VHd@XX^l@nA",
+        "start_latlng": [
+            51.708204,
+            -1.289615
+        ]
+    },
+    {
+        "avg_grade": 0.8,
+        "climb": 10.7,
+        "distance": 955.9,
+        "effort_count": 1790,
+        "end_latlng": [
+            51.714412,
+            -1.285863
+        ],
+        "fastest_athlete": "Gregory Ablett",
+        "fastest_time": "3:36",
+        "id": 17772695,
+        "name": "Chi swell to boars",
+        "polyline": "eotzHd`xFXj@\\v@Ld@v@lBX^d@^LPV`@Zx@HNPl@LPhAxBLh@\\f@rA~DLR`@f@bA|Bf@p@Ph@r@vAp@bB~@rCHLn@|CPl@b@xBx@pDp@`C",
+        "start_latlng": [
+            51.719714,
+            -1.275068
+        ]
+    },
+    {
+        "avg_grade": 0.5,
+        "climb": 103.8,
+        "distance": 4241.0,
+        "effort_count": 163,
+        "end_latlng": [
+            51.712419,
+            -1.301491
+        ],
+        "fastest_athlete": "Andy Queralt",
+        "fastest_time": "17:47",
+        "id": 27062332,
+        "name": "Old Boar's hot lap",
+        "polyline": "_bszH`e}Fy@m@S[]WW]UWe@]]]_@S_@e@e@_@]Gm@a@}@[YSg@SgASSSO]KM_@MUCUQs@aAOQIMAOHk@Xs@b@{@b@i@|@_BV]XWFO@[E{B_@cDSiDQ_AIo@EoBGaAMgAQs@EBMPu@zAQj@Mz@]rAs@bBk@pBm@jBc@|Ae@dAU|@e@vAU~@k@bBAL_@|@Ir@[~@YjAMbAc@d@WFQJUBe@Va@`@QXUTaAj@e@PIHa@d@[l@cAtAQXc@dAG\\ANXd@f@`@hClDf@h@d@b@VZb@x@RR^Vl@r@z@v@xAnBz@p@f@h@NT\\\\x@bAf@^f@j@VRPFdAl@NLj@x@\\z@|B~DpAjAh@x@vBvCXXf@t@THdA@D@LJX@b@PNPXJXRVXXJr@LpAZr@Fx@DPCh@Cf@Kp@C\\WJUFiAEuAIu@Mg@MwAO}CBUJa@t@iBfAyBDQ@_@G_@Oq@a@cBQc@u@sEu@_Dg@wCU}@_@y@IKk@e@]_@_@i@UOq@q@YOOM",
+        "start_latlng": [
+            51.712488,
+            -1.301447
+        ]
+    },
+    {
+        "avg_grade": 4.0,
+        "climb": 24.2,
+        "distance": 605.1,
+        "effort_count": 733,
+        "end_latlng": [
+            51.717839,
+            -1.277679
+        ],
+        "fastest_athlete": "Henry Delacave",
+        "fastest_time": "2:36",
+        "id": 20219854,
+        "name": "Woodcraft Wood climb to Foxcombe Rd",
+        "polyline": "qcszHl~wFiB`Aa@JcBhAQXm@b@iAjAMNYTa@`AYVg@LSJwARk@LcA\\oAXg@HO?oATc@@]H",
+        "start_latlng": [
+            51.712739,
+            -1.274787
+        ]
+    },
+    {
+        "avg_grade": -1.8,
+        "climb": 13.2,
+        "distance": 1051.6,
+        "effort_count": 1463,
+        "end_latlng": [
+            51.725788,
+            -1.285363
+        ],
+        "fastest_athlete": "Jasper Verschuur",
+        "fastest_time": "3:22",
+        "id": 11373672,
+        "name": "Chilswell lane to farm",
+        "polyline": "motzHt_xFCCKBeClAgAn@eA^s@b@QPGRAXBv@GdDKfCGl@GVo@rAwB`CaBpBkAxB}@rAuAhCuBfD_@t@e@hAQr@[xA]vA[hCGTK^",
+        "start_latlng": [
+            51.719752,
+            -1.274987
+        ]
+    },
+    {
+        "avg_grade": 6.1,
+        "climb": 22.8,
+        "distance": 372.7,
+        "effort_count": 1271,
+        "end_latlng": [
+            51.719852,
+            -1.304129
+        ],
+        "fastest_athlete": "Luke B.",
+        "fastest_time": "1:35",
+        "id": 21005755,
+        "name": "Bluebell Climb",
+        "polyline": "autzHxu~FLSRq@RkAXuBFs@By@XqBNaD?sCB_AJwBHi@",
+        "start_latlng": [
+            51.720655,
+            -1.309245
+        ]
+    },
+    {
+        "avg_grade": -7.2,
+        "climb": 0.0,
+        "distance": 232.9,
+        "effort_count": 928,
+        "end_latlng": [
+            51.72056,
+            -1.309313
+        ],
+        "fastest_athlete": "Andrew B.",
+        "fastest_time": "39s",
+        "id": 14008358,
+        "name": "This is Red Five, I'm going in",
+        "polyline": "optzHzb~F?fAq@bEUrD]xBK\\MR",
+        "start_latlng": [
+            51.71992,
+            -1.306213
+        ]
+    },
+    {
+        "avg_grade": 0.0,
+        "climb": 2.1,
+        "distance": 417.5,
+        "effort_count": 14716,
+        "end_latlng": [
+            51.694719,
+            -1.247391
+        ],
+        "fastest_athlete": "James Ash",
+        "fastest_time": "51s",
+        "id": 11983103,
+        "name": "Radley 400m",
+        "polyline": "_sozHfsrFJe@D_@?_@E]KYOUIESGU@QHWZuApCQb@Ih@?p@Fj@LTXRNDZEPMT_@|A_D",
+        "start_latlng": [
+            51.694723,
+            -1.247395
+        ]
+    },
+    {
+        "avg_grade": 0.0,
+        "climb": 0.0,
+        "distance": 403.3,
+        "effort_count": 8714,
+        "end_latlng": [
+            51.714992,
+            -1.218595
+        ],
+        "fastest_athlete": "Richard A.",
+        "fastest_time": "1:11",
+        "id": 11235700,
+        "name": "Grenoble Rd Sprint - North",
+        "polyline": "waszHfrmFWk@KaAQiA_@uBg@_BwAyCWWi@_@m@Wm@Og@Ea@Do@`@OD",
+        "start_latlng": [
+            51.712447,
+            -1.22164
+        ]
+    },
+    {
+        "avg_grade": 2.3,
+        "climb": 20.8,
+        "distance": 891.6,
+        "effort_count": 10568,
+        "end_latlng": [
+            51.722989,
+            -1.230191
+        ],
+        "fastest_athlete": "Joe Morrow",
+        "fastest_time": "3:03",
+        "id": 8062879,
+        "name": "River to Footbridge",
+        "polyline": "kquzH~lqF^mAd@uAh@eAbAeCJg@P[vAyEjBoFx@gBXeAL[t@oABcANmBFo@BmAK{@[gB[}CWiACsASuCa@iB",
+        "start_latlng": [
+            51.725184,
+            -1.241277
+        ]
+    },
+    {
+        "avg_grade": 0.5,
+        "climb": 7.6,
+        "distance": 415.9,
+        "effort_count": 4511,
+        "end_latlng": [
+            51.708926,
+            -1.242968
+        ],
+        "fastest_athlete": "Matt Wilkinson",
+        "fastest_time": "1:08",
+        "id": 17046926,
+        "name": "I aint waiting!!!!!",
+        "polyline": "abszHh`rFVIx@Ib@I~@Wj@YTEbAIn@Cj@Et@KrA]f@Gf@]j@OHG^q@@S",
+        "start_latlng": [
+            51.712493,
+            -1.244365
+        ]
+    },
+    {
+        "avg_grade": -1.5,
+        "climb": 2.7,
+        "distance": 1890.2,
+        "effort_count": 3039,
+        "end_latlng": [
+            51.700157,
+            -1.242239
+        ],
+        "fastest_athlete": "Aaron Burgess \ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
+        "fastest_time": "5:56",
+        "id": 10753006,
+        "name": "down Sugworth Lane",
+        "polyline": "qfqzHxivFHWDq@EgDBqBIy@JsE?}AD}AK_A@KMiAk@gBOWGWAi@DeBAuAScEAgAG}@QsAOc@Jg@PeBt@_EDKb@q@f@{AJg@Ba@GaAE{B?eADw@AmBE}AIq@Cm@BoDB_@A{@J{@`@yAvAPrAAPKDGRy@RaA^uALUHW?aJfBkTRSJe@FMLSXSNW",
+        "start_latlng": [
+            51.702979,
+            -1.266363
+        ]
+    },
+    {
+        "avg_grade": 2.9,
+        "climb": 21.3,
+        "distance": 738.1,
+        "effort_count": 1214,
+        "end_latlng": [
+            51.713625,
+            -1.259277
+        ],
+        "fastest_athlete": "Cameron Taylor",
+        "fastest_time": "2:50",
+        "id": 26532943,
+        "name": "Watery Brake Uphill",
+        "polyline": "oltzHzvtF`@QvAYTDb@DRFVApC_A^Id@Sh@YNMXi@lAeAd@]j@Wz@MJ?b@Hx@r@l@fAb@p@n@`Bh@jAf@x@V\\b@nADXB?",
+        "start_latlng": [
+            51.719284,
+            -1.258217
+        ]
+    },
+    {
+        "avg_grade": -1.9,
+        "climb": 0.0,
+        "distance": 1005.7,
+        "effort_count": 3189,
+        "end_latlng": [
+            51.701165,
+            -1.247284
+        ],
+        "fastest_athlete": "Paul F.",
+        "fastest_time": "3:10",
+        "id": 26960457,
+        "name": "1km from A34 bridge",
+        "polyline": "yhqzH~auFK{EScCIc@GmAA_AHu@fAiGzAeELq@YyD?sBQmEEi@G_FPm@Ve@v@gArA{AXSl@Q\\c@RuAL{AXcBBc@Fa@",
+        "start_latlng": [
+            51.703332,
+            -1.259995
+        ]
+    },
+    {
+        "avg_grade": -0.4,
+        "climb": 0.0,
+        "distance": 204.4,
+        "effort_count": 15637,
+        "end_latlng": [
+            51.694723,
+            -1.247395
+        ],
+        "fastest_athlete": "David S.",
+        "fastest_time": "24s",
+        "id": 12000324,
+        "name": "Radley 200m (second half)",
+        "polyline": "qyozH~srFIZCh@B`@Hd@JVNLPDP?ZKPSbBqD",
+        "start_latlng": [
+            51.695778,
+            -1.247515
+        ]
+    },
+    {
+        "avg_grade": -0.1,
+        "climb": 5.2,
+        "distance": 1053.0,
+        "effort_count": 545,
+        "end_latlng": [
+            51.699032,
+            -1.250173
+        ],
+        "fastest_athlete": "Will Cullen",
+        "fastest_time": "3:12",
+        "id": 17496899,
+        "name": "Smithsons",
+        "polyline": "cnpzHrcsFa@Da@?gAB_@A}@BMDEF?J`BtMFRd@b@HP?LCJ_@d@CT@JdAtDjBtFVj@JJF?XMn@a@NWBK?WGg@i@uBw@sEK{@IkAA}@MiCAq@YkG",
+        "start_latlng": [
+            51.699068,
+            -1.250018
+        ]
+    },
+    {
+        "avg_grade": 0.5,
+        "climb": 0.0,
+        "distance": 208.4,
+        "effort_count": 15454,
+        "end_latlng": [
+            51.695778,
+            -1.247515
+        ],
+        "fastest_athlete": "Alec V.",
+        "fastest_time": "26s",
+        "id": 11983139,
+        "name": "Radley 200m",
+        "polyline": "{rozHbsrFH_@BUAo@G]MWQSSKUASDMLmBdE",
+        "start_latlng": [
+            51.694707,
+            -1.247373
+        ]
+    },
+    {
+        "avg_grade": 0.0,
+        "climb": 22.7,
+        "distance": 3172.3,
+        "effort_count": 164,
+        "end_latlng": [
+            51.694968,
+            -1.251153
+        ],
+        "fastest_athlete": "R S.",
+        "fastest_time": "10:19",
+        "id": 16604739,
+        "name": "Radley steeplechase long loop",
+        "polyline": "eoozHdosFZh@j@v@j@lALR`An@DH@JCl@G^a@x@iAjA]d@Wf@Kb@Kt@Wf@q@|Bs@tAo@zA_B`LAd@DxFEd@EHG?q@SEIE[@aBCeACKIQMKOEuDAyBQYBQHq@n@WHYBa@As@IUBECEG@]x@qJH_BEUQUkAaAc@c@[o@YY{@g@c@U_@K]S]IaBEwAQWGy@Ke@M_@EgAUSSISIs@GuAEqB?_BC{BD{GDGHCzD{@tC_Ax@Q|@]tACn@Ex@?\\Cj@AL@HBHRDt@HpFBHJJlBOr@CdBWFEBI@w@FcABMFGHCN?F@|@^n@Lx@Bz@Eh@@XFd@XrAd@",
+        "start_latlng": [
+            51.694118,
+            -1.251865
+        ]
+    },
+    {
+        "avg_grade": -0.5,
+        "climb": 0.0,
+        "distance": 464.2,
+        "effort_count": 620,
+        "end_latlng": [
+            51.694798,
+            -1.251182
+        ],
+        "fastest_athlete": "Charlie Aveline",
+        "fastest_time": "1:06",
+        "id": 17497089,
+        "name": "last bit",
+        "polyline": "ejpzHpmsF\\NTBVC^UNE|@GLEJO@K@oADg@FUFEF?N@z@Tn@JV?tASnAL^@LDNHb@b@dA`@",
+        "start_latlng": [
+            51.698439,
+            -1.25161
+        ]
+    },
+    {
+        "avg_grade": 4.2,
+        "climb": 12.2,
+        "distance": 292.9,
+        "effort_count": 1925,
+        "end_latlng": [
+            51.695381,
+            -1.258983
+        ],
+        "fastest_athlete": "Nick Coupe",
+        "fastest_time": "50s",
+        "id": 15238133,
+        "name": "Radley long hill effort.....",
+        "polyline": "eqozH~btFGh@kAtGQtACZe@dDi@pCCj@",
+        "start_latlng": [
+            51.694439,
+            -1.255034
+        ]
+    },
+    {
+        "avg_grade": -1.1,
+        "climb": 0.0,
+        "distance": 820.3,
+        "effort_count": 2777,
+        "end_latlng": [
+            51.694883,
+            -1.256811
+        ],
+        "fastest_athlete": "David Z.",
+        "fastest_time": "2:59",
+        "id": 6910500,
+        "name": "Cheesers to Radley",
+        "polyline": "mwozHtvvFDqAEgA@{@HyADqBGsAGk@D}@CgAB}ACoA@q@AoCFiBGc@LcBCgADg@A[C[CiDC]BmEH}AXaC^gBLmAPs@",
+        "start_latlng": [
+            51.695439,
+            -1.268428
+        ]
+    },
+    {
+        "avg_grade": 5.1,
+        "climb": 7.4,
+        "distance": 141.0,
+        "effort_count": 1179,
+        "end_latlng": [
+            51.694874,
+            -1.256696
+        ],
+        "fastest_athlete": "Matthieu Marshall",
+        "fastest_time": "17s",
+        "id": 15238142,
+        "name": "Radley short hill effort.....",
+        "polyline": "eqozH`ctFKl@Sn@G\\YnB[pBAAFQ",
+        "start_latlng": [
+            51.694435,
+            -1.255048
+        ]
+    },
+    {
+        "avg_grade": 0.0,
+        "climb": 4.6,
+        "distance": 540.3,
+        "effort_count": 238,
+        "end_latlng": [
+            51.698917,
+            -1.247589
+        ],
+        "fastest_athlete": "Owen S.",
+        "fastest_time": "1:42",
+        "id": 6128095,
+        "name": "Radley Wood Loop AntiClock",
+        "polyline": "empzHttrFQO]?u@DULOLOTSh@Ib@Al@]IUY_@FWf@GV@VDPN^VZb@v@`Ar@RHR?VGVCRQFc@Bo@Dg@E]?cBTwABk@FK",
+        "start_latlng": [
+            51.698914,
+            -1.247626
+        ]
+    },
+    {
+        "avg_grade": -0.0,
+        "climb": 0.0,
+        "distance": 630.6,
+        "effort_count": 561,
+        "end_latlng": [
+            51.698947,
+            -1.250374
+        ],
+        "fastest_athlete": "Mark T.",
+        "fastest_time": "1:47",
+        "id": 18075707,
+        "name": "Fast loop",
+        "polyline": "gmpzHjfsFGeAMQQKQAmAHuBFIBMLBn@J`AXfBDz@b@nEHTNL`@TXJP?PI`As@JUH]B}@Cy@SoG",
+        "start_latlng": [
+            51.698927,
+            -1.250458
+        ]
+    },
+    {
+        "avg_grade": -0.1,
+        "climb": 0.0,
+        "distance": 455.9,
+        "effort_count": 229,
+        "end_latlng": [
+            51.699044,
+            -1.247627
+        ],
+        "fastest_athlete": "Tegs Jones",
+        "fastest_time": "1:50",
+        "id": 18867892,
+        "name": "Radley Wood loop - clockwise....",
+        "polyline": "qmpzHjurFMz@[`AH`AA|BITMJw@V[Ai@a@kAsAEKIo@Le@`@a@Ve@v@{@dAu@r@IJN",
+        "start_latlng": [
+            51.698971,
+            -1.247734
+        ]
+    },
+    {
+        "avg_grade": 0.2,
+        "climb": 0.0,
+        "distance": 423.9,
+        "effort_count": 12166,
+        "end_latlng": [
+            51.710292,
+            -1.239427
+        ],
+        "fastest_athlete": "Lawrence Harkin",
+        "fastest_time": "1:13",
+        "id": 7158048,
+        "name": "Fraze crazy Quarter",
+        "polyline": "}|qzHpzpFe@VaBVWHaANkDr@{AVkDt@uAN",
+        "start_latlng": [
+            51.706551,
+            -1.238329
+        ]
+    },
+    {
+        "avg_grade": 3.5,
+        "climb": 9.0,
+        "distance": 259.3,
+        "effort_count": 4559,
+        "end_latlng": [
+            51.708729,
+            -1.243118
+        ],
+        "fastest_athlete": "Nik H.",
+        "fastest_time": "40s",
+        "id": 23968803,
+        "name": "The Ave Uphill",
+        "polyline": "c|qzHhuqF_AJg@L]B_ANuC\\oBX",
+        "start_latlng": [
+            51.70642,
+            -1.242601
+        ]
+    },
+    {
+        "avg_grade": 0.2,
+        "climb": 6.6,
+        "distance": 601.6,
+        "effort_count": 567,
+        "end_latlng": [
+            51.701172,
+            -1.241289
+        ],
+        "fastest_athlete": "Sam T.",
+        "fastest_time": "2:02",
+        "id": 21549436,
+        "name": "Footpath housing estate detour \ud83d\ude25",
+        "polyline": "etqzHr{pF|ASZCN@f@G\\AjCa@`@El@ApBWj@?b@FHPHr@FjBA^RjABXL|@JhAHb@Xj@X`AP^PT",
+        "start_latlng": [
+            51.705153,
+            -1.238496
+        ]
+    },
+    {
+        "avg_grade": 1.3,
+        "climb": 9.9,
+        "distance": 685.9,
+        "effort_count": 2731,
+        "end_latlng": [
+            51.706156,
+            -1.242454
+        ],
+        "fastest_athlete": "Simon F.",
+        "fastest_time": "2:07",
+        "id": 26580346,
+        "name": "Sanford Lane Bridge to Ken Road",
+        "polyline": "u~qzHx~oFIlAJx@j@dDNz@tApEVt@Mv@Qr@J|@Zf@Vp@z@`DLt@PhCBz@CbA_@pBUt@Wl@Yj@_@f@Wn@",
+        "start_latlng": [
+            51.706837,
+            -1.233888
+        ]
+    },
+    {
+        "avg_grade": -0.0,
+        "climb": 17.3,
+        "distance": 10088.4,
+        "effort_count": 125,
+        "end_latlng": [
+            51.70606,
+            -1.23818
+        ],
+        "fastest_athlete": "Liam S.",
+        "fastest_time": "33:20",
+        "id": 26756190,
+        "name": "Sandford Ln to Folly Bridge And Back Again",
+        "polyline": "_zqzHpypFaAl@_@JO@i@Ny@HsE`Ay@Ju@P{@He@La@FWJWDYHq@Nc@@_@JqAPICWHq@D[HEAo@VuATi@Cg@N]PsA`@_@H]LgANaA^]HE?{Cv@aBn@eA\\o@LuAb@{@F{@f@_@JQ@[TQP{BbAe@^m@x@[\\MDcAl@URe@XyAv@k@VKCOe@u@f@G?ECU[Sm@Q_@SoAQ[QK]?YFw@BK?IEo@Mg@?W@i@AMCII]Ma@[_@]SKSE[c@UQc@KeA?kAGUGm@I]KCIEAOJDOCHIDOAMISIeAUk@@i@Jq@EMBOEUOMC[WQKw@We@Iu@Gm@@m@Iu@QYMa@Ya@Is@?OEc@E_@?OCCCQEYBq@T}AtAu@h@s@`@O@oASM@SCo@A[@OAa@BcAb@_Af@eALUJw@P_@NcBZYHe@H[@cANQAEUSVULE@KA]Du@Xo@\\m@b@k@j@]b@m@~@]^eAn@c@Xa@j@Up@Mp@In@AbASpAK\\_@z@W`@sAhA_An@a@\\uAbAg@d@aCnBc@TURk@Zq@f@q@z@aA~A[TUXe@r@_AfBk@t@c@|@qA|DqB|F_BzC_@|@KPk@`@ONQh@ORSj@SXOf@Ir@?HHH?J?AAYHmBHQFO\\i@^eAr@g@Ta@zCcGRe@d@aBPg@b@_B`@kAZu@tAkCfA}AfAoAn@}@d@a@t@gA`@[fBaAbBkAlAiAb@Yl@q@~AuAl@q@RM\\]JSV}@RuA@sAVsAZaA\\]p@a@t@i@tCkDjAo@`@Qr@QjAOL?XHTKp@G~Ag@PIvAW`A]vAWPE|@k@`@Qb@E~AFxALX@VCRIfBsA`@W`@Qv@Ur@EPDT?b@Cp@JPCV@^Zh@Rx@R`@DfA?ZF`@Bn@VZHb@Zj@Pp@Bb@Eh@Ml@@r@Nx@VF?\\QAb@N@BDVD^L|@FnA?p@Hp@VRTd@^f@XPRfAh@\\?l@CXDXH`@BjAGX@ZJT`@Tt@d@jAHZJRBBH?`@[HCLTFBJ?~@k@d@]t@c@f@_@hAe@PQt@cAPOf@QnAq@j@c@LEVCREd@YXURINCh@EREtAm@xAa@x@YjCo@j@MlAa@b@KXCzBg@bBi@d@Ed@OnCg@n@EzAa@f@E`BYr@In@OhCa@|Bg@p@Ih@Md@G~A_@tBWz@WRM",
+        "start_latlng": [
+            51.706082,
+            -1.23817
+        ]
+    },
+    {
+        "avg_grade": -0.0,
+        "climb": 15.9,
+        "distance": 3994.9,
+        "effort_count": 229,
+        "end_latlng": [
+            51.70802,
+            -1.232932
+        ],
+        "fastest_athlete": "David Newman",
+        "fastest_time": "15:09",
+        "id": 13543097,
+        "name": "Sanford Lock Loop",
+        "polyline": "oerzHzyoFx@\\hATXNj@p@XXGXCX@d@D`@l@pCJt@dBnFJd@@j@WbA?h@ZzAAFMJs@\\uCr@_AH]J_ANcDr@gANyCp@cBXuAP_CTq@RmANeATyBj@cCd@uA^_AXa@Pa@HmA^aBp@gBj@{A^s@J_@Li@b@{@JcA|@k@NgAh@WVUd@YRc@Ta@Tq@h@wCbBSBIIK]e@\\SDKGo@_BK_@Mq@Aa@Pc@XWz@a@`@[\\[j@w@POh@m@FEJ@LGRc@RUPMTU\\WTUl@_A^Yt@_@PMf@gAxAkEP_@PQRe@r@kAdAoAVWdAu@RINB^Kl@g@RWJQKy@?MBG^s@vAeBx@]\\CV@x@GJBzAErA[d@Sb@e@P]tAkBn@a@NO^m@v@gBRYl@]b@MVCZIrAi@x@IZ?x@FtAd@p@Jz@ZvA\\",
+        "start_latlng": [
+            51.707925,
+            -1.233092
+        ]
+    },
+    {
+        "avg_grade": -0.5,
+        "climb": 2.5,
+        "distance": 388.0,
+        "effort_count": 9351,
+        "end_latlng": [
+            51.713081,
+            -1.227969
+        ],
+        "fastest_athlete": "Heather M.",
+        "fastest_time": "38s",
+        "id": 5605327,
+        "name": "Down to Sandford",
+        "polyline": "kzszHl~nFtAh@|@Vl@HnAD~@GbBi@\\Of@[vAkAn@o@NK",
+        "start_latlng": [
+            51.716383,
+            -1.228703
+        ]
+    },
+    {
+        "avg_grade": 1.3,
+        "climb": 18.1,
+        "distance": 749.0,
+        "effort_count": 5845,
+        "end_latlng": [
+            51.719348,
+            -1.226413
+        ],
+        "fastest_athlete": "Tipsy N.",
+        "fastest_time": "2:43",
+        "id": 19069599,
+        "name": "Climb to the Railway bridge",
+        "polyline": "cfszHzznFc@b@}CxB[R[Ju@LgADgAAaAKy@UqAi@uBoAq@QaCqAqAeAoCgC_@e@]s@",
+        "start_latlng": [
+            51.713143,
+            -1.228139
+        ]
+    },
+    {
+        "avg_grade": 0.0,
+        "climb": 0.0,
+        "distance": 423.6,
+        "effort_count": 7271,
+        "end_latlng": [
+            51.712443,
+            -1.221632
+        ],
+        "fastest_athlete": "Sholto David",
+        "fastest_time": "1:11",
+        "id": 11235711,
+        "name": "Grenoble Rd Sprint - South",
+        "polyline": "crszHz~lFNGl@k@tACZF~@b@nAp@LN`@~@l@bB`@xAV~ARzBN~@NZ",
+        "start_latlng": [
+            51.715061,
+            -1.218538
+        ]
+    },
+    {
+        "avg_grade": 0.0,
+        "climb": 16.6,
+        "distance": 4865.5,
+        "effort_count": 35,
+        "end_latlng": [
+            51.711476,
+            -1.226514
+        ],
+        "fastest_athlete": "Richard A.",
+        "fastest_time": "22:39",
+        "id": 24298999,
+        "name": "The Sandford Mouse",
+        "polyline": "o|rzHronFU|CExB?~@JfEX~Bv@nDVr@^\\d@Cx@Wd@Ih@Ad@VZd@LXRTd@T`B^b@Tt@l@?b@h@JFx@BDD?X^Ab@GBc@CWA[Ii@@g@CuBq@aAIg@@e@Jk@Te@Le@FWHcAp@{@vA_DxDq@jA]\\a@Za@Pc@JmALe@GiB?g@Lc@Rc@Va@b@_@h@Od@Fv@[n@]d@_@XYD_@V{@dAw@tA_@d@[l@CCWXw@zA[\\KV_@jAcAnCQp@Ox@SrAUjD@PJTFFxA]ZMJIb@Qd@K\\Qb@]b@QhAQzAy@z@QvAo@xAUfAUf@Wd@Mf@KjAMfA_@jAYxC_@hAa@p@GbAOd@OPCNIz@QzAQlAUp@ElDs@jBUt@QzAUdA[lB_@b@OHOGw@?i@Hs@Ds@Mu@i@mBS_A[k@i@gBI_AG{ASq@A]Q_ASW_@[kBq@a@WQc@AWc@WAQ@o@{@CHo@y@s@c@Ea@IgA_@a@U]a@Yi@m@Og@@c@Hw@\\e@D][_AaCQy@K{@AcDB{AA{ABqA\\oF",
+        "start_latlng": [
+            51.711607,
+            -1.226335
+        ]
+    },
+    {
+        "avg_grade": -0.4,
+        "climb": 0.0,
+        "distance": 140.1,
+        "effort_count": 717,
+        "end_latlng": [
+            51.711804,
+            -1.221532
+        ],
+        "fastest_athlete": "Tom N.",
+        "fastest_time": "6s",
+        "id": 27995304,
+        "name": "Science Park Round About Hill",
+        "polyline": "e_szHdsmFHNV`ALXDBH@TOHO?Se@cAKk@",
+        "start_latlng": [
+            51.712033,
+            -1.22179
+        ]
+    },
+    {
+        "avg_grade": 0.1,
+        "climb": 15.2,
+        "distance": 1412.0,
+        "effort_count": 51,
+        "end_latlng": [
+            51.711557,
+            -1.265285
+        ],
+        "fastest_athlete": "Jamie Parkinson",
+        "fastest_time": "5:24",
+        "id": 24521975,
+        "name": "West Wood",
+        "polyline": "sltzHbpvFTp@Xl@b@Xh@B`@J^p@dAxCh@nCHjBP|@Vn@zApBlArBRNJB^Eb@S\\a@b@Yf@Kf@AnALjACj@IpALfAu@rBy@zBOf@GN@Xa@CYQw@Iy@`@sBA_AFeAPaATo@ZqA\\oBZsA?gAEiAI_BMy@Ac@",
+        "start_latlng": [
+            51.719302,
+            -1.267377
+        ]
+    },
+    {
+        "avg_grade": 6.0,
+        "climb": 60.8,
+        "distance": 944.72,
+        "effort_count": -9,
+        "end_latlng": [
+            51.71409806236625,
+            -1.2656101305037737
+        ],
+        "fastest_athlete": "Daniel H.",
+        "fastest_time": "8:09",
+        "id": 3787653,
+        "name": "Oxford Road Climb",
+        "polyline": "{}rzHj{rFTd@pA~A\\l@dBnDr@fB`@vAn@pCrAfJHvBChAh@bIlCbUBfAAd@?|BMfDAxAHrFLN?D}Ch@}@Xu@ZyInBiADQBmAXOF]Hw@Vm@LeC\\c@J",
+        "start_latlng": [
+            51.711825309321284,
+            -1.2486936058849096
+        ]
+    },
+    {
+        "avg_grade": -0.2,
+        "climb": 0.0,
+        "distance": 1315.5,
+        "effort_count": 11496,
+        "end_latlng": [
+            51.734376,
+            -1.250129
+        ],
+        "fastest_athlete": "Daniel H.",
+        "fastest_time": "4:02",
+        "id": 6539884,
+        "name": "Abingdon Road - St Aldate's to Weirs Lane",
+        "polyline": "epyzHtjtF^AZDt@GPKbBWXK~@MREr@WhCq@XMZE\\Q~@w@bB{@dBgArAq@^YTM\\UT]RIb@_@`@SvCsBtAo@~@i@^ONMXMt@e@`@GLQpAk@`@Mz@m@t@a@fCgA^Sn@c@jBu@XQ",
+        "start_latlng": [
+            51.745474,
+            -1.256262
+        ]
+    },
+    {
+        "avg_grade": -0.1,
+        "climb": 6.2,
+        "distance": 800.0,
+        "effort_count": 5195,
+        "end_latlng": [
+            51.73643,
+            -1.261043
+        ],
+        "fastest_athlete": "Jake P.",
+        "fastest_time": "2:31",
+        "id": 14172710,
+        "name": "Old railway",
+        "polyline": "yyxzHvwvFnB_DtCiEr@mAhA_B^o@dBeChDsFjFwHpBgDp@cA",
+        "start_latlng": [
+            51.741893,
+            -1.268596
+        ]
+    },
+    {
+        "avg_grade": 0.7,
+        "climb": 2.5,
+        "distance": 347.6,
+        "effort_count": 9426,
+        "end_latlng": [
+            51.742434,
+            -1.220419
+        ],
+        "fastest_athlete": "Leonard Lee",
+        "fastest_time": "57s",
+        "id": 20544907,
+        "name": "Footpath sign to barrier on Barracks ln",
+        "polyline": "yrxzHrplFK|BE^{@`FYhASh@Yn@aA|Aw@`B{@zA",
+        "start_latlng": [
+            51.740776,
+            -1.216254
+        ]
+    },
+    {
+        "avg_grade": -0.7,
+        "climb": 0.0,
+        "distance": 336.3,
+        "effort_count": 8256,
+        "end_latlng": [
+            51.740844,
+            -1.216365
+        ],
+        "fastest_athlete": "Bruno C.",
+        "fastest_time": "54s",
+        "id": 20544945,
+        "name": "Barrier to footpath sign on Barracks ln",
+        "polyline": "c}xzHrjmFLYr@gAl@uAnAaCd@kATaAr@}DBe@F}B",
+        "start_latlng": [
+            51.742423,
+            -1.220411
+        ]
+    },
+    {
+        "avg_grade": 0.1,
+        "climb": 8.4,
+        "distance": 819.6,
+        "effort_count": 6399,
+        "end_latlng": [
+            51.744555,
+            -1.227057
+        ],
+        "fastest_athlete": "Jack M.",
+        "fastest_time": "2:46",
+        "id": 16599583,
+        "name": "Barrack's Dash Westbound ",
+        "polyline": "usxzHxulFOl@?TS|@EZQz@CVk@bB]p@gBjCIVWh@Y\\]l@Q|@i@zBMp@c@~Ac@~BEDYv@[hAO`A_@jAKdAk@rC]vA@HKl@ELKj@KlAS`ABP",
+        "start_latlng": [
+            51.740919,
+            -1.217085
+        ]
+    },
+    {
+        "avg_grade": 0.7,
+        "climb": 3.4,
+        "distance": 444.6,
+        "effort_count": 4627,
+        "end_latlng": [
+            51.750626,
+            -1.224672
+        ],
+        "fastest_athlete": "Aaron Tipping",
+        "fastest_time": "1:03",
+        "id": 23330786,
+        "name": "Hill Top Road to Roundabout East-West",
+        "polyline": "a~yzHhpmFE?UP{@bBIX_@v@ER?r@I\\YZQDK@KDMTg@nBUXe@v@i@h@e@|@M^I?KEk@IW@WGa@DOI",
+        "start_latlng": [
+            51.74769,
+            -1.221321
+        ]
+    },
+    {
+        "avg_grade": 1.1,
+        "climb": 8.3,
+        "distance": 626.6,
+        "effort_count": 15218,
+        "end_latlng": [
+            51.751761,
+            -1.257408
+        ],
+        "fastest_athlete": "Oskar Denby",
+        "fastest_time": "1:45",
+        "id": 23470479,
+        "name": "Head of the River to Head of the High Street",
+        "polyline": "wtyzHjjtFa@Hc@Dy@Ei@@g@Fc@Vc@Lg@BoALk@Si@@}@FiARcBf@oABc@Fk@Pe@BiAf@kAZg@H",
+        "start_latlng": [
+            51.746205,
+            -1.256214
+        ]
+    },
+    {
+        "avg_grade": -0.4,
+        "climb": 0.0,
+        "distance": 547.9,
+        "effort_count": 1429,
+        "end_latlng": [
+            51.73726,
+            -1.318678
+        ],
+        "fastest_athlete": "Lee F.",
+        "fastest_time": "1:58",
+        "id": 13796140,
+        "name": "Bertie & Norreys",
+        "polyline": "gqwzHz}aGSYOa@a@_CWqA{@_Gu@qEEi@w@eEIw@q@wDMgAc@eCFU",
+        "start_latlng": [
+            51.735408,
+            -1.325894
+        ]
+    },
+    {
+        "avg_grade": 1.1,
+        "climb": 16.4,
+        "distance": 859.8,
+        "effort_count": 5557,
+        "end_latlng": [
+            51.737953,
+            -1.310057
+        ],
+        "fastest_athlete": "Thomas Lamont",
+        "fastest_time": "3:06",
+        "id": 16904571,
+        "name": "Hurst dash",
+        "polyline": "wewzHl{|Fs@vAQx@_B~FyDtMUl@Yj@[b@mBpDaA~Bm@dB_@jBsAbEc@dBc@nBg@hB",
+        "start_latlng": [
+            51.733564,
+            -1.299902
+        ]
+    },
+    {
+        "avg_grade": 7.3,
+        "climb": 79.5,
+        "distance": 1088.9,
+        "effort_count": 1996,
+        "end_latlng": [
+            51.762379,
+            -1.312461
+        ],
+        "fastest_athlete": "Joe Morrow",
+        "fastest_time": "4:29",
+        "id": 17885938,
+        "name": "Singing Way (up)",
+        "polyline": "_b|zHhp|FAx@KhBKx@]xEQlAm@vC_@vDMv@Y|Ci@hDQt@a@lBk@`Ci@dBSp@Wl@qAdCmAvEOt@g@rDKz@WfD]lBK`AMz@Kb@Yt@",
+        "start_latlng": [
+            51.758566,
+            -1.298124
+        ]
+    },
+    {
+        "avg_grade": 3.7,
+        "climb": 0.0,
+        "distance": 250.6,
+        "effort_count": 7372,
+        "end_latlng": [
+            51.74315,
+            -1.309998
+        ],
+        "fastest_athlete": "Dan Blake",
+        "fastest_time": "46s",
+        "id": 9121589,
+        "name": "ERR Botley Hills Pre-Beast Rep No. 4",
+        "polyline": "coyzHbt~Fh@V^FbEfA~Av@PFl@b@",
+        "start_latlng": [
+            51.745302,
+            -1.308978
+        ]
+    },
+    {
+        "avg_grade": 12.8,
+        "climb": 63.2,
+        "distance": 456.4,
+        "effort_count": 5037,
+        "end_latlng": [
+            51.739761,
+            -1.313753
+        ],
+        "fastest_athlete": "Amelia Pagett",
+        "fastest_time": "15s",
+        "id": 6242452,
+        "name": "Turnpike Road Climb",
+        "polyline": "}ayzH~{~FXPj@j@dAv@^b@lBhAX^d@f@CFJVxAnBz@x@DLVZXXPJd@d@dArA",
+        "start_latlng": [
+            51.743197,
+            -1.310236
+        ]
+    },
+    {
+        "avg_grade": -0.5,
+        "climb": 0.0,
+        "distance": 443.0,
+        "effort_count": 1436,
+        "end_latlng": [
+            51.738001,
+            -1.315397
+        ],
+        "fastest_athlete": "George Bridge",
+        "fastest_time": "1:28",
+        "id": 12521955,
+        "name": "Dodge the potholes!",
+        "polyline": "_ixzHxx~Fl@dAFXTp@f@pB~@lCp@fCPrA\\nBDd@A^_@|AGv@EdABlB",
+        "start_latlng": [
+            51.739201,
+            -1.30973
+        ]
+    },
+    {
+        "avg_grade": 1.1,
+        "climb": 5.8,
+        "distance": 470.6,
+        "effort_count": 6362,
+        "end_latlng": [
+            51.735662,
+            -1.320941
+        ],
+        "fastest_athlete": "peter hughes",
+        "fastest_time": "44s",
+        "id": 19686745,
+        "name": "Nolor/Tayland Handicap Chase",
+        "polyline": "qaxzH~{_GPj@`@n@hAzBr@lBVdA^lA^fBd@hB`BhFRdAn@`C",
+        "start_latlng": [
+            51.738011,
+            -1.315352
+        ]
+    },
+    {
+        "avg_grade": 0.2,
+        "climb": 2.5,
+        "distance": 484.6,
+        "effort_count": 1971,
+        "end_latlng": [
+            51.735646,
+            -1.325435
+        ],
+        "fastest_athlete": "Andy Queralt",
+        "fastest_time": "1:31",
+        "id": 11421338,
+        "name": "Norris road ",
+        "polyline": "_}wzHds`GBTVnAXzBj@~CL^H`@L`APfABh@Hn@Vp@RbA@TKn@T`Ap@pBt@`F",
+        "start_latlng": [
+            51.73728,
+            -1.319066
+        ]
+    },
+    {
+        "avg_grade": 10.0,
+        "climb": 49.4,
+        "distance": 431.7,
+        "effort_count": 1573,
+        "end_latlng": [
+            51.735054,
+            -1.323528
+        ],
+        "fastest_athlete": "Kate W.",
+        "fastest_time": "1:23",
+        "id": 6242453,
+        "name": "Chawley Lane Climb",
+        "polyline": "a{wzHjm`GNh@ZrAv@rC?VHz@h@fB@L^dBl@vBr@nBr@pDHHVl@L`@",
+        "start_latlng": [
+            51.736975,
+            -1.31814
+        ]
+    },
+    {
+        "avg_grade": 6.7,
+        "climb": 40.0859,
+        "distance": 596.479,
+        "effort_count": 452,
+        "end_latlng": [
+            51.7380135,
+            -1.3157433
+        ],
+        "fastest_athlete": "Mark B.",
+        "fastest_time": "2:35",
+        "id": 2729122,
+        "name": "Chawley Ln Climb",
+        "polyline": "u|xzHzx`GFA\\k@dBcB\\Wx@g@VWRIh@c@lAw@ZOfAYp@]r@WVCl@ShAa@DEJUH]@Wj@iC^eAVaA",
+        "start_latlng": [
+            51.7423587,
+            -1.3199771
+        ]
+    },
+    {
+        "avg_grade": -0.3,
+        "climb": 2.5,
+        "distance": 740.6,
+        "effort_count": 1859,
+        "end_latlng": [
+            51.734367,
+            -1.326063
+        ],
+        "fastest_athlete": "Andy Queralt",
+        "fastest_time": "2:18",
+        "id": 13226643,
+        "name": "Norreys & Bertie",
+        "polyline": "_zwzHzn`GGMI?SNUZSNILM`@EP@RNl@P^ZzC`@zAd@hCFp@Nr@Dd@b@fCNvAJh@Fr@P`AHx@P`ARp@TjBRr@F`@JTJHF@^C|BXl@?FE",
+        "start_latlng": [
+            51.736802,
+            -1.318373
+        ]
+    },
+    {
+        "avg_grade": -1.8,
+        "climb": 17.0,
+        "distance": 463.0,
+        "effort_count": 27,
+        "end_latlng": [
+            51.733674,
+            -1.311763
+        ],
+        "fastest_athlete": "Ben C.",
+        "fastest_time": "2:33",
+        "id": 21063732,
+        "name": "Steep bank loop",
+        "polyline": "afwzHff_GAVBdAAb@E`@Qf@KTIDGAC@GREBKCYBQAm@KKNC?e@UKQc@[GIc@SCG?EZ{@VOLMHMRs@BYDILFJJPFh@OVHd@FPAX@LE",
+        "start_latlng": [
+            51.73361,
+            -1.311873
+        ]
+    },
+    {
+        "avg_grade": 1.0,
+        "climb": 10.0,
+        "distance": 566.2,
+        "effort_count": 5291,
+        "end_latlng": [
+            51.737434,
+            -1.316245
+        ],
+        "fastest_athlete": "Humberto M.",
+        "fastest_time": "1:47",
+        "id": 13033908,
+        "name": "cotswold road to top of cumnor hill",
+        "polyline": "uwxzHrc_GXVvA~A`A|@j@r@p@n@X`@lA`AxA|ApAfB`AjAd@t@d@h@Xn@V^z@fBTT",
+        "start_latlng": [
+            51.741553,
+            -1.311459
+        ]
+    },
+    {
+        "avg_grade": 4.1,
+        "climb": 47.1,
+        "distance": 1117.4,
+        "effort_count": 47,
+        "end_latlng": [
+            51.737149,
+            -1.327308
+        ],
+        "fastest_athlete": "George Bridge",
+        "fastest_time": "5:19",
+        "id": 6460222,
+        "name": "Denman's Lane Climb",
+        "polyline": "kkyzHjv`Gz@PT@^ER@VCPETD`@@NLh@XND\\TLTVPX^TPz@jALb@P\\LLNl@HN\\H^b@d@v@h@t@f@`AZ^f@|@tCxC\\v@J`BNp@^l@f@j@LBDYATYjCDB^@nA^`@Zl@VJJh@PVDx@VGJDHR^JHZ^RJLDDABI",
+        "start_latlng": [
+            51.744702,
+            -1.319577
+        ]
+    },
+    {
+        "avg_grade": 1.5,
+        "climb": 28.2,
+        "distance": 1275.5,
+        "effort_count": 74,
+        "end_latlng": [
+            51.741239,
+            -1.287968
+        ],
+        "fastest_athlete": "Oliver P.",
+        "fastest_time": "6:12",
+        "id": 26097357,
+        "name": "hinksey heights nature trail",
+        "polyline": "kswzHnmxFOh@Uf@M`@Kd@SjCC~AQtDF~@Rt@BRAHYp@C`@ZvAVr@JvAMVIf@M`@Gd@IXQfAm@`BSn@EhAGLe@P]]e@Ie@JYlAUCs@eDYi@QIkANg@?oBHoBd@_@ZYh@Yl@i@pBe@lBC\\A~BIz@Qp@kAfC",
+        "start_latlng": [
+            51.735749,
+            -1.277196
+        ]
+    },
+    {
+        "avg_grade": 0.4,
+        "climb": 4.1,
+        "distance": 801.0,
+        "effort_count": 5972,
+        "end_latlng": [
+            51.746451,
+            -1.285154
+        ],
+        "fastest_athlete": "Mark T.",
+        "fastest_time": "2:12",
+        "id": 13959441,
+        "name": "WI to Willow Walk",
+        "polyline": "owzzHlm{Fr@cAfA}@b@k@pAcAj@q@Je@n@kBb@q@bAw@p@u@T[Vc@L_@LGNE`@e@FQ?]D[Le@NUJE\\c@\\q@\\a@^i@dByBNe@j@}@Jk@NWZaAVk@P[",
+        "start_latlng": [
+            51.751761,
+            -1.292542
+        ]
+    },
+    {
+        "avg_grade": 0.9,
+        "climb": 4.2,
+        "distance": 433.7,
+        "effort_count": 1516,
+        "end_latlng": [
+            51.74609,
+            -1.317327
+        ],
+        "fastest_athlete": "Otto Rutter - Abingdon Race Team",
+        "fastest_time": "1:33",
+        "id": 26623652,
+        "name": "Orchard Road",
+        "polyline": "kjzzHt~_G^VNKNAn@Jh@BJBJH\\DZTZ?PNJRD@HH\\J`@Vh@JPJRNRXDDJBLNFAJBBVDBDNDJHDNATFJEXAZBP?JCT@",
+        "start_latlng": [
+            51.749664,
+            -1.315785
+        ]
+    },
+    {
+        "avg_grade": -0.0,
+        "climb": 10.8,
+        "distance": 603.2,
+        "effort_count": 200,
+        "end_latlng": [
+            51.75365,
+            -1.304876
+        ],
+        "fastest_athlete": "Ellis Maguire",
+        "fastest_time": "2:01",
+        "id": 23854180,
+        "name": "Fogwell footpath",
+        "polyline": "myzzHjk_GMYAk@Dc@COc@w@Sy@SqAc@{@YUa@c@w@m@OEGc@MgCMiA?k@@Ud@gBCaA?o@Jk@LQH[IY?KEQ@O_@yAKq@g@cFBO",
+        "start_latlng": [
+            51.752076,
+            -1.312692
+        ]
+    },
+    {
+        "avg_grade": 0.0,
+        "climb": 3.5,
+        "distance": 1717.9,
+        "effort_count": 168,
+        "end_latlng": [
+            51.749816,
+            -1.312812
+        ],
+        "fastest_athlete": "James Farrell",
+        "fastest_time": "7:01",
+        "id": 23485039,
+        "name": "Fogwell canter",
+        "polyline": "kkzzH~k_GOf@Cn@AbACFCDYEa@OM@WMa@a@IYIGESIAGISa@Wk@Qq@@KAIOq@My@Aw@CGEq@Ie@CIIIO]K}@EGGa@GGGi@A[GS?s@GYEQIMEUWi@]eAI{@C}BCq@QaBOg@GMECCOQmC?e@MwA?q@Ee@HKJ@PM`@MHOFEVGVCTIL?FCb@ANEf@@n@If@ALEbAKPGHDHtA@~AFdA@H?\\Db@?\\Fd@Jb@?^@HLtBFpAAFBFDr@BHFtBJ|AFn@HrBAJ@FCFHhAATBXK`C?tADf@?x@BVCdAD^Ab@EF",
+        "start_latlng": [
+            51.749823,
+            -1.312791
+        ]
+    },
+    {
+        "avg_grade": 0.3,
+        "climb": 2.2,
+        "distance": 522.5,
+        "effort_count": 185,
+        "end_latlng": [
+            51.748682,
+            -1.319696
+        ],
+        "fastest_athlete": "Ryan Burke",
+        "fastest_time": "1:58",
+        "id": 23415040,
+        "name": "Across the field W-E",
+        "polyline": "{czzHdfbGLwNO{@AiEEkC@iGEcE@iC",
+        "start_latlng": [
+            51.748628,
+            -1.327226
+        ]
+    },
+    {
+        "avg_grade": 1.1,
+        "climb": 26.8,
+        "distance": 966.1,
+        "effort_count": 109,
+        "end_latlng": [
+            51.755412,
+            -1.32345
+        ],
+        "fastest_athlete": "Jack Shayler",
+        "fastest_time": "3:17",
+        "id": 14329805,
+        "name": "Hill End xc - opening stretch round the field.......",
+        "polyline": "o_{zHz{aGcAy@w@u@wAiBc@a@cDcEKGOCMJMNCJBh@^d@x@|@|BvBjDzCXRp@`@HGG]Y[sAqAyAgBcA}AiCwCIISAc@^",
+        "start_latlng": [
+            51.75304,
+            -1.325576
+        ]
+    },
+    {
+        "avg_grade": 7.6,
+        "climb": 18.2,
+        "distance": 217.7,
+        "effort_count": 92,
+        "end_latlng": [
+            51.759958,
+            -1.323545
+        ],
+        "fastest_athlete": "Jack Shayler",
+        "fastest_time": "49s",
+        "id": 14340772,
+        "name": "Hill End xc - final climb on the field.......",
+        "polyline": "ah|zH`|aGO_@S}@Um@Wi@Ig@DsCGyAF_@@nA",
+        "start_latlng": [
+            51.759534,
+            -1.325605
+        ]
+    },
+    {
+        "avg_grade": 2.6,
+        "climb": 37.2,
+        "distance": 946.6,
+        "effort_count": 155,
+        "end_latlng": [
+            51.760185,
+            -1.330857
+        ],
+        "fastest_athlete": "James Craggs",
+        "fastest_time": "4:05",
+        "id": 14329809,
+        "name": "Hill End xc - loop through the woods......",
+        "polyline": "qz{zHrkbGZBRTnAr@x@PFVAPDNVZBTCj@b@|CHjCJx@A`@Mv@Qn@Eh@@t@Gb@CpAWlASh@[`@WNUQYe@GUW]m@o@KUs@u@QM[GS]kAcAk@_@SIOCWFc@G_@OsBqAUU_@i@KIIC",
+        "start_latlng": [
+            51.757374,
+            -1.328097
+        ]
+    },
+    {
+        "avg_grade": -0.3,
+        "climb": 0.0,
+        "distance": 518.3,
+        "effort_count": 294,
+        "end_latlng": [
+            51.74864,
+            -1.327105
+        ],
+        "fastest_athlete": "Mark B.",
+        "fastest_time": "1:52",
+        "id": 23258589,
+        "name": "Across the field E-W",
+        "polyline": "gdzzH|v`GLbDBz@HtJBzFHbBAn@Kf@EzEIrCCpA",
+        "start_latlng": [
+            51.748689,
+            -1.319661
+        ]
+    },
+    {
+        "avg_grade": -1.2,
+        "climb": 0.0,
+        "distance": 439.2,
+        "effort_count": 321,
+        "end_latlng": [
+            51.74967,
+            -1.31232
+        ],
+        "fastest_athlete": "Tim Jones",
+        "fastest_time": "1:40",
+        "id": 21771050,
+        "name": "Get it started",
+        "polyline": "uuyzHjy_GOBg@VQ@iA_@Kk@a@LOAUKOQYq@]c@YMGMaAs@o@o@]Kq@m@Yi@m@}@WUMQKQIY",
+        "start_latlng": [
+            51.746355,
+            -1.314935
+        ]
+    },
+    {
+        "avg_grade": -0.3,
+        "climb": 0.0,
+        "distance": 555.5,
+        "effort_count": 1856,
+        "end_latlng": [
+            51.75234,
+            -1.307264
+        ],
+        "fastest_athlete": "Mark Haigh",
+        "fastest_time": "1:51",
+        "id": 4741677,
+        "name": "Fogwell Road",
+        "polyline": "klzzH|q_G[K]O[Qs@k@i@}@e@mAUa@Q_BOaEk@iASk@Gm@KiCMm@w@wB[uAO{D",
+        "start_latlng": [
+            51.749983,
+            -1.313743
+        ]
+    },
+    {
+        "avg_grade": -0.0,
+        "climb": 2.3,
+        "distance": 497.0,
+        "effort_count": 611,
+        "end_latlng": [
+            51.751627,
+            -1.313319
+        ],
+        "fastest_athlete": "James Farrell",
+        "fastest_time": "1:37",
+        "id": 7760821,
+        "name": "Fogwell field run",
+        "polyline": "wvzzHho_GSHCDAHB^r@pBPR`@ZZJbAz@`@R\\LT@NCRKJOFuB?YEOGGQIe@MMKi@s@sAcAMAGBgAb@EAEI",
+        "start_latlng": [
+            51.751643,
+            -1.313329
+        ]
+    },
+    {
+        "avg_grade": -0.0,
+        "climb": 4.2,
+        "distance": 473.3,
+        "effort_count": 268,
+        "end_latlng": [
+            51.75036,
+            -1.314011
+        ],
+        "fastest_athlete": "James Farrell",
+        "fastest_time": "1:35",
+        "id": 21965260,
+        "name": "Fogwell field loop exc gravel",
+        "polyline": "aozzH~r_G`@f@P`@G|@gA|Aa@MkAq@c@[_@a@_@g@g@kBCa@\\_@jAWd@@rAz@RZTb@TZ",
+        "start_latlng": [
+            51.750412,
+            -1.313919
+        ]
+    },
+    {
+        "avg_grade": -4.7,
+        "climb": 8.2,
+        "distance": 1117.2,
+        "effort_count": 103,
+        "end_latlng": [
+            51.754195,
+            -1.325076
+        ],
+        "fastest_athlete": "Ben Upjohn",
+        "fastest_time": "3:50",
+        "id": 14340781,
+        "name": "Hill End xc - fast into the finish........",
+        "polyline": "}h|zHzqaGzBh@n@b@l@VbBh@nAd@RHh@@z@k@ZAlA_@f@SPANDBDJ?FSE{AHUJKD@JG@ELUJ_@HwAH]FCF@v@t@z@n@j@n@Z`@PZx@v@fAdBj@p@lAhAbAv@TVDVK^UJ_@Ue@Yw@q@mA{@i@e@",
+        "start_latlng": [
+            51.759671,
+            -1.32398
+        ]
+    },
+    {
+        "avg_grade": 5.8,
+        "climb": 49.5641,
+        "distance": 841.75,
+        "effort_count": 1068,
+        "end_latlng": [
+            51.743888687342405,
+            -1.3037466164678335
+        ],
+        "fastest_athlete": "James Haynes",
+        "fastest_time": "2:42",
+        "id": 2439846,
+        "name": "Arnolds Way Climb",
+        "polyline": "wjzzHzj}FNSd@a@l@_@b@Ml@Mj@ElASdBSv@QlCe@hBKVNNVN^`@bCj@nARTtBnA^N|A~@fAd@PLBHBCWOOQ]IIFG?GE?Cx@V",
+        "start_latlng": [
+            51.74972911814053,
+            -1.3023768209074327
+        ]
+    },
+    {
+        "avg_grade": -1.3,
+        "climb": 0.0,
+        "distance": 963.8,
+        "effort_count": 5899,
+        "end_latlng": [
+            51.727432,
+            -1.246339
+        ],
+        "fastest_athlete": "Michal W.",
+        "fastest_time": "2:25",
+        "id": 15406369,
+        "name": "Eastern By-Pass ",
+        "polyline": "q_uzHhfpFGj@K^gBhFiCdHqAvDYdAw@tBy@pBuIhVgA`DyBzF",
+        "start_latlng": [
+            51.722338,
+            -1.235084
+        ]
+    },
+    {
+        "avg_grade": -0.4,
+        "climb": 0.0,
+        "distance": 894.2,
+        "effort_count": 269,
+        "end_latlng": [
+            51.722926,
+            -1.203826
+        ],
+        "fastest_athlete": "Guille Fernandez",
+        "fastest_time": "3:01",
+        "id": 11749996,
+        "name": "Sandy Lane, west-then-south",
+        "polyline": "{wuzHtlhFFJT|@LbALrDD~CRvGN`DXpJRrFHhADVHNRVx@n@xA~@rA`AbA\\p@DHANIj@{@d@cAHM",
+        "start_latlng": [
+            51.726226,
+            -1.195148
+        ]
+    },
+    {
+        "avg_grade": -2.4,
+        "climb": 0.0,
+        "distance": 549.3,
+        "effort_count": 1218,
+        "end_latlng": [
+            51.747049,
+            -1.211881
+        ],
+        "fastest_athlete": "Jamie Parkinson",
+        "fastest_time": "1:46",
+        "id": 16829965,
+        "name": "Down Churchill Drive",
+        "polyline": "sxzzHzukFb@G|EEfAId@Gx@Bj@?vCIjA?lAEf@?dBFb@AXR",
+        "start_latlng": [
+            51.75194,
+            -1.21198
+        ]
+    },
+    {
+        "avg_grade": 1.8,
+        "climb": 12.0,
+        "distance": 675.3,
+        "effort_count": 556,
+        "end_latlng": [
+            51.753214,
+            -1.212075
+        ],
+        "fastest_athlete": "Daniel H.",
+        "fastest_time": "2:18",
+        "id": 26043296,
+        "name": "Churchill Drive",
+        "polyline": "c{yzH~tkFUBKEUCi@Dk@ImCFYEO@[FE?g@JEEOAy@B[AUC_@Lo@H}@BECUDuAAq@Fc@@E@k@@U?g@Gg@F]Aq@FWHOAWOW?EB",
+        "start_latlng": [
+            51.747227,
+            -1.211833
+        ]
+    },
+    {
+        "avg_grade": -1.5,
+        "climb": 2.6,
+        "distance": 758.3,
+        "effort_count": 3448,
+        "end_latlng": [
+            51.763032,
+            -1.226812
+        ],
+        "fastest_athlete": "Nicholas B.",
+        "fastest_time": "1:50",
+        "id": 6490319,
+        "name": "Pullens Lane (Footpath to Jack Straw's Lane)",
+        "polyline": "yu{zHzxnFGIqBg@YMy@UM?YK[Gm@UYGiAc@]Ga@?mA]g@SCCs@Qy@[{Cq@m@W}@SQIuA?aAnA[p@MTc@Xe@@QB",
+        "start_latlng": [
+            51.756616,
+            -1.227811
+        ]
+    },
+    {
+        "avg_grade": 0.9,
+        "climb": 9.8,
+        "distance": 788.6,
+        "effort_count": 10860,
+        "end_latlng": [
+            51.757487,
+            -1.219689
+        ],
+        "fastest_athlete": "H\u00e9lio Louren\u00e7o",
+        "fastest_time": "2:18",
+        "id": 25391476,
+        "name": "JR roundabout time pub",
+        "polyline": "w`}zH|jnFNKNQ^]NU\\YZa@bAeAf@]^[LW~@q@PI^]T[PENK|@s@PKh@c@~@eAXQLOz@q@l@i@n@u@`@YfB_BZe@`@g@b@iAf@k@PYXYd@]",
+        "start_latlng": [
+            51.763485,
+            -1.225587
+        ]
+    },
+    {
+        "avg_grade": 1.6,
+        "climb": 14.7,
+        "distance": 770.9,
+        "effort_count": 2998,
+        "end_latlng": [
+            51.75629,
+            -1.227857
+        ],
+        "fastest_athlete": "Jamie Parkinson",
+        "fastest_time": "2:29",
+        "id": 11620697,
+        "name": "Jack Straw Pullens Ln Up",
+        "polyline": "a}|zHnrnFn@?T[`@s@jA}Ad@I`@HbAHpA\\ZLhB^ZL~@VlB\\lA`@nAXnA\\v@N|@^z@PfCdA\\D",
+        "start_latlng": [
+            51.762891,
+            -1.226794
+        ]
+    },
+    {
+        "avg_grade": -1.0,
+        "climb": 0.0,
+        "distance": 344.2,
+        "effort_count": 791,
+        "end_latlng": [
+            51.771034,
+            -1.230065
+        ],
+        "fastest_athlete": "Andrew M.",
+        "fastest_time": "1:18",
+        "id": 21555860,
+        "name": "Through the woods - North",
+        "polyline": "{b~zH`snFGESA]Lg@XKNQL]t@eAxA]t@Sx@UTWt@]DEH]vBWlACZ",
+        "start_latlng": [
+            51.76894,
+            -1.226883
+        ]
+    },
+    {
+        "avg_grade": 0.4,
+        "climb": 7.1,
+        "distance": 1044.8,
+        "effort_count": 7912,
+        "end_latlng": [
+            51.781276,
+            -1.243673
+        ],
+        "fastest_athlete": "Chris D.",
+        "fastest_time": "3:10",
+        "id": 12798541,
+        "name": "First K A40",
+        "polyline": "un_{HlnoF_@b@w@vAUr@Ol@aCdHy@jC}@`CsBvGcBvF_BxEiAxDsAdEuApFQj@k@xAq@nCSl@",
+        "start_latlng": [
+            51.775957,
+            -1.231266
+        ]
+    },
+    {
+        "avg_grade": 0.1,
+        "climb": 0.0,
+        "distance": 1027.1,
+        "effort_count": 6169,
+        "end_latlng": [
+            51.765067,
+            -1.287718
+        ],
+        "fastest_athlete": "Daniel H.",
+        "fastest_time": "3:10",
+        "id": 4374053,
+        "name": "Binsey Lane - 1k (golf club to Perch cattlegrid)",
+        "polyline": "mu{zHzryF[Ni@b@}@~@gA~@iAnAa@l@qBfC_@XYN_@LIJe@FMFm@Le@NOBm@^OB[N_@H]@MHk@BUCCBS?UGg@CGCgAAiAFa@NKJ_@PO@]N_AVk@VsAj@[P_@LW?MBEJG?MHyAhAG@KI",
+        "start_latlng": [
+            51.756558,
+            -1.283171
+        ]
+    },
+    {
+        "avg_grade": 0.1,
+        "climb": 0.0,
+        "distance": 752.5,
+        "effort_count": 2579,
+        "end_latlng": [
+            51.783913,
+            -1.287918
+        ],
+        "fastest_athlete": "James V.",
+        "fastest_time": "2:36",
+        "id": 8908048,
+        "name": "Port Meadow sprint finish!",
+        "polyline": "o~_{HvtyFYAUE{AFa@Ai@@}AFgAHa@Fg@JaCx@qAV_@L{CjB]Za@h@_@lBQrAKn@a@hBSn@UdA[lB",
+        "start_latlng": [
+            51.778483,
+            -1.283473
+        ]
+    },
+    {
+        "avg_grade": 0.1,
+        "climb": 0.0,
+        "distance": 777.548,
+        "effort_count": 63725,
+        "end_latlng": [
+            51.741141,
+            -1.248398
+        ],
+        "fastest_athlete": "Ben Deakin",
+        "fastest_time": "2:14",
+        "id": 3551025,
+        "name": "Donnington Bridge to river fork",
+        "polyline": "cswzHxtqF@ICQqAP_@Ne@^w@`@y@bAu@hAg@h@OLeAd@ON{@vAOl@Ip@@v@o@xC[j@Y\\OH_@Ve@j@MJW^o@`@YV_@`@QLSV_ChBi@V",
+        "start_latlng": [
+            51.735702,
+            -1.242522
+        ]
+    },
+    {
+        "avg_grade": -0.2,
+        "climb": 0.0,
+        "distance": 830.0,
+        "effort_count": 16086,
+        "end_latlng": [
+            51.743568,
+            -1.241907
+        ],
+        "fastest_athlete": "Daniel Weller",
+        "fastest_time": "2:31",
+        "id": 5741977,
+        "name": "Meadow Lane Footpath",
+        "polyline": "svwzHdiqFG@Y@]FQ?e@B]HYMKCODYN_@FqA?o@GYDi@?QLI@e@OQ@QDa@K}BXSFk@DMFOG]D{@A]Lw@Ns@d@QHe@F[LWBOHu@D[Hk@DsA^qAB",
+        "start_latlng": [
+            51.736267,
+            -1.240663
+        ]
+    },
+    {
+        "avg_grade": 0.1,
+        "climb": 0.0,
+        "distance": 775.5,
+        "effort_count": 578,
+        "end_latlng": [
+            51.751377,
+            -1.27607
+        ],
+        "fastest_athlete": "Mark Haigh",
+        "fastest_time": "2:42",
+        "id": 27930565,
+        "name": "Osney mead Sickeners flip",
+        "polyline": "yzyzHzhwFs@dBg@~AwBpMUz@Il@m@~BiAfHWnAIPE@WEu@i@o@[e@]S]{@q@iBgB{@k@YM",
+        "start_latlng": [
+            51.747178,
+            -1.271335
+        ]
+    },
+    {
+        "avg_grade": 0.2,
+        "climb": 2.8,
+        "distance": 639.5,
+        "effort_count": 6450,
+        "end_latlng": [
+            51.742807,
+            -1.221355
+        ],
+        "fastest_athlete": "Jamie Parkinson",
+        "fastest_time": "2:01",
+        "id": 26621418,
+        "name": "barracks lane to glanville",
+        "polyline": "kqxzHn}kFK~@MfEAbAKlAIpDOpC]lBm@fEWp@u@pAu@xAaCzFo@pB",
+        "start_latlng": [
+            51.740547,
+            -1.213195
+        ]
+    },
+    {
+        "avg_grade": -1.4,
+        "climb": 0.0,
+        "distance": 1374.1,
+        "effort_count": 6656,
+        "end_latlng": [
+            51.730092,
+            -1.203171
+        ],
+        "fastest_athlete": "Nev Carter",
+        "fastest_time": "3:59",
+        "id": 12874167,
+        "name": "Home straight",
+        "polyline": "qvxzHvshFXFtBz@zCVpALlAXzHjClIbCdFxBn@\\hA|@lAt@h@TdAr@n@h@p@r@dCxCjAx@jAr@hD`C`@b@Fb@FhA",
+        "start_latlng": [
+            51.741379,
+            -1.196279
+        ]
+    },
+    {
+        "avg_grade": -1.0,
+        "climb": 0.0,
+        "distance": 1141.97,
+        "effort_count": 4789,
+        "end_latlng": [
+            51.73407968133688,
+            -1.2101558782160282
+        ],
+        "fastest_athlete": "Patrick Hussey",
+        "fastest_time": "3:00",
+        "id": 2028845,
+        "name": "Hollow way run",
+        "polyline": "yayzHl{iFbAdAfA`AtB~Bp@p@`@VzAlA^b@LT^b@r@n@tAzA`@^fAn@lAl@b@\\zA~@r@n@r@f@d@Tr@h@nCbBt@n@lBpAb@^jAx@r@j@RLPNv@b@z@Zb@X",
+        "start_latlng": [
+            51.74317174125463,
+            -1.20262716896832
+        ]
+    },
+    {
+        "avg_grade": 1.6,
+        "climb": 8.6,
+        "distance": 554.7,
+        "effort_count": 4421,
+        "end_latlng": [
+            51.743045,
+            -1.182528
+        ],
+        "fastest_athlete": "Tom Phillips",
+        "fastest_time": "1:37",
+        "id": 19484284,
+        "name": "xc - exposed across the field....",
+        "polyline": "ocxzHbjfFy@{Ac@Sc@Q}@U}Ak@gGaBcAc@yB{@a@C_ANy@B_@IOI",
+        "start_latlng": [
+            51.73832,
+            -1.184497
+        ]
+    },
+    {
+        "avg_grade": 0.9,
+        "climb": 10.4,
+        "distance": 1028.3,
+        "effort_count": 874,
+        "end_latlng": [
+            51.743002,
+            -1.182581
+        ],
+        "fastest_athlete": "George Pool",
+        "fastest_time": "3:19",
+        "id": 13786070,
+        "name": "Masters xc - round the bigger field.....",
+        "polyline": "wexzHfgfFQRQf@OlAJr@Zz@Lh@@\\I`BO~@s@tAcAzBe@p@}@~@y@n@MHYAg@Ya@_@o@w@]S_@IiAFQA]U_CoC{@oB{BsHGs@?[Fe@fA_FTwA",
+        "start_latlng": [
+            51.738681,
+            -1.184039
+        ]
+    },
+    {
+        "avg_grade": 0.8,
+        "climb": 7.0,
+        "distance": 875.9,
+        "effort_count": 5989,
+        "end_latlng": [
+            51.742816,
+            -1.203099
+        ],
+        "fastest_athlete": "Patrick Hussey",
+        "fastest_time": "3:08",
+        "id": 15340075,
+        "name": "Salegate Ln to Dene Rd",
+        "polyline": "mtwzH~bkFcDsBeAw@eAo@]]e@S_@[a@WoF}De@@OWaA}@a@WaByAWU_@i@eA{@eC{B{@qAaCcC",
+        "start_latlng": [
+            51.73591,
+            -1.208959
+        ]
+    },
+    {
+        "avg_grade": 9.7,
+        "climb": 54.3,
+        "distance": 561.2,
+        "effort_count": 1734,
+        "end_latlng": [
+            51.75076,
+            -1.18403
+        ],
+        "fastest_athlete": "Daniel Weller",
+        "fastest_time": "2:23",
+        "id": 14142219,
+        "name": "The leg burner!",
+        "polyline": "qyyzH`agFkAqEk@{CAW[gAB]COYs@OUUQWYa@Y_@Ia@Cy@Qm@Qq@]c@[UKw@MYFK?MCi@a@y@K",
+        "start_latlng": [
+            51.746978,
+            -1.188164
+        ]
+    },
+    {
+        "avg_grade": -8.2,
+        "climb": 0.0,
+        "distance": 603.8,
+        "effort_count": 3423,
+        "end_latlng": [
+            51.750964,
+            -1.192649
+        ],
+        "fastest_athlete": "Simon R.",
+        "fastest_time": "1:49",
+        "id": 16055891,
+        "name": "Green Down - Notice Board to Ridings",
+        "polyline": "mvzzHnlfFIvAG^AXFlAPlBH`@j@fAZv@Nl@NjAZ|@Px@BZAVITWd@WTY`@IX@f@A~@HdBGzAHn@IpAF`@RZRp@Bh@Af@",
+        "start_latlng": [
+            51.751592,
+            -1.184879
+        ]
+    },
+    {
+        "avg_grade": 1.7,
+        "climb": 12.7,
+        "distance": 220.5,
+        "effort_count": 1404,
+        "end_latlng": [
+            51.750056,
+            -1.188129
+        ],
+        "fastest_athlete": "James H.",
+        "fastest_time": "41s",
+        "id": 14142255,
+        "name": "Up And Down",
+        "polyline": "ahzzHlnfF_A`FWfB_@lBGl@Qv@El@",
+        "start_latlng": [
+            51.749299,
+            -1.185185
+        ]
+    },
+    {
+        "avg_grade": 8.5,
+        "climb": 44.7,
+        "distance": 421.4,
+        "effort_count": 1641,
+        "end_latlng": [
+            51.749046,
+            -1.184654
+        ],
+        "fastest_athlete": "Daniel Weller",
+        "fastest_time": "1:55",
+        "id": 14142230,
+        "name": "Leg Burner 2!!",
+        "polyline": "mtyzHf~eFGDm@nAa@hAOr@Q`@m@lAc@nAWh@Sv@INQP_@PKAIEc@i@}Ay@MEkAMKCOI",
+        "start_latlng": [
+            51.746151,
+            -1.182592
+        ]
+    },
+    {
+        "avg_grade": 2.0,
+        "climb": 10.6,
+        "distance": 181.9,
+        "effort_count": 4823,
+        "end_latlng": [
+            51.751594,
+            -1.18481
+        ],
+        "fastest_athlete": "Tom Hardy",
+        "fastest_time": "33s",
+        "id": 18453460,
+        "name": "Hill recovery",
+        "polyline": "iwzzH~{fFEYCm@BsAE{A?cAJaBZ_B",
+        "start_latlng": [
+            51.751732,
+            -1.187357
+        ]
+    },
+    {
+        "avg_grade": -6.9,
+        "climb": 2.4,
+        "distance": 373.0,
+        "effort_count": 613,
+        "end_latlng": [
+            51.7497,
+            -1.186626
+        ],
+        "fastest_athlete": "Jamie Edgerton",
+        "fastest_time": "1:04",
+        "id": 22373440,
+        "name": "Long Descent",
+        "polyline": "cszzHvcfFf@h@\\R~@\\RR`@XTF`BhAn@PPf@Ef@Id@On@WvA_@hAM~@",
+        "start_latlng": [
+            51.751063,
+            -1.183476
+        ]
+    },
+    {
+        "avg_grade": 1.5,
+        "climb": 7.7,
+        "distance": 443.5,
+        "effort_count": 18654,
+        "end_latlng": [
+            51.753513,
+            -1.214265
+        ],
+        "fastest_athlete": "Tom L.",
+        "fastest_time": "1:23",
+        "id": 20695328,
+        "name": "Hidden Path (Old Road)",
+        "polyline": "s}zzHtimFGm@G][y@g@iB_@wBGaAQmASc@Q_CEwBDmBFcAT}@DqAE_@?k@CM",
+        "start_latlng": [
+            51.752749,
+            -1.220266
+        ]
+    },
+    {
+        "avg_grade": 1.2,
+        "climb": 10.6,
+        "distance": 807.9,
+        "effort_count": 1128,
+        "end_latlng": [
+            51.760538,
+            -1.226571
+        ],
+        "fastest_athlete": "Jake P.",
+        "fastest_time": "2:50",
+        "id": 7045118,
+        "name": "Harberton Mead",
+        "polyline": "um|zH|gpFO}DGw@G_BIgCOiCC{A@oADIKg@KI[a@WSeA_AY_@Ke@Gu@UuABi@Gg@Mi@SiBSs@@g@HYbAiAXE^CZ?h@CTFh@ADEJa@FgAFc@",
+        "start_latlng": [
+            51.760432,
+            -1.235348
+        ]
+    },
+    {
+        "avg_grade": 6.1,
+        "climb": 36.4,
+        "distance": 598.1,
+        "effort_count": 539,
+        "end_latlng": [
+            51.757869,
+            -1.227484
+        ],
+        "fastest_athlete": "Charlie Gibbard",
+        "fastest_time": "2:30",
+        "id": 13954088,
+        "name": "Marston Rd to Pullens via John Garne Way",
+        "polyline": "s~{zHvhpFEu@EeCEaED[AYKeBPq@P_@f@y@HWCY_@w@Ok@OeCFs@`@kB?e@Fk@F}@Ae@L{ACa@@a@Ec@Qe@DSECAG@OCE?E",
+        "start_latlng": [
+            51.758029,
+            -1.235479
+        ]
     }
 ]

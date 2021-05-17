@@ -58,7 +58,7 @@ class RegionsData:
     def save(self):
         """Save all regions to DB"""
         with open(self.filename, "w") as db_file:
-            json.dump(self.data, db_file)
+            json.dump(self.data, db_file, indent=4, sort_keys=True)
             LOGGER.info(f"Saved {len(self.data)} regions to {self.filename}")
 
     def display(self):

@@ -14,6 +14,7 @@ import socket
 import logging
 import datetime
 import coloredlogs
+from flask.helpers import send_from_directory
 from stravalib.client import Client
 from src.segment_crawler import SegmentsData, SegmentCrawler, retrieve_fastest_times
 from src.regions import RegionsData
@@ -51,11 +52,19 @@ def get_default_bounds(location):
         raise Exception(f"No bounds found for {location}")
     return bounds
 
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(app.root_path,
+                               'favicon.png', mimetype='image/vnd.microsoft.icon')
 
-@app.route("/<location>", methods=["GET"])
-def index(location="oxford"):
+@app.route("/", methods=["GET"])
+def index():
     """Home page"""
-    client, authorize_url = get_client_or_authorize_url()
+    _, authorize_url = get_client_or_authorize_url()
+
+    location=request.args.get('offset')
+    if not location:
+        location = "oxford"
 
     segments = SegmentsData(None, get_data_path(location=location))
     return render_template(
@@ -66,26 +75,30 @@ def index(location="oxford"):
     )
 
 
-@app.route("/retrieve/<location>/<bounds>", methods=["GET"])
-def retrieve(location="oxford", bounds=None):
+@app.route("/retrieve/<string:location>", methods=["GET"])
+def retrieve(location="oxford"):
     """Home page
     e.g.
-    /retrieve/oxford/51.2,-1.3,51.8,-1.2
+    /retrieve/oxford?offset=0.02
     """
     client, authorize_url = get_client_or_authorize_url()
 
     # Oxford bounds
     # bottom left, top right
+    bounds = None
     if bounds:
         p = bounds.split(",")
         bounds = [(p[0], p[1]), (p[2], p[3])]
     else:
         bounds = get_default_bounds(location)
 
-    # bounds = [(51.723917, -1.301553), (51.792771, -1.185510)]
-    # bounds = [(51.720917, -1.302553), (51.799771, -1.189510)]
-    # bounds = [(51.713917, -1.303553), (51.804771, -1.190510)]
-    # bounds = [(51.713917, -1.308553), (51.804771, -1.190510)]
+    offset = float(request.args.get('offset'))
+    if offset:
+        for bound in bounds:
+            bound[0] += offset
+            bound[1] += offset
+
+    LOGGER.info("Base coords: %s", bounds)
 
     segments = SegmentsData(client, get_data_path(location))
     regions = RegionsData(get_data_path(location, filetype="regions"))
