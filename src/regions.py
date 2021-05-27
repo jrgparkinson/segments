@@ -15,11 +15,7 @@ LOGGER.addHandler(handler)
 class RegionsData:
     """Object to describe a region containing segments"""
 
-    FILENAME = "live_data/regions.json"
-
-    def __init__(self, filename=None):
-        if not filename:
-            filename = self.FILENAME
+    def __init__(self, filename):
         self.filename = filename
         with open(self.filename, "r") as db_file:
             self.data = json.load(db_file)

@@ -14,6 +14,7 @@ import socket
 import logging
 import datetime
 import coloredlogs
+from random import randrange
 from flask.helpers import send_from_directory
 from stravalib.client import Client
 from src.segment_crawler import SegmentsData, SegmentCrawler, retrieve_fastest_times
@@ -66,13 +67,15 @@ def index():
     if not location:
         location = "oxford"
 
-    segments = SegmentsData(None, get_data_path(location=location))
+    segments = SegmentsData(get_data_path(location=location))
     return render_template(
         "index.html",
         authorize_url=authorize_url,
         segments=segments.display_segments(),
         location=location,
     )
+
+
 
 
 @app.route("/retrieve/<string:location>", methods=["GET"])
@@ -95,12 +98,12 @@ def retrieve(location="oxford"):
     offset = float(request.args.get('offset'))
     if offset:
         for bound in bounds:
-            bound[0] += offset
-            bound[1] += offset
+            bound[0] += randrange(-1, 2, 1)*offset
+            bound[1] += randrange(-1, 2, 1)*offset
 
     LOGGER.info("Base coords: %s", bounds)
 
-    segments = SegmentsData(client, get_data_path(location))
+    segments = SegmentsData(get_data_path(location), client)
     regions = RegionsData(get_data_path(location, filetype="regions"))
     crawler = SegmentCrawler(client, segments, regions)
 
@@ -119,6 +122,29 @@ def retrieve(location="oxford"):
         location=location,
     )
 
+
+
+
+
+# @app.route("/retrieve/<string:location>", methods=["GET"])
+# def update(location="oxford"):
+#     """Home page
+#     e.g.
+#     /update/oxford
+#     """
+#     client, authorize_url = get_client_or_authorize_url()
+
+#     segments = SegmentsData(get_data_path(location), client)
+
+#     retrieve_fastest_times(segments)
+#     segments.save()
+
+#     return render_template(
+#         "index.html",
+#         authorize_url=authorize_url,
+#         segments=segments.display_segments(),
+#         location=location,
+#     )
 
 @app.route("/authenticate")
 def authenticate():

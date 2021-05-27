@@ -1,19 +1,18 @@
+import logging
+import os
+from stravalib.attributes import LatLon
+from stravalib.model import SegmentExplorerResult
+from stravalib.client import Client
+import pytest
 import src
-from src.regions import RegionsData
 from src.segment_crawler import (
-    SegmentsData,
     split_box,
     retrieve_fastest_times,
     SegmentCrawler,
 )
-import os
-from stravalib.model import SegmentExplorerResult
-from stravalib.client import Client
 
-import pytest
-
+LOGGER = logging.getLogger(__name__)
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
-
 
 def test_split_box():
     assert split_box([(0, 0), (2, 2)]) == [
@@ -94,6 +93,13 @@ def test_retrieve_segments_one_region(mock_stravalib, segments_db, regions_db):
 
     assert is_explored
     assert len(segments_db.data) == 5
+
+    LOGGER.info(segments_db.display_segments())
+
+    displayed = segments_db.display_segments()
+    assert len(displayed) == 5
+    displayed[0].pop("fastest_pace") # can't compare this as it's nan
+    assert displayed[0] == {'id': 0, 'name': 'Segment name', 'distance': 1000.0, 'avg_grade': 1.0, 'climb': 10.0, 'effort_count': 0, 'start_latlng': LatLon(lat=0.0, lon=0.0), 'end_latlng': LatLon(lat=1.0, lon=0.0), 'polyline': 'abc', 'url': 'https://www.strava.com/segments/0', 'colour': '#000000'}
 
 
 def test_retrieve_segments_recursive(mock_stravalib, segments_db, regions_db):

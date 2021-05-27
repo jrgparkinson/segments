@@ -1,5 +1,5 @@
 secrets.sh
-.venv
+.venv*
 __pycache__
 segments copy.json
 .coverage

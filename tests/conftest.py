@@ -18,7 +18,7 @@ def segments_db():
     with open(segments_file, "w+") as f:
         json.dump([], f)
     try:
-        yield SegmentsData(Client(), segments_file)
+        yield SegmentsData(segments_file, Client())
 
     finally:
         os.remove(segments_file)

@@ -20,11 +20,7 @@ LOGGER.addHandler(handler)
 
 class SegmentsData:
 
-    FILENAME = "live_data/segments.json"
-
-    def __init__(self, client=None, filename=None):
-        if not filename:
-            filename = self.FILENAME
+    def __init__(self, filename, client=None):
         self.client = client
         self.filename = filename
         with open(self.filename, "r") as f:
@@ -100,7 +96,7 @@ class SegmentsData:
                     (delta.total_seconds() / 60.0) / (segment["distance"] / 1000.0), 1
                 )
             else:
-                segment["fastest_pace"] = float("NaN")
+                segment["fastest_pace"] = float('NaN')
 
             segment["climb"] = round(segment["climb"], 2)
 
@@ -182,9 +178,13 @@ def get_html_from_url(url):
     return html
 
 
-def retrieve_fastest_times(segments):
-    segments_to_fill = [seg for seg in segments.data if "fastest_athlete" not in seg]
+def retrieve_fastest_times(segments: SegmentsData, force_retrieve=False, save_interval=10):
+    if force_retrieve:
+        segments_to_fill = segments.data
+    else:
+        segments_to_fill = [seg for seg in segments.data if "fastest_athlete" not in seg]
     count = 0
+
     for segment in segments_to_fill:
 
         url = "https://www.strava.com/segments/" + str(segment["id"])
@@ -206,9 +206,5 @@ def retrieve_fastest_times(segments):
             f"{segment['name']}: {name}, {time} ({count}/{len(segments_to_fill)})"
         )
 
-
-if __name__ == "__main__":
-    location = "oxford"
-    segments = SegmentsData(filename=f"data/{location}/segments.json")
-    retrieve_fastest_times(segments)
-    segments.save()
+        if count % save_interval == 0:
+            segments.save()
